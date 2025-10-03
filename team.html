@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team | AWARENET</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a class="navbar__brand" href="index.html" aria-label="AWARENET">
+                <img src="assets/images/logo.svg" alt="AWARENET logo" class="navbar__logo">
+                <span class="navbar__title">AWARENET</span>
+            </a>
+            <button class="navbar__toggle" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+            <ul id="primary-navigation" class="navbar__menu">
+                <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
+                <li class="navbar__item"><a href="research.html" class="navbar__link">Research</a></li>
+                <li class="navbar__item"><a href="team.html" class="navbar__link navbar__link--active">Team</a></li>
+                <li class="navbar__item"><a href="news.html" class="navbar__link">News</a></li>
+                <li class="navbar__item"><a href="contact.html" class="navbar__link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section section--hero" aria-labelledby="team-hero-title">
+            <div class="section__content">
+                <h1 id="team-hero-title">A network of professionals united by responsible innovation</h1>
+                <p>Researchers, entrepreneurs, and policy-makers collaborate within AWARENET to translate scientific breakthroughs into transformative products.</p>
+                <a class="button" href="contact.html">Join the network</a>
+            </div>
+            <aside class="hero-highlight" aria-label="Team snapshot">
+                <p><strong>Community:</strong> 150+ members across academia and industry</p>
+                <p><strong>Locations:</strong> Padova, Milano, Trento, and Bologna</p>
+            </aside>
+        </section>
+
+        <section class="section section--surface" aria-labelledby="team-timeline">
+            <div class="section__heading">
+                <h2 id="team-timeline">Milestones</h2>
+                <p>The network continues to grow by involving new partners and supporting community-led projects.</p>
+            </div>
+            <div class="timeline" aria-label="Network history">
+                <div class="timeline__event">
+                    <span class="timeline__year">2019</span>
+                    <p>AWARENET is founded with the goal of connecting Italian excellence in responsible research.</p>
+                </div>
+                <div class="timeline__event">
+                    <span class="timeline__year">2021</span>
+                    <p>Launch of the first joint labs with public entities and companies for interpretable AI pilot projects.</p>
+                </div>
+                <div class="timeline__event">
+                    <span class="timeline__year">2023</span>
+                    <p>Start of a mentoring program for early-stage startups developing ethical AI solutions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--muted" aria-labelledby="team-expertise">
+            <div class="section__heading">
+                <h2 id="team-expertise">Expertise areas</h2>
+                <p>Multidisciplinary expertise ensures that technological advances remain aligned with human values.</p>
+            </div>
+            <div class="card-grid">
+                <article class="card">
+                    <h3>Neuroscience &amp; cognition</h3>
+                    <p>Scholars explore neural signatures of awareness to inform explainable machine learning architectures.</p>
+                </article>
+                <article class="card">
+                    <h3>Ethics &amp; law</h3>
+                    <p>Legal experts translate regulatory requirements into governance frameworks for AI development teams.</p>
+                </article>
+                <article class="card">
+                    <h3>Engineering &amp; product</h3>
+                    <p>Technical leaders develop deployable tools and evaluate their performance in mission-critical settings.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section--surface" aria-labelledby="team-collaboration">
+            <div class="section__heading">
+                <h2 id="team-collaboration">How we collaborate</h2>
+                <p>Community activities create a space to experiment with new ideas and to mentor emerging talent.</p>
+            </div>
+            <div class="news-grid">
+                <article class="news-item">
+                    <h3>Residency program</h3>
+                    <p>Teams spend up to three months on-site to co-create prototypes with support from dedicated mentors.</p>
+                </article>
+                <article class="news-item">
+                    <h3>Learning circles</h3>
+                    <p>Monthly sessions feature case studies from members who apply responsible AI practices in production.</p>
+                </article>
+                <article class="news-item">
+                    <h3>Innovation grants</h3>
+                    <p>Seed funding is allocated to early-stage initiatives that promise measurable social and economic impact.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year"></span> AWARENET. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

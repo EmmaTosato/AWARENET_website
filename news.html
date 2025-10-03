@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News | AWARENET</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a class="navbar__brand" href="index.html" aria-label="AWARENET">
+                <img src="assets/images/logo.svg" alt="AWARENET logo" class="navbar__logo">
+                <span class="navbar__title">AWARENET</span>
+            </a>
+            <button class="navbar__toggle" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+            <ul id="primary-navigation" class="navbar__menu">
+                <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
+                <li class="navbar__item"><a href="research.html" class="navbar__link">Research</a></li>
+                <li class="navbar__item"><a href="team.html" class="navbar__link">Team</a></li>
+                <li class="navbar__item"><a href="news.html" class="navbar__link navbar__link--active">News</a></li>
+                <li class="navbar__item"><a href="contact.html" class="navbar__link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section section--hero" aria-labelledby="news-hero-title">
+            <div class="section__content">
+                <h1 id="news-hero-title">Updates, stories, and opportunities across the network</h1>
+                <p>Follow our community events, research breakthroughs, and publications to stay in the loop.</p>
+                <a class="button" href="contact.html">Share your news</a>
+            </div>
+            <aside class="hero-highlight" aria-label="News highlight">
+                <p><strong>Upcoming event:</strong> Responsible AI Summit — June 20, Padova</p>
+                <p><strong>Submission deadline:</strong> Call for workshops closes on May 15</p>
+            </aside>
+        </section>
+
+        <section class="section section--surface" aria-labelledby="news-latest">
+            <div class="section__heading">
+                <h2 id="news-latest">Latest highlights</h2>
+                <p>Discover the initiatives that our members are leading this season.</p>
+            </div>
+            <div class="news-grid">
+                <article class="news-item">
+                    <h3>"Responsible AI" workshop</h3>
+                    <p>A collaborative training day with universities and companies to share best practices on implementing transparent systems.</p>
+                    <a class="button button--secondary" href="contact.html">Join us</a>
+                </article>
+                <article class="news-item">
+                    <h3>2024 annual report</h3>
+                    <p>Discover how AWARENET-funded projects improved decision-process traceability through explainable AI tools.</p>
+                    <a class="button button--secondary" href="contact.html">Download now</a>
+                </article>
+                <article class="news-item">
+                    <h3>Ethical AI residency</h3>
+                    <p>Three startups are selected for an immersive residency program focusing on regulatory readiness and accountability.</p>
+                    <a class="button button--secondary" href="contact.html">Apply today</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section--muted" aria-labelledby="news-resources">
+            <div class="section__heading">
+                <h2 id="news-resources">Resources</h2>
+                <p>Our publications and toolkits help teams scale responsible AI practices.</p>
+            </div>
+            <div class="card-grid">
+                <article class="card">
+                    <h3>Policy playbook</h3>
+                    <p>A curated set of templates to align governance with the evolving European AI Act.</p>
+                </article>
+                <article class="card">
+                    <h3>Explainability toolbox</h3>
+                    <p>Open-source libraries for model inspection, scenario analysis, and fairness assessments.</p>
+                </article>
+                <article class="card">
+                    <h3>Community newsletter</h3>
+                    <p>Quarterly insights from partners experimenting with responsible AI in complex settings.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section--surface" aria-labelledby="news-participate">
+            <div class="section__heading">
+                <h2 id="news-participate">Participate</h2>
+                <p>We welcome contributions from practitioners, policy-makers, and students.</p>
+            </div>
+            <div class="news-grid">
+                <article class="news-item">
+                    <h3>Call for speakers</h3>
+                    <p>Submit case studies, research talks, or live demos to feature in our community gatherings.</p>
+                </article>
+                <article class="news-item">
+                    <h3>Volunteer with us</h3>
+                    <p>Support outreach programs that bring responsible AI literacy to local schools and civic groups.</p>
+                </article>
+                <article class="news-item">
+                    <h3>Partner spotlights</h3>
+                    <p>Tell us about your latest achievements to be featured in the AWARENET spotlight series.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year"></span> AWARENET. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
