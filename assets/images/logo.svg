@@ -1,0 +1,17 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">AWARENET logo</title>
+  <desc id="desc">Logo astratto con nodi connessi che formano una lettera A stilizzata</desc>
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3e7cb1" />
+      <stop offset="100%" stop-color="#1b2a4b" />
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="56" fill="url(#gradient)" opacity="0.18" />
+  <path d="M60 18l28 84h-12l-6.8-22.8H50.8L44 102H32L60 18zm2 49.8l-6-19.8-6.2 19.8H62z" fill="#1b2a4b" />
+  <g fill="#f0b429">
+    <circle cx="60" cy="18" r="4" />
+    <circle cx="88" cy="102" r="4" />
+    <circle cx="32" cy="102" r="4" />
+  </g>
+</svg>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWARENET</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a class="navbar__brand" href="#home" aria-label="AWARENET">
+                <img src="assets/images/logo.svg" alt="AWARENET logo" class="navbar__logo">
+                <span class="navbar__title">AWARENET</span>
+            </a>
+            <button class="navbar__toggle" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+            <ul id="primary-navigation" class="navbar__menu">
+                <li class="navbar__item"><a href="#home" class="navbar__link">Home</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link navbar__link--disabled" aria-disabled="true" tabindex="-1">Research</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link navbar__link--disabled" aria-disabled="true" tabindex="-1">Team</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link navbar__link--disabled" aria-disabled="true" tabindex="-1">News</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link navbar__link--disabled" aria-disabled="true" tabindex="-1">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="section section--hero" aria-labelledby="home-title">
+            <div class="section__content">
+                <h1 id="home-title">Benvenuti in AWARENET</h1>
+                <p>Un network multidisciplinare dedicato allo sviluppo di soluzioni di intelligenza artificiale responsabile e interpretabile.</p>
+                <a class="button" href="#contattaci">Contattaci</a>
+            </div>
+            <aside class="hero-highlight" id="contattaci" aria-label="Contatti rapidi">
+                <p><strong>Email:</strong> <a href="mailto:info@awarenet.org">info@awarenet.org</a></p>
+                <p><strong>Indirizzo:</strong> Via dell'Innovazione 42, 35100 Padova (PD)</p>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year"></span> AWARENET. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script>
+        const toggleButton = document.querySelector('.navbar__toggle');
+        const navigation = document.querySelector('#primary-navigation');
+
+        toggleButton.addEventListener('click', () => {
+            const expanded = toggleButton.getAttribute('aria-expanded') === 'true';
+            toggleButton.setAttribute('aria-expanded', String(!expanded));
+            navigation.classList.toggle('navbar__menu--open');
+        });
+
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
