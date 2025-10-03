@@ -1,6 +1,6 @@
 # AWARENET Website
 
-Questa è una pagina web statica pensata per presentare il network AWARENET. L'interfaccia richiama la struttura del sito [dynamical-inference.ai](https://dynamical-inference.ai/) con una barra di navigazione orizzontale che include il logo e le sezioni principali del sito.
+Questa è una pagina web statica pensata per presentare il network AWARENET. 
 
 ## Struttura del progetto
 
