@@ -12,123 +12,95 @@
 <body>
     <header class="site-header">
         <nav class="navbar">
-            <a class="navbar__brand" href="#home" aria-label="AWARENET">
+            <a class="navbar__brand" href="index.html" aria-label="AWARENET">
                 <img src="assets/images/logo.svg" alt="AWARENET logo" class="navbar__logo">
                 <span class="navbar__title">AWARENET</span>
             </a>
             <button class="navbar__toggle" aria-expanded="false" aria-controls="primary-navigation">☰</button>
             <ul id="primary-navigation" class="navbar__menu">
-                <li class="navbar__item"><a href="#home" class="navbar__link">Home</a></li>
-                <li class="navbar__item"><a href="#research" class="navbar__link">Research</a></li>
-                <li class="navbar__item"><a href="#team" class="navbar__link">Team</a></li>
-                <li class="navbar__item"><a href="#news" class="navbar__link">News</a></li>
-                <li class="navbar__item"><a href="#contact" class="navbar__link">Contact</a></li>
+                <li class="navbar__item"><a href="index.html" class="navbar__link navbar__link--active">Home</a></li>
+                <li class="navbar__item"><a href="research.html" class="navbar__link">Research</a></li>
+                <li class="navbar__item"><a href="team.html" class="navbar__link">Team</a></li>
+                <li class="navbar__item"><a href="news.html" class="navbar__link">News</a></li>
+                <li class="navbar__item"><a href="contact.html" class="navbar__link">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="section section--hero" aria-labelledby="home-title">
+        <section class="section section--hero" aria-labelledby="home-title">
             <div class="section__content">
                 <h1 id="home-title">Discover AWARENET: mapping the brain’s pathways to consciousness</h1>
                 <p>A multidisciplinary network dedicated to developing responsible, interpretable artificial intelligence solutions informed by cutting-edge neuroscience.</p>
-                <a class="button" href="#contact">Contact us</a>
+                <a class="button" href="contact.html">Contact us</a>
             </div>
             <aside class="hero-highlight" aria-label="Quick contacts">
                 <p><strong>Email:</strong> <a href="mailto:info@awarenet.org">info@awarenet.org</a></p>
                 <p><strong>Address:</strong> Via dell'Innovazione 42, 35100 Padova (PD)</p>
             </aside>
         </section>
-        <section id="research" class="section section--surface" aria-labelledby="research-title">
+
+        <section class="section section--surface" aria-labelledby="about-title">
             <div class="section__heading">
-                <h2 id="research-title">Interdisciplinary research</h2>
-                <p>We bring together data scientists, ethicists, and industry leaders to transform artificial intelligence research into trustworthy, responsible solutions.</p>
+                <h2 id="about-title">What we do</h2>
+                <p>AWARENET unites academic excellence and entrepreneurial drive to turn trustworthy AI into a reality.</p>
             </div>
             <div class="card-grid">
-                <article class="card" aria-labelledby="research-interpretability">
-                    <h3 id="research-interpretability">Model interpretability</h3>
-                    <p>We develop tools that transparently explain machine learning decisions, with a focus on highly regulated sectors.</p>
+                <article class="card" aria-labelledby="about-research">
+                    <h3 id="about-research">Interdisciplinary research</h3>
+                    <p>From explainable models to governance frameworks, we develop tools that are ready for adoption in highly regulated environments.</p>
+                    <a class="button button--secondary" href="research.html">Explore our work</a>
                 </article>
-                <article class="card" aria-labelledby="research-governance">
-                    <h3 id="research-governance">Governance and compliance</h3>
-                    <p>We define organizational frameworks that help companies comply with emerging guidelines and regulations such as the European AI Act.</p>
+                <article class="card" aria-labelledby="about-team">
+                    <h3 id="about-team">An extended network</h3>
+                    <p>Universities, startups, and institutions collaborate within AWARENET to bridge fundamental research with industrial needs.</p>
+                    <a class="button button--secondary" href="team.html">Meet the team</a>
                 </article>
-                <article class="card" aria-labelledby="research-impact">
-                    <h3 id="research-impact">Social impact</h3>
-                    <p>We analyze the effects of AI adoption on communities to promote an equitable and sustainable digital transformation.</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="team" class="section section--muted" aria-labelledby="team-title">
-            <div class="section__heading">
-                <h2 id="team-title">A network of professionals</h2>
-                <p>University researchers, tech startups, and institutional partners collaborate to accelerate responsible innovation.</p>
-            </div>
-            <div class="timeline" aria-label="Network history">
-                <div class="timeline__event">
-                    <span class="timeline__year">2019</span>
-                    <p>AWARENET is founded with the goal of connecting Italian excellence in responsible research.</p>
-                </div>
-                <div class="timeline__event">
-                    <span class="timeline__year">2021</span>
-                    <p>Launch of the first joint labs with public entities and companies for interpretable AI pilot projects.</p>
-                </div>
-                <div class="timeline__event">
-                    <span class="timeline__year">2023</span>
-                    <p>Start of a mentoring program for early-stage startups developing ethical AI solutions.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="news" class="section section--surface" aria-labelledby="news-title">
-            <div class="section__heading">
-                <h2 id="news-title">Updates</h2>
-                <p>Events, publications, and opportunities to stay informed about our activities.</p>
-            </div>
-            <div class="news-grid">
-                <article class="news-item">
-                    <h3>"Responsible AI" workshop</h3>
-                    <p>A collaborative training day with universities and companies to share best practices on implementing transparent systems.</p>
-                    <a class="button button--secondary" href="#contact">Join us</a>
-                </article>
-                <article class="news-item">
-                    <h3>2024 annual report</h3>
-                    <p>Discover how AWARENET-funded projects improved decision-process traceability through explainable AI tools.</p>
-                    <a class="button button--secondary" href="#contact">Download now</a>
+                <article class="card" aria-labelledby="about-news">
+                    <h3 id="about-news">Knowledge sharing</h3>
+                    <p>We publish reports, host workshops, and connect communities that are shaping the future of responsible artificial intelligence.</p>
+                    <a class="button button--secondary" href="news.html">Read the news</a>
                 </article>
             </div>
         </section>
 
-        <section id="contact" class="section section--muted" aria-labelledby="contact-title">
+        <section class="section section--muted" aria-labelledby="approach-title">
             <div class="section__heading">
-                <h2 id="contact-title">Collaborate with us</h2>
-                <p>Write to us to propose new initiatives, request consulting, or join the AWARENET network.</p>
+                <h2 id="approach-title">Our approach</h2>
+                <p>We map the journey from theoretical discovery to real-world solutions through transparent, iterative experimentation.</p>
             </div>
-            <div class="contact-panel">
-                <div>
-                    <h3>Main contacts</h3>
-                    <ul class="contact-list">
-                        <li><strong>Email:</strong> <a href="mailto:info@awarenet.org">info@awarenet.org</a></li>
-                        <li><strong>Phone:</strong> <a href="tel:+390497654321">+39 049 7654321</a></li>
-                        <li><strong>Address:</strong> Via dell'Innovazione 42, 35100 Padova (PD)</li>
-                    </ul>
+            <div class="timeline" aria-label="Highlights">
+                <div class="timeline__event">
+                    <span class="timeline__year">Collaborative labs</span>
+                    <p>Shared facilities allow mixed teams to validate AI explainability tools alongside neuroscientists and ethicists.</p>
                 </div>
-                <form class="contact-form" aria-label="Contact form">
-                    <div class="form-field">
-                        <label for="contact-name">Name</label>
-                        <input type="text" id="contact-name" name="name" placeholder="Your name" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="contact-email">Email</label>
-                        <input type="email" id="contact-email" name="email" placeholder="name@company.com" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="contact-message">Message</label>
-                        <textarea id="contact-message" name="message" rows="4" placeholder="How can we help you?" required></textarea>
-                    </div>
-                    <button type="submit" class="button">Send request</button>
-                </form>
+                <div class="timeline__event">
+                    <span class="timeline__year">Ethics by design</span>
+                    <p>We support organizations in embedding impact assessments into their development lifecycle from the very first prototype.</p>
+                </div>
+                <div class="timeline__event">
+                    <span class="timeline__year">Open knowledge</span>
+                    <p>Guidelines, datasets, and reference implementations are released to help the community reproduce our results.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--surface" aria-labelledby="cta-title">
+            <div class="section__heading">
+                <h2 id="cta-title">Ready to collaborate?</h2>
+                <p>Join the conversation on responsible, human-centric AI and help us transform ideas into impact.</p>
+            </div>
+            <div class="card-grid">
+                <article class="card">
+                    <h3>Stay informed</h3>
+                    <p>Subscribe to our quarterly digest to receive curated updates on upcoming events and publications.</p>
+                    <a class="button" href="news.html">Visit the news hub</a>
+                </article>
+                <article class="card">
+                    <h3>Start a project</h3>
+                    <p>Let’s co-design initiatives that align with your organization’s ambitions and societal responsibilities.</p>
+                    <a class="button" href="contact.html">Get in touch</a>
+                </article>
             </div>
         </section>
     </main>
@@ -137,24 +109,6 @@
         <p>&copy; <span id="current-year"></span> AWARENET. All rights reserved.</p>
     </footer>
 
-    <script>
-        const toggleButton = document.querySelector('.navbar__toggle');
-        const navigation = document.querySelector('#primary-navigation');
-
-        toggleButton.addEventListener('click', () => {
-            const expanded = toggleButton.getAttribute('aria-expanded') === 'true';
-            toggleButton.setAttribute('aria-expanded', String(!expanded));
-            navigation.classList.toggle('navbar__menu--open');
-        });
-
-        navigation.querySelectorAll('.navbar__link').forEach((link) => {
-            link.addEventListener('click', () => {
-                navigation.classList.remove('navbar__menu--open');
-                toggleButton.setAttribute('aria-expanded', 'false');
-            });
-        });
-
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
