@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | AWARENET</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a class="navbar__brand" href="index.html" aria-label="AWARENET">
+                <img src="assets/images/logo.svg" alt="AWARENET logo" class="navbar__logo">
+                <span class="navbar__title">AWARENET</span>
+            </a>
+            <button class="navbar__toggle" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+            <ul id="primary-navigation" class="navbar__menu">
+                <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
+                <li class="navbar__item"><a href="research.html" class="navbar__link">Research</a></li>
+                <li class="navbar__item"><a href="team.html" class="navbar__link">Team</a></li>
+                <li class="navbar__item"><a href="news.html" class="navbar__link">News</a></li>
+                <li class="navbar__item"><a href="contact.html" class="navbar__link navbar__link--active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section section--hero" aria-labelledby="contact-hero-title">
+            <div class="section__content">
+                <h1 id="contact-hero-title">Collaborate with us</h1>
+                <p>Write to us to propose new initiatives, request consulting, or join the AWARENET network.</p>
+                <a class="button" href="mailto:info@awarenet.org">Send an email</a>
+            </div>
+            <aside class="hero-highlight" aria-label="Main contacts">
+                <p><strong>Email:</strong> <a href="mailto:info@awarenet.org">info@awarenet.org</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+390497654321">+39 049 7654321</a></p>
+                <p><strong>Address:</strong> Via dell'Innovazione 42, 35100 Padova (PD)</p>
+            </aside>
+        </section>
+
+        <section class="section section--surface" aria-labelledby="contact-form-title">
+            <div class="section__heading">
+                <h2 id="contact-form-title">Send us a message</h2>
+                <p>We will respond within two business days with next steps tailored to your request.</p>
+            </div>
+            <div class="contact-panel">
+                <div>
+                    <h3>Main contacts</h3>
+                    <ul class="contact-list">
+                        <li><strong>Email:</strong> <a href="mailto:info@awarenet.org">info@awarenet.org</a></li>
+                        <li><strong>Phone:</strong> <a href="tel:+390497654321">+39 049 7654321</a></li>
+                        <li><strong>Address:</strong> Via dell'Innovazione 42, 35100 Padova (PD)</li>
+                    </ul>
+                    <h3>Office hours</h3>
+                    <p>Monday to Friday, 9:00 – 18:00 CET.</p>
+                </div>
+                <form class="contact-form" aria-label="Contact form">
+                    <div class="form-field">
+                        <label for="contact-name">Name</label>
+                        <input type="text" id="contact-name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" name="email" placeholder="name@company.com" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="contact-organization">Organization</label>
+                        <input type="text" id="contact-organization" name="organization" placeholder="Company or institution">
+                    </div>
+                    <div class="form-field">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" rows="4" placeholder="How can we help you?" required></textarea>
+                    </div>
+                    <button type="submit" class="button">Send request</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="section section--muted" aria-labelledby="contact-visit-title">
+            <div class="section__heading">
+                <h2 id="contact-visit-title">Plan your visit</h2>
+                <p>Our headquarters is located in the Padova innovation district and is easily accessible by public transport.</p>
+            </div>
+            <div class="card-grid">
+                <article class="card">
+                    <h3>By train</h3>
+                    <p>We are 10 minutes away from Padova Centrale. From the station, take tram line SIR1 to “Ponti Romani”.</p>
+                </article>
+                <article class="card">
+                    <h3>By car</h3>
+                    <p>Parking is available at the Innovation Center. Please request a visitor permit 24 hours in advance.</p>
+                </article>
+                <article class="card">
+                    <h3>Accessibility</h3>
+                    <p>The venue is equipped with step-free access, assistive listening devices, and private meeting spaces.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year"></span> AWARENET. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
