@@ -19,10 +19,10 @@
             <button class="navbar__toggle" aria-expanded="false" aria-controls="primary-navigation">☰</button>
             <ul id="primary-navigation" class="navbar__menu">
                 <li class="navbar__item"><a href="#home" class="navbar__link">Home</a></li>
-                <li class="navbar__item"><a href="#" class="navbar__link navbar__link--disabled" aria-disabled="true" tabindex="-1">Research</a></li>
-                <li class="navbar__item"><a href="#" class="navbar__link navbar__link--disabled" aria-disabled="true" tabindex="-1">Team</a></li>
-                <li class="navbar__item"><a href="#" class="navbar__link navbar__link--disabled" aria-disabled="true" tabindex="-1">News</a></li>
-                <li class="navbar__item"><a href="#" class="navbar__link navbar__link--disabled" aria-disabled="true" tabindex="-1">Contact</a></li>
+                <li class="navbar__item"><a href="#research" class="navbar__link">Research</a></li>
+                <li class="navbar__item"><a href="#team" class="navbar__link">Team</a></li>
+                <li class="navbar__item"><a href="#news" class="navbar__link">News</a></li>
+                <li class="navbar__item"><a href="#contact" class="navbar__link">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -39,6 +39,98 @@
                 <p><strong>Indirizzo:</strong> Via dell'Innovazione 42, 35100 Padova (PD)</p>
             </aside>
         </section>
+        <section id="research" class="section section--surface" aria-labelledby="research-title">
+            <div class="section__heading">
+                <h2 id="research-title">Ricerca interdisciplinare</h2>
+                <p>Mettiamo in collaborazione scienziati dei dati, esperti di etica e professionisti del settore per trasformare la ricerca sull'intelligenza artificiale in soluzioni affidabili e responsabili.</p>
+            </div>
+            <div class="card-grid">
+                <article class="card" aria-labelledby="research-interpretability">
+                    <h3 id="research-interpretability">Interpretabilità dei modelli</h3>
+                    <p>Sviluppiamo strumenti che permettono di spiegare in modo trasparente le decisioni dei sistemi di machine learning, con un focus su settori regolamentati.</p>
+                </article>
+                <article class="card" aria-labelledby="research-governance">
+                    <h3 id="research-governance">Governance e compliance</h3>
+                    <p>Definiamo framework organizzativi che aiutano le aziende a rispettare linee guida e normative emergenti come l'AI Act europeo.</p>
+                </article>
+                <article class="card" aria-labelledby="research-impact">
+                    <h3 id="research-impact">Impatto sociale</h3>
+                    <p>Analizziamo gli effetti dell'adozione dell'IA sulle comunità per promuovere una trasformazione digitale equa e sostenibile.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="team" class="section section--muted" aria-labelledby="team-title">
+            <div class="section__heading">
+                <h2 id="team-title">Un network di professionisti</h2>
+                <p>Ricercatori universitari, start-up tecnologiche e partner istituzionali lavorano insieme per accelerare l'innovazione responsabile.</p>
+            </div>
+            <div class="timeline" aria-label="Storia del network">
+                <div class="timeline__event">
+                    <span class="timeline__year">2019</span>
+                    <p>Fondazione di AWARENET con l'obiettivo di connettere le eccellenze italiane sulla ricerca responsabile.</p>
+                </div>
+                <div class="timeline__event">
+                    <span class="timeline__year">2021</span>
+                    <p>Creazione dei primi laboratori congiunti con enti pubblici e imprese per progetti pilota su IA interpretabile.</p>
+                </div>
+                <div class="timeline__event">
+                    <span class="timeline__year">2023</span>
+                    <p>Avvio del programma di mentoring per startup early-stage impegnate nello sviluppo di soluzioni AI etiche.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="news" class="section section--surface" aria-labelledby="news-title">
+            <div class="section__heading">
+                <h2 id="news-title">Aggiornamenti</h2>
+                <p>Eventi, pubblicazioni e opportunità per rimanere informati sulle nostre attività.</p>
+            </div>
+            <div class="news-grid">
+                <article class="news-item">
+                    <h3>Workshop "AI Responsabile"</h3>
+                    <p>Una giornata di formazione congiunta con università e imprese per condividere best practice sull'implementazione di sistemi trasparenti.</p>
+                    <a class="button button--secondary" href="#contact">Partecipa</a>
+                </article>
+                <article class="news-item">
+                    <h3>Report annuale 2024</h3>
+                    <p>Scopri come i progetti finanziati da AWARENET hanno migliorato la tracciabilità dei processi decisionali grazie a strumenti di explainable AI.</p>
+                    <a class="button button--secondary" href="#contact">Scarica ora</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="section section--muted" aria-labelledby="contact-title">
+            <div class="section__heading">
+                <h2 id="contact-title">Collabora con noi</h2>
+                <p>Scrivici per proporre nuove iniziative, richiedere una consulenza o entrare a far parte del network AWARENET.</p>
+            </div>
+            <div class="contact-panel">
+                <div>
+                    <h3>Contatti principali</h3>
+                    <ul class="contact-list">
+                        <li><strong>Email:</strong> <a href="mailto:info@awarenet.org">info@awarenet.org</a></li>
+                        <li><strong>Telefono:</strong> <a href="tel:+390497654321">+39 049 7654321</a></li>
+                        <li><strong>Indirizzo:</strong> Via dell'Innovazione 42, 35100 Padova (PD)</li>
+                    </ul>
+                </div>
+                <form class="contact-form" aria-label="Modulo di contatto">
+                    <div class="form-field">
+                        <label for="contact-name">Nome</label>
+                        <input type="text" id="contact-name" name="name" placeholder="Il tuo nome" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" name="email" placeholder="nome@azienda.it" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="contact-message">Messaggio</label>
+                        <textarea id="contact-message" name="message" rows="4" placeholder="Come possiamo aiutarti?" required></textarea>
+                    </div>
+                    <button type="submit" class="button">Invia richiesta</button>
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">
@@ -53,6 +145,13 @@
             const expanded = toggleButton.getAttribute('aria-expanded') === 'true';
             toggleButton.setAttribute('aria-expanded', String(!expanded));
             navigation.classList.toggle('navbar__menu--open');
+        });
+
+        navigation.querySelectorAll('.navbar__link').forEach((link) => {
+            link.addEventListener('click', () => {
+                navigation.classList.remove('navbar__menu--open');
+                toggleButton.setAttribute('aria-expanded', 'false');
+            });
         });
 
         document.getElementById('current-year').textContent = new Date().getFullYear();
