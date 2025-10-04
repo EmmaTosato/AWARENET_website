@@ -25,7 +25,7 @@ body {
     flex-direction: column;
     font-family: var(--font-family);
     color: var(--color-text);
-    background: var(--color-background);
+    background: linear-gradient(180deg, #f6f5ff 0%, #f5edff 45%, #fef4ec 100%);
     line-height: 1.6;
 }
 
