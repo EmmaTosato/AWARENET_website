@@ -163,7 +163,6 @@ a:focus {
     gap: 2.5rem;
     align-items: center;
     padding: clamp(2.75rem, 11vh, 4.5rem) 1.5rem clamp(2.5rem, 9vh, 4rem);
-    background: var(--color-background);
     width: min(1200px, 92vw);
     margin: 0 auto;
 }
