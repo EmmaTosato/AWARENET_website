@@ -12,6 +12,7 @@ html {
     --color-accent: #f1c7af;
     --font-family: 'Montserrat', sans-serif;
     --shadow-sm: 0 4px 12px rgba(16, 24, 40, 0.08);
+    --header-offset: 5rem;
 }
 
 * {
@@ -160,7 +161,7 @@ a:focus {
 .section--hero {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2.5rem;
+    gap: clamp(2rem, 4vw, 3rem);
     align-items: center;
     padding: clamp(2.75rem, 11vh, 4.5rem) 1.5rem clamp(2.5rem, 9vh, 4rem);
     background: var(--color-background);
