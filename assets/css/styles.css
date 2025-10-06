@@ -457,6 +457,87 @@ a:focus {
     font-size: 1.05rem;
 }
 
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: clamp(1.5rem, 3vw, 2.75rem);
+}
+
+.objective-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.25rem;
+    align-items: start;
+    padding: clamp(1.5rem, 3vw, 2rem);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid var(--surface-border);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.objective-card::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 6px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    opacity: 0.72;
+}
+
+.objective-card__icon {
+    width: 72px;
+    height: 72px;
+    display: grid;
+    place-items: center;
+    border-radius: 18px;
+    background: rgba(218, 205, 233, 0.28);
+    border: 1px solid rgba(160, 122, 167, 0.32);
+    box-shadow: inset 0 6px 12px rgba(255, 255, 255, 0.45);
+}
+
+.objective-card__icon img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    filter: drop-shadow(0 6px 10px rgba(58, 106, 155, 0.18));
+}
+
+.objective-card__content {
+    display: grid;
+    gap: 0.4rem;
+}
+
+.objective-card__title {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+}
+
+.objective-card__text {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 1rem;
+}
+
+@media (max-width: 680px) {
+    .objective-card {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .objective-card__icon {
+        width: 64px;
+        height: 64px;
+    }
+
+    .objective-card__icon img {
+        width: 42px;
+        height: 42px;
+    }
+}
+
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
