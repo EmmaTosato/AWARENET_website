@@ -10,7 +10,7 @@ html {
     --color-text: #1f1f36;
     --color-muted: #5c5b78;
     --color-accent: #f1c7af;
-    --font-family: 'Montserrat', sans-serif;
+    --font-family: 'Inter', sans-serif;
     --shadow-sm: 0 4px 12px rgba(16, 24, 40, 0.08);
     --header-offset: 5rem;
 }
@@ -25,9 +25,19 @@ body {
     display: flex;
     flex-direction: column;
     font-family: var(--font-family);
+    font-weight: 400;
     color: var(--color-text);
     background: linear-gradient(180deg, #f6f5ff 0%, #f5edff 45%, #fef4ec 100%);
     line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
 }
 
 img {
