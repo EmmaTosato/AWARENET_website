@@ -74,12 +74,12 @@ a:focus {
 }
 
 .navbar__logo {
-    width: 72px;
+    width: 75px;
     height: auto;
 }
 
 .navbar__title {
-    line-height: 1;
+    line-height: 0.5;
 }
 
 .navbar__toggle {
