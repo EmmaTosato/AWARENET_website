@@ -156,11 +156,11 @@ a:focus {
 .navbar__brand {
     display: inline-flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.2rem;
     color: var(--color-primary);
     text-decoration: none;
     position: relative;
-    padding: 0.35rem 0.75rem 0.35rem 0.45rem;
+    padding: 0.45rem 0.65rem 0.45rem 0.45rem;
     border-radius: 999px;
     transition: transform 0.25s ease;
 }
@@ -190,7 +190,16 @@ a:focus {
 
 .navbar__identity {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.navbar__eyebrow {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    font-weight: 600;
+    color: rgba(37, 38, 58, 0.55);
 }
 
 .navbar__title {
