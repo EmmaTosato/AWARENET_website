@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="theme-dawn">
+<body class="theme-dawn contact-page">
     <header class="site-header">
         <nav class="navbar">
             <span class="navbar__brand" aria-label="AWARENET">
@@ -30,17 +30,28 @@
     </header>
 
     <main>
-        <section class="section section--hero" aria-labelledby="contact-hero-title">
-            <div class="section__content">
-                <h1 id="contact-hero-title">Collaborate with us</h1>
-                <p>Write to us to propose new initiatives, request consulting, or join the AWARENET network.</p>
-                <a class="button" href="mailto:info@awarenet.org">Send an email</a>
+        <section class="section section--surface contact-intro" aria-labelledby="contact-intro-title">
+            <div class="section__heading contact-intro__heading">
+                <h1 id="contact-intro-title">Get in touch with AWARENET</h1>
+                <p>Select the most convenient channel to reach our team and we will follow up shortly.</p>
             </div>
-            <aside class="hero-highlight" aria-label="Main contacts">
-                <p><strong>Email:</strong> <a href="mailto:info@awarenet.org">info@awarenet.org</a></p>
-                <p><strong>Phone:</strong> <a href="tel:+390497654321">+39 049 7654321</a></p>
-                <p><strong>Address:</strong> Via dell'Innovazione 42, 35100 Padova (PD)</p>
-            </aside>
+            <div class="contact-info__grid" role="list">
+                <article class="contact-card" role="listitem">
+                    <span class="contact-card__icon" aria-hidden="true"></span>
+                    <h2 class="contact-card__title">Email</h2>
+                    <p>Write to <a href="mailto:info@awarenet.org">info@awarenet.org</a> for collaborations, partnerships, or general enquiries.</p>
+                </article>
+                <article class="contact-card" role="listitem">
+                    <span class="contact-card__icon" aria-hidden="true"></span>
+                    <h2 class="contact-card__title">Phone</h2>
+                    <p>Call us at <a href="tel:+390497654321">+39 049 7654321</a> to speak directly with a member of the coordination office.</p>
+                </article>
+                <article class="contact-card" role="listitem">
+                    <span class="contact-card__icon" aria-hidden="true"></span>
+                    <h2 class="contact-card__title">Main office</h2>
+                    <p>Visit us at Via dell'Innovazione 42, 35100 Padova (PD). Meetings are available upon appointment.</p>
+                </article>
+            </div>
         </section>
 
         <section class="section section--surface" aria-labelledby="contact-form-title">
@@ -49,16 +60,6 @@
                 <p>We will respond within two business days with next steps tailored to your request.</p>
             </div>
             <div class="contact-panel">
-                <div>
-                    <h3>Main contacts</h3>
-                    <ul class="contact-list">
-                        <li><strong>Email:</strong> <a href="mailto:info@awarenet.org">info@awarenet.org</a></li>
-                        <li><strong>Phone:</strong> <a href="tel:+390497654321">+39 049 7654321</a></li>
-                        <li><strong>Address:</strong> Via dell'Innovazione 42, 35100 Padova (PD)</li>
-                    </ul>
-                    <h3>Office hours</h3>
-                    <p>Monday to Friday, 9:00 – 18:00 CET.</p>
-                </div>
                 <form class="contact-form" aria-label="Contact form">
                     <div class="form-field">
                         <label for="contact-name">Name</label>
