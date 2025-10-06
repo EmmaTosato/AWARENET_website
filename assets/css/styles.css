@@ -112,6 +112,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: var(--font-family);
+    font-size: 18px;
     color: var(--color-text);
     background: var(--gradient-background);
     line-height: 1.6;
