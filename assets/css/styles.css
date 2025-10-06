@@ -163,11 +163,12 @@ a:focus {
     padding: 0.45rem 0.65rem 0.45rem 0.45rem;
     border-radius: 999px;
     transition: transform 0.25s ease;
+    cursor: default;
 }
 
 .navbar__brand:focus-visible,
 .navbar__brand:hover {
-    transform: translateY(-1px);
+    transform: none;
 }
 
 .navbar__crest {
@@ -191,7 +192,9 @@ a:focus {
 .navbar__identity {
     display: flex;
     flex-direction: column;
-    gap: 0.35rem;
+    gap: 0;
+    align-items: center;
+    text-align: center;
 }
 
 .navbar__eyebrow {
