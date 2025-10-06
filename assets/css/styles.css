@@ -164,7 +164,7 @@ a:focus {
     padding: 0.45rem 0.65rem 0.45rem 0.45rem;
     border-radius: 999px;
     transition: transform 0.25s ease;
-    cursor: default;
+    cursor: pointer;
 }
 
 .navbar__brand:focus-visible,
