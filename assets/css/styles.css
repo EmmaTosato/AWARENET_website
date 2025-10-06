@@ -170,10 +170,11 @@ a:focus {
     align-items: flex-start;
     align-content: start;
     justify-items: start;
-    padding: clamp(3.25rem, 12vh, 6rem) 1.5rem clamp(3.5rem, 10vh, 5.5rem);
+    padding: clamp(3.25rem, 12vh, 6rem) clamp(1.5rem, 8vw, 6rem) clamp(3.5rem, 10vh, 5.5rem);
     min-height: calc(100vh - var(--header-offset));
-    width: min(1200px, 92vw);
-    margin: 0 auto;
+    width: 100%;
+    max-width: none;
+    margin: 0;
 }
 
 .section--hero > * {
@@ -181,7 +182,7 @@ a:focus {
 }
 
 .section--hero .section__content {
-    max-width: 600px;
+    max-width: min(720px, 100%);
 }
 
 .section--hero h1 {
