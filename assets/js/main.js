@@ -21,4 +21,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
     }
+
+    const eventTitleTarget = document.querySelector('[data-event-title]');
+    if (eventTitleTarget) {
+        const params = new URLSearchParams(window.location.search);
+        const rawTitle = params.get('title');
+
+        if (rawTitle) {
+            const cleanedTitle = rawTitle.trim();
+            if (cleanedTitle.length > 0) {
+                eventTitleTarget.textContent = cleanedTitle;
+                document.title = `${cleanedTitle} | AWARENET`;
+            }
+        }
+    }
 });
