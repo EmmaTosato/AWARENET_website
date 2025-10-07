@@ -1,41 +1,59 @@
 # AWARENET Website
 
-Questa è una pagina web statica pensata per presentare il network AWARENET. 
+Sito web statico multipagina pensato per presentare il network AWARENET, le sue attività di ricerca e i partner coinvolti.
 
 ## Struttura del progetto
 
 ```
 .
+├── index.html               # Home page con panoramica del network
+├── research.html            # Focus su obiettivi e filoni di ricerca
+├── team.html                # Sezione partner e profili del team
+├── news.html                # Archivio notizie ed eventi
+├── event.html               # Template dinamico per il dettaglio evento
+├── contact.html             # Form e recapiti per i contatti
 ├── assets
 │   ├── css
-│   │   └── styles.css      # Stili personalizzati del sito
-│   └── images
-│       └── logo.png        # Logo raster usato nella navbar
-├── index.html               # Pagina principale (Home)
-└── README.md                # Documentazione del progetto
+│   │   └── styles.css       # Stili condivisi e varianti tema
+│   ├── js
+│   │   └── main.js          # Navigazione mobile, anno footer, utilità pagina eventi
+│   ├── images               # Loghi, segnaposto e icone SVG
+│   ├── icons_team           # Cartella pronta per eventuali icone dedicate al team
+│   ├── icons_uni            # Cartella pronta per eventuali loghi/icone universitarie
+│   └── photos_team          # Spazio dove caricare le foto del team
+└── README.md
 ```
 
-## Contenuti della pagina
+## Pagine disponibili
 
-La pagina `index.html` apre direttamente sulla **Home**, che comprende:
+- **Home (`index.html`)** – Hero principale, call-to-action verso ricerca, team e news, obiettivi del network e contatti rapidi.
+- **Research (`research.html`)** – Riassume missione scientifica, aree tematiche e modalità di collaborazione.
+- **Team (`team.html`)** – Presenta istituzioni partner e profili dei membri con link social/professionali.
+- **News (`news.html`)** – Cards per aggiornamenti, eventi e approfondimenti in evidenza.
+- **Event (`event.html`)** – Pagina di dettaglio riutilizzabile: il titolo può essere passato come query string (`?title=...`) e viene aggiornato dallo script principale; previsto spazio per immagine e testo descrittivo.
+- **Contact (`contact.html`)** – Informazioni di contatto e invito alla collaborazione.
 
-- un hero introduttivo con titolo, descrizione e pulsante di invito all'azione;
-- un riquadro laterale con recapiti rapidi (email e indirizzo) per consentire il contatto immediato.
+Tutte le pagine condividono la stessa barra di navigazione responsive e il footer con aggiornamento automatico dell'anno corrente.
 
-La barra di navigazione mostra già le voci "Research", "Team", "News" e "Contact" per rispecchiare il menu desiderato, ma al momento sono disattivate in attesa di eventuali pagine dedicate.
+## Stili e risorse condivise
 
-## Personalizzazione
+- `assets/css/styles.css` contiene variabili di colore, layout CSS grid/flex e varianti tema usate dalle diverse pagine. Personalizza qui palette, tipografia e componenti comuni.
+- `assets/js/main.js` gestisce il menu mobile (apertura/chiusura e stato `aria-expanded`), aggiorna dinamicamente l'anno nel footer e, se presente la pagina evento, imposta titolo, `<title>` del documento e formattazione del placeholder rispetto ai media caricati.
+- Le sottocartelle di `assets/images` raccolgono segnaposto (es. `placeholders/`) e icone social (`social/`). Sostituisci i file con le versioni definitive mantenendo i percorsi, oppure aggiorna gli attributi `src` nei file HTML.
 
-- Aggiorna il logo sostituendo `assets/images/logo.png` con la tua versione (mantenendo lo stesso nome file oppure aggiornando il percorso nell'`<img>` della navbar).
-- Modifica i testi dell'hero e del riquadro contatti direttamente in `index.html` per adattarli ai contenuti reali.
-- Personalizza la palette di colori aggiornando le variabili CSS dichiarate in cima a `assets/css/styles.css`.
+## Personalizzazione rapida
+
+1. **Logo e identità** – aggiorna l'elemento `.navbar__crest` o sostituisci `assets/images/logo.png` con il tuo logo.
+2. **Contenuti** – modifica testi direttamente nei file HTML; ogni sezione è già organizzata con classi semantiche (`section__heading`, `card-grid`, ecc.).
+3. **Eventi** – duplica `event.html` per creare landing dedicate oppure collega dalla pagina `news.html` aggiungendo il parametro `title` all'URL per personalizzare il titolo in modo rapido.
+4. **Immagini del team** – carica le foto in `assets/photos_team` oppure sostituisci i segnaposto in `assets/images/placeholders/` con versioni reali (consigliata la stessa proporzione per mantenere il layout).
 
 ## Anteprima locale
 
-Trattandosi di un sito statico è sufficiente aprire `index.html` in un browser moderno. Per una migliore esperienza di sviluppo puoi servire il sito con un piccolo server locale:
+Essendo un sito statico è sufficiente aprire una pagina nel browser. Per una migliore esperienza durante lo sviluppo può essere utile un piccolo server locale:
 
 ```bash
 python3 -m http.server
 ```
 
-Visitando `http://localhost:8000` potrai navigare il sito e testare il comportamento della barra di navigazione responsive.
+Visitando `http://localhost:8000` potrai navigare tutte le pagine e verificare il comportamento della barra di navigazione responsive e della pagina eventi dinamica.
