@@ -614,8 +614,9 @@ a:focus {
 }
 
 .contact-intro__heading {
-    justify-items: center;
-    text-align: center;
+    justify-items: start;
+    align-items: start;
+    text-align: left;
     max-width: 100%;
 }
 
@@ -635,6 +636,8 @@ a:focus {
     border: 1px solid var(--card-border);
     border-radius: 18px;
     box-shadow: var(--shadow-sm);
+    justify-items: start;
+    text-align: left;
 }
 
 .contact-card__icon {
