@@ -347,10 +347,10 @@ a:focus {
 }
 
 .hero-institutions {
-    background: var(--gradient-background);
+    background: var(--color-background);
     color: var(--color-text);
-    padding: clamp(3rem, 10vh, 5rem) clamp(1.5rem, 6vw, 4rem) clamp(3rem, 12vh, 5rem);
-    min-height: min(720px, 100vh);
+    padding: clamp(4rem, 12vh, 5.5rem) clamp(1.5rem, 6vw, 4rem) clamp(4rem, 14vh, 6rem);
+    min-height: auto;
 }
 
 .hero-institutions::before {
@@ -360,7 +360,7 @@ a:focus {
 .hero-institutions__layout {
     display: grid;
     gap: clamp(2rem, 4vw, 3.5rem);
-    align-content: center;
+    align-content: start;
 }
 
 .hero-institutions .section__content {
