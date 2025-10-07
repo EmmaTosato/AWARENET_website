@@ -622,7 +622,7 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: min(100%, 9rem);
+    width: min(100%, 7.5rem);
     justify-self: center;
     aspect-ratio: 1;
     border-radius: 16px;
