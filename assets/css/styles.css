@@ -992,7 +992,7 @@ a:focus {
 }
 
 .contact-message-section .contact-panel {
-    max-width: min(680px, 100%);
+    max-width: min(720px, 96vw);
     margin-inline: auto;
     width: 100%;
 }
@@ -1018,8 +1018,8 @@ a:focus {
 
 .contact-form {
     display: grid;
-    gap: 1rem;
-    padding: 2rem;
+    gap: clamp(0.75rem, 1vw + 0.5rem, 1rem);
+    padding: clamp(1.25rem, 2vw + 1rem, 1.75rem);
     background: rgba(255, 255, 255, 0.85);
     border-radius: 18px;
     box-shadow: var(--shadow-sm);
@@ -1040,7 +1040,7 @@ a:focus {
 .form-field textarea {
     border: 1px solid var(--surface-border);
     border-radius: 10px;
-    padding: 0.75rem 1rem;
+    padding: 0.65rem 0.95rem;
     font: inherit;
     background: white;
     color: var(--color-text);
