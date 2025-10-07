@@ -44,4 +44,64 @@ document.addEventListener('DOMContentLoaded', () => {
             description.classList.toggle('event-detail__placeholder--wrap', hasMedia);
         }
     }
+
+    const contactForm = document.querySelector('[data-contact-form]');
+    if (contactForm) {
+        const statusMessage = contactForm.querySelector('[data-form-status]');
+        const contactEmail = (contactForm.dataset.contactEmail || '').trim();
+
+        const updateStatus = (message, tone = 'info') => {
+            if (!statusMessage) {
+                return;
+            }
+
+            statusMessage.textContent = message;
+            statusMessage.classList.remove('form-status--success', 'form-status--error');
+
+            if (tone === 'success') {
+                statusMessage.classList.add('form-status--success');
+            } else if (tone === 'error') {
+                statusMessage.classList.add('form-status--error');
+            }
+        };
+
+        contactForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            if (!contactEmail) {
+                updateStatus('The email service is not configured yet. Please try again soon.', 'error');
+                return;
+            }
+
+            const formData = new FormData(contactForm);
+            const getValue = (field) => {
+                const value = formData.get(field);
+                return value ? String(value).trim() : '';
+            };
+
+            const name = getValue('name');
+            const email = getValue('email');
+            const organization = getValue('organization');
+            const message = getValue('message');
+
+            const emailLines = [
+                'You have received a new contact request from the AWARENET website.',
+                '',
+                `Name: ${name || 'Not provided'}`,
+                `Email: ${email || 'Not provided'}`,
+                `Organization: ${organization || 'Not provided'}`,
+                '',
+                'Message:',
+                message || 'No message provided.'
+            ];
+
+            const subject = encodeURIComponent(`New contact request from ${name || 'AWARENET website'}`);
+            const body = encodeURIComponent(emailLines.join('\n'));
+            const mailtoLink = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
+
+            window.location.href = mailtoLink;
+            updateStatus('We have opened your email client to finalize the request. Please press send to complete your message.', 'success');
+            contactForm.reset();
+        });
+    }
 });
