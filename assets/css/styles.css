@@ -449,12 +449,12 @@ a:focus {
 
 .section__heading > h1,
 .section__content > h1 {
-    font-size: clamp(1.83rem, 4.2vw, 2.73rem);
+    font-size: calc(clamp(1.83rem, 4.2vw, 2.73rem) - 2pt);
 }
 
 .section__heading > h2,
 .section__content > h2 {
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-size: calc(clamp(1.75rem, 4vw, 2.5rem) - 2pt);
 }
 
 .section__heading p {
