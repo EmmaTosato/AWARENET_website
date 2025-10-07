@@ -628,7 +628,8 @@ a:focus {
     box-shadow: var(--shadow-sm);
 }
 
-.card h3 {
+.card h3,
+.card h2 {
     margin-top: 0;
     margin-bottom: 0.75rem;
     font-size: 1.2rem;
@@ -652,6 +653,7 @@ a:focus {
     text-align: left;
     max-width: 100%;
 }
+
 
 .contact-info__grid {
     display: grid;
