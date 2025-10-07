@@ -28,6 +28,8 @@ html {
     --header-shadow: 0 12px 35px rgba(62, 93, 150, 0.12);
     --crest-shadow: rgba(62, 93, 150, 0.32);
     --hero-overlay: linear-gradient(135deg, rgba(35, 44, 73, 0.78) 0%, rgba(49, 59, 92, 0.42) 60%, rgba(78, 90, 122, 0.26) 100%);
+    --color-title-strong: #324d88;
+    --color-year-date: #3b2f70;
 }
 
 body.theme-dawn {
@@ -52,6 +54,8 @@ body.theme-dawn {
     --header-shadow: 0 12px 35px rgba(62, 93, 150, 0.12);
     --crest-shadow: rgba(62, 93, 150, 0.32);
     --hero-overlay: linear-gradient(135deg, rgba(35, 44, 73, 0.78) 0%, rgba(49, 59, 92, 0.42) 60%, rgba(78, 90, 122, 0.26) 100%);
+    --color-title-strong: #324d88;
+    --color-year-date: #3b2f70;
 }
 
 body.theme-horizon {
@@ -76,6 +80,8 @@ body.theme-horizon {
     --header-shadow: 0 12px 35px rgba(58, 104, 153, 0.12);
     --crest-shadow: rgba(58, 104, 153, 0.3);
     --hero-overlay: linear-gradient(135deg, rgba(36, 50, 74, 0.74) 0%, rgba(52, 70, 100, 0.4) 60%, rgba(88, 105, 129, 0.24) 100%);
+    --color-title-strong: #2f5a92;
+    --color-year-date: #2f3d7a;
 }
 
 body.theme-dusk {
@@ -100,6 +106,8 @@ body.theme-dusk {
     --header-shadow: 0 12px 35px rgba(64, 89, 142, 0.12);
     --crest-shadow: rgba(64, 89, 142, 0.32);
     --hero-overlay: linear-gradient(135deg, rgba(38, 45, 70, 0.76) 0%, rgba(56, 62, 90, 0.42) 60%, rgba(88, 92, 120, 0.24) 100%);
+    --color-title-strong: #384f87;
+    --color-year-date: #3a2f6f;
 }
 
 * {
@@ -766,13 +774,13 @@ a:focus {
     justify-content: space-between;
     gap: 1rem;
     padding: 1.5rem 1.75rem;
-    font-weight: 600;
-    color: var(--color-primary);
+    font-weight: 700;
+    color: var(--color-year-date);
 }
 
 .news-year__label {
-    font-size: 1.1rem;
-    letter-spacing: 0.02em;
+    font-size: 1.5rem;
+    letter-spacing: 0.04em;
 }
 
 .news-year summary::-webkit-details-marker {
@@ -782,7 +790,7 @@ a:focus {
 .news-year summary::after {
     content: "\25BC";
     font-size: 0.95rem;
-    color: var(--color-primary);
+    color: var(--color-year-date);
     margin-left: 0.75rem;
     background: transparent;
     line-height: 1;
@@ -812,8 +820,8 @@ a:focus {
 
 .news-card__title {
     margin: 0;
-    font-size: 1.15rem;
-    color: var(--color-primary);
+    font-size: 1.3rem;
+    color: var(--color-title-strong);
 }
 
 .news-card__title a {
@@ -827,12 +835,13 @@ a:focus {
 
 .news-card__date {
     margin: 0;
-    color: var(--color-muted);
-    font-weight: 500;
+    color: var(--color-year-date);
+    font-weight: 600;
+    font-size: 1.1rem;
 }
 
 .news-card__date--upcoming {
-    color: var(--color-primary);
+    color: var(--color-year-date);
 }
 
 .news-card__description {
