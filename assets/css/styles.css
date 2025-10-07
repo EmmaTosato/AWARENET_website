@@ -589,18 +589,23 @@ a:focus {
 }
 
 .contact-card__icon {
-    display: grid;
-    place-items: center;
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 1.25rem;
-    background: var(--gradient-button);
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.55), 0 10px 20px rgba(62, 93, 150, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 12rem);
+    justify-self: center;
+    aspect-ratio: 1;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid var(--surface-border);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
 }
 
 .contact-card__icon img {
-    width: 1.9rem;
-    height: 1.9rem;
+    width: clamp(3rem, 38%, 4.25rem);
+    max-width: 100%;
+    height: auto;
 }
 
 .contact-card__title {
