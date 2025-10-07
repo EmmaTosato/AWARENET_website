@@ -991,8 +991,13 @@ a:focus {
     text-align: center;
 }
 
+
+.contact-page .section {
+    padding-block: clamp(3.25rem, 10vh, 4.35rem);
+}
+
 .contact-message-section .contact-panel {
-    max-width: min(680px, 100%);
+    max-width: min(720px, 100%);
     margin-inline: auto;
     width: 100%;
 }
@@ -1018,8 +1023,8 @@ a:focus {
 
 .contact-form {
     display: grid;
-    gap: 1rem;
-    padding: 2rem;
+    gap: 0.65rem;
+    padding: 1.25rem 1.85rem;
     background: rgba(255, 255, 255, 0.85);
     border-radius: 18px;
     box-shadow: var(--shadow-sm);
