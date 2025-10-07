@@ -631,8 +631,8 @@ a:focus {
     gap: clamp(0.8rem, 1.8vw, 1.1rem);
     padding: clamp(1.2rem, 2.4vw, 2.15rem) clamp(1rem, 2vw, 1.75rem);
     min-height: clamp(12.5rem, 18vw, 14.75rem);
-    background: rgba(255, 255, 255, 0.88);
-    border: 1px solid var(--surface-border);
+    background: var(--card-fill);
+    border: 1px solid var(--card-border);
     border-radius: 18px;
     box-shadow: var(--shadow-sm);
 }
@@ -1141,7 +1141,7 @@ a:focus {
 }
 
 .contact-message-section .contact-panel {
-    max-width: min(680px, 100%);
+    max-width: min(620px, 100%);
     margin-inline: auto;
     width: 100%;
 }
@@ -1168,7 +1168,7 @@ a:focus {
 .contact-form {
     display: grid;
     gap: 0.45rem;
-    padding: 0.95rem 1.35rem 1.1rem;
+    padding: 0.8rem 1.15rem 0.95rem;
     background: rgba(255, 255, 255, 0.85);
     border-radius: 18px;
     box-shadow: var(--shadow-sm);
@@ -1203,6 +1203,21 @@ a:focus {
 
 .form-field textarea {
     resize: vertical;
+}
+
+.form-status {
+    margin-top: 0.9rem;
+    font-size: 0.95rem;
+    color: var(--color-muted);
+    min-height: 1.5rem;
+}
+
+.form-status--success {
+    color: var(--color-primary);
+}
+
+.form-status--error {
+    color: #b24d57;
 }
 
 .hero-highlight {
