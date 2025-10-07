@@ -667,9 +667,10 @@ a:focus {
 
 .highlights-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(0, clamp(200px, 26vw, 240px)));
     gap: clamp(1rem, 2vw, 1.5rem);
     align-items: stretch;
+    justify-content: center;
 }
 
 .highlight-card {
@@ -685,13 +686,13 @@ a:focus {
 
 .highlight-card__media {
     background: linear-gradient(135deg, rgba(58, 104, 153, 0.35), rgba(160, 122, 167, 0.5));
-    aspect-ratio: 5 / 3;
+    aspect-ratio: 4 / 3;
 }
 
 .highlight-card__body {
     display: grid;
     gap: 0.5rem;
-    padding: 0 1.25rem 1.5rem;
+    padding: 0 1.1rem 1.3rem;
 }
 
 .highlight-card__title {
