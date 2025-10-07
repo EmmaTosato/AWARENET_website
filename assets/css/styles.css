@@ -950,6 +950,17 @@ a:focus {
     color: var(--color-muted);
 }
 
+
+.contact-message-section .section__heading {
+    text-align: center;
+}
+
+.contact-message-section .contact-panel {
+    max-width: min(680px, 100%);
+    margin-inline: auto;
+    width: 100%;
+}
+
 .contact-panel {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
