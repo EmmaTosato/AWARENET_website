@@ -1247,10 +1247,10 @@ a:focus {
 
 .contact-form {
     display: grid;
-    gap: clamp(0.75rem, 2vw, 1rem);
-    padding: 0.85rem clamp(1rem, 2.5vw, 1.5rem) 1.1rem;
-    background: rgba(242, 244, 250, 0.92);
-    border-radius: 14px;
+    gap: clamp(0.6rem, 1.8vw, 0.85rem);
+    padding: 0.7rem clamp(0.85rem, 2vw, 1.25rem) 0.95rem;
+    background: rgba(242, 244, 250, 0.9);
+    border-radius: 16px;
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--surface-border);
 }
@@ -1269,11 +1269,12 @@ a:focus {
 .form-field input,
 .form-field textarea {
     border: 1px solid var(--surface-border);
-    border-radius: 8px;
-    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    padding: 0.55rem 0.9rem;
     font: inherit;
     background: #f7f7fb;
     color: var(--color-text);
+    line-height: 1.4;
 }
 
 .form-field--organization {
@@ -1295,17 +1296,17 @@ a:focus {
 .organization-select__toggle {
     position: absolute;
     top: 50%;
-    right: 0.75rem;
+    right: 0.65rem;
     transform: translateY(-50%);
     border: none;
     background: transparent;
     color: var(--color-muted);
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.95rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.2rem;
+    padding: 0.15rem;
 }
 
 .organization-select__toggle:focus-visible {
@@ -1365,8 +1366,8 @@ a:focus {
 
 .form-field textarea {
     resize: vertical;
-    height: 4.5rem;
-    min-height: 4.5rem;
+    height: 4rem;
+    min-height: 3.8rem;
 }
 
 .form-status {
@@ -1406,13 +1407,19 @@ a:focus {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.65rem 1.35rem;
-    border-radius: 999px;
+    padding: 0.55rem 1.2rem;
+    border-radius: 12px;
     background: var(--gradient-button);
     color: white;
     font-weight: 600;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: var(--shadow-sm);
+}
+
+.contact-form .button {
+    align-self: flex-end;
+    min-width: 9.5rem;
+    margin-top: 0.2rem;
 }
 
 .button:hover,
