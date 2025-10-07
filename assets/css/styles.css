@@ -29,6 +29,7 @@ html {
     --crest-shadow: rgba(62, 93, 150, 0.32);
     --hero-overlay: linear-gradient(135deg, rgba(35, 44, 73, 0.78) 0%, rgba(49, 59, 92, 0.42) 60%, rgba(78, 90, 122, 0.26) 100%);
     --color-title-strong: #324d88;
+    --color-heading: #1f3f73;
     --color-year-date: #2a1f5a;
     --layout-max-width: 1200px;
     --layout-fluid-width: min(92vw, var(--layout-max-width));
@@ -79,6 +80,7 @@ body.theme-dawn {
     --crest-shadow: rgba(62, 93, 150, 0.32);
     --hero-overlay: linear-gradient(135deg, rgba(35, 44, 73, 0.78) 0%, rgba(49, 59, 92, 0.42) 60%, rgba(78, 90, 122, 0.26) 100%);
     --color-title-strong: #324d88;
+    --color-heading: #1f3f73;
     --color-year-date: #2a1f5a;
 }
 
@@ -105,6 +107,7 @@ body.theme-horizon {
     --crest-shadow: rgba(58, 104, 153, 0.3);
     --hero-overlay: linear-gradient(135deg, rgba(36, 50, 74, 0.74) 0%, rgba(52, 70, 100, 0.4) 60%, rgba(88, 105, 129, 0.24) 100%);
     --color-title-strong: #2f5a92;
+    --color-heading: #1f3f73;
     --color-year-date: #1f285f;
 }
 
@@ -131,6 +134,7 @@ body.theme-dusk {
     --crest-shadow: rgba(64, 89, 142, 0.32);
     --hero-overlay: linear-gradient(135deg, rgba(38, 45, 70, 0.76) 0%, rgba(56, 62, 90, 0.42) 60%, rgba(88, 92, 120, 0.24) 100%);
     --color-title-strong: #384f87;
+    --color-heading: #1f3f73;
     --color-year-date: #281d56;
 }
 
@@ -416,7 +420,7 @@ a:focus {
 }
 
 .hero-institutions h1 {
-    color: var(--color-primary);
+    color: var(--color-heading);
     font-size: clamp(1.8rem, 3.4vw, 2.6rem);
     letter-spacing: -0.01em;
     margin-bottom: 0.5rem;
@@ -475,7 +479,7 @@ a:focus {
 .institution-card h3 {
     margin: 0;
     font-size: 1.12rem;
-    color: #071a3c;
+    color: var(--color-heading);
 }
 
 .hero-media {
@@ -526,7 +530,7 @@ a:focus {
 .section__heading > :is(h1, h2),
 .section__content > :is(h1, h2) {
     margin: 0;
-    color: var(--color-primary);
+    color: var(--color-heading);
 }
 
 .section__heading > h1,
@@ -602,7 +606,7 @@ a:focus {
 .objective-card__title {
     margin: 0;
     font-size: 1.2rem;
-    color: var(--color-primary);
+    color: var(--color-heading);
 }
 
 .objective-card__text {
@@ -637,7 +641,7 @@ a:focus {
     margin-top: 0;
     margin-bottom: 0.75rem;
     font-size: 1.2rem;
-    color: var(--color-primary);
+    color: var(--color-heading);
 }
 
 .contact-page .section--surface {
@@ -703,7 +707,7 @@ a:focus {
 .contact-card__title {
     margin: 0;
     font-size: 1.2rem;
-    color: var(--color-primary);
+    color: var(--color-heading);
 }
 
 .contact-card p {
@@ -737,7 +741,7 @@ a:focus {
 
 .timeline__year {
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--color-heading);
 }
 
 .timeline__event p {
@@ -818,7 +822,7 @@ a:focus {
     margin: 0;
     font-size: 1.1rem;
     line-height: 1.35;
-    color: var(--color-primary);
+    color: var(--color-heading);
     flex: 1;
     min-width: 0;
 }
@@ -941,7 +945,7 @@ a:focus {
 .news-card__title {
     margin: 0;
     font-size: 1.3rem;
-    color: var(--color-primary);
+    color: var(--color-heading);
 }
 
 .news-card__title a {
@@ -1122,6 +1126,11 @@ a:focus {
     flex: 1;
 }
 
+.team-card__body h3 {
+    margin: 0;
+    color: var(--color-heading);
+}
+
 .team-card__role {
     margin: 0;
     font-weight: 600;
@@ -1201,7 +1210,7 @@ a:focus {
 
 .news-item h3 {
     margin: 0;
-    color: var(--color-primary);
+    color: var(--color-heading);
 }
 
 .news-item p {
