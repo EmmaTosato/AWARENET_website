@@ -184,6 +184,7 @@ a:focus {
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
+    position: relative;
 }
 
 
@@ -452,11 +453,23 @@ a:focus {
     overflow: hidden;
 }
 
+.institution-card:first-child .institution-card__logo {
+    overflow: visible;
+}
+
 .institution-card__logo img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
     filter: drop-shadow(0 6px 12px rgba(64, 89, 142, 0.12));
+}
+
+.institution-card:first-child .institution-card__logo img {
+    transform: scale(1.12);
+}
+
+.institution-card:last-child .institution-card__logo img {
+    transform: scale(0.92);
 }
 
 .institution-card h3 {
@@ -619,7 +632,8 @@ a:focus {
     box-shadow: var(--shadow-sm);
 }
 
-.card h3 {
+.card h3,
+.card h2 {
     margin-top: 0;
     margin-bottom: 0.75rem;
     font-size: 1.2rem;
@@ -643,6 +657,7 @@ a:focus {
     text-align: left;
     max-width: 100%;
 }
+
 
 .contact-info__grid {
     display: grid;
@@ -742,10 +757,20 @@ a:focus {
 
 .highlights-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: clamp(1.25rem, 2.5vw, 2rem);
     align-items: stretch;
-    justify-content: center;
+}
+
+@media (min-width: 48rem) {
+    .highlights-grid {
+        grid-template-columns: repeat(2, minmax(260px, 1fr));
+    }
+}
+
+@media (min-width: 64rem) {
+    .highlights-grid {
+        grid-template-columns: repeat(3, minmax(260px, 1fr));
+    }
 }
 
 .highlight-card {
@@ -764,7 +789,7 @@ a:focus {
 .highlight-card__media {
     margin: 0;
     background: linear-gradient(135deg, rgba(58, 104, 153, 0.35), rgba(160, 122, 167, 0.5));
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 5 / 4;
     overflow: hidden;
 }
 
@@ -778,8 +803,15 @@ a:focus {
 .highlight-card__body {
     display: flex;
     flex-direction: column;
-    gap: 0.55rem;
-    padding: 0 1rem 1.15rem;
+    gap: 0.75rem;
+    padding: 0 1.3rem 1.55rem;
+}
+
+.highlight-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
 }
 
 .highlight-card__title {
@@ -787,10 +819,8 @@ a:focus {
     font-size: 1.1rem;
     line-height: 1.35;
     color: var(--color-primary);
-    display: flex;
-    align-items: flex-end;
-    min-height: calc(var(--highlight-title-lines) * 1.35em);
-    min-height: calc(var(--highlight-title-lines) * 1lh);
+    flex: 1;
+    min-width: 0;
 }
 
 .highlight-card__title a {
@@ -806,13 +836,13 @@ a:focus {
     margin: 0;
     color: var(--color-muted);
     font-weight: 500;
-    font-size: 0.95rem;
+    white-space: nowrap;
 }
 
 .highlight-card__description {
     margin: 0;
     color: var(--color-text);
-    line-height: 1.45;
+    line-height: 1.5;
 }
 
 .news-archive__accordion {
@@ -1217,9 +1247,9 @@ a:focus {
 
 .contact-form {
     display: grid;
-    gap: 0.25rem;
-    padding: 0.5rem 1rem 0.6rem;
-    background: rgba(255, 255, 255, 0.85);
+    gap: clamp(0.75rem, 2vw, 1rem);
+    padding: 0.85rem clamp(1rem, 2.5vw, 1.5rem) 1.1rem;
+    background: rgba(242, 244, 250, 0.92);
     border-radius: 14px;
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--surface-border);
@@ -1227,7 +1257,7 @@ a:focus {
 
 .form-field {
     display: grid;
-    gap: 0.25rem;
+    gap: 0.45rem;
 }
 
 .form-field label {
@@ -1240,10 +1270,91 @@ a:focus {
 .form-field textarea {
     border: 1px solid var(--surface-border);
     border-radius: 8px;
-    padding: 0.55rem 0.8rem;
+    padding: 0.7rem 1rem;
     font: inherit;
-    background: white;
+    background: #f7f7fb;
     color: var(--color-text);
+}
+
+.form-field--organization {
+    position: relative;
+}
+
+.organization-select {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.organization-select input[data-organization-input] {
+    flex: 1;
+    padding-right: 2.5rem;
+}
+
+.organization-select__toggle {
+    position: absolute;
+    top: 50%;
+    right: 0.75rem;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: var(--color-muted);
+    cursor: pointer;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;
+}
+
+.organization-select__toggle:focus-visible {
+    outline: 2px solid var(--focus-outline);
+    border-radius: 6px;
+}
+
+.organization-select__list {
+    position: absolute;
+    top: calc(100% + 0.4rem);
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border: 1px solid var(--surface-border);
+    border-radius: 12px;
+    box-shadow: 0 18px 35px rgba(64, 89, 142, 0.18);
+    max-height: 18rem;
+    overflow-y: auto;
+    padding: 0.4rem 0;
+    display: none;
+    z-index: 12;
+}
+
+.organization-select--open .organization-select__list {
+    display: block;
+}
+
+.organization-select__option {
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: transparent;
+    padding: 0.55rem 1rem;
+    font: inherit;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.organization-select__option:hover,
+.organization-select__option:focus {
+    background-color: rgba(73, 94, 152, 0.08);
+    outline: none;
+}
+
+.organization-select__empty {
+    padding: 0.7rem 1rem;
+    color: var(--color-muted);
+    font-size: 0.95rem;
 }
 
 .form-field input:focus,
@@ -1356,7 +1467,9 @@ main {
 
     .navbar__menu {
         position: absolute;
-        inset: 72px 1.5rem auto;
+        top: calc(100% + 0.75rem);
+        left: 0;
+        right: 0;
         flex-direction: column;
         background: var(--color-surface);
         border-radius: 14px;

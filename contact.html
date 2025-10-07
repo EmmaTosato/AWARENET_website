@@ -48,18 +48,17 @@
                         <img src="assets/images/contact/icons/office_phone_icon.png" alt="">
                     </span>
                     <h2 class="contact-card__title">Phone</h2>
-                    <p>Call us at <a href="tel:+390497654321">+39 049 7654321.</a></p>
+                    <p>Call us at <a href="tel:+390497654321">+39 049 7654321</a>.</p>
                 </article>
                 <article class="contact-card" role="listitem">
                     <span class="contact-card__icon" aria-hidden="true">
                         <img src="assets/images/contact/icons/placeholder.png" alt="">
                     </span>
                     <h2 class="contact-card__title">Main office</h2>
-                    <p>Visit us at Via </p>
+                    <p>Visit us at Via Venezia 1<br>35131 Padova (PD), Italy</p>
                 </article>
             </div>
         </section>
-
         <section class="section contact-message-section" aria-labelledby="contact-form-title">
             <div class="section__heading">
                 <h2 id="contact-form-title">Send us a message</h2>
@@ -74,37 +73,15 @@
                         <label for="contact-email">Email</label>
                         <input type="email" id="contact-email" name="email" placeholder="name@company.com" required>
                     </div>
-                    <div class="form-field">
+                    <div class="form-field form-field--organization" data-organization-field>
                         <label for="contact-organization">Organization</label>
-                        <input type="text" id="contact-organization" name="organization" list="organization-options" placeholder="Company or institution">
-                        <datalist id="organization-options">
-                            <option value="Politecnico di Milano">
-                            <option value="Università di Bologna">
-                            <option value="Sapienza Università di Roma">
-                            <option value="Università di Padova">
-                            <option value="Politecnico di Torino">
-                            <option value="Università di Pisa">
-                            <option value="CNR - Consiglio Nazionale delle Ricerche">
-                            <option value="Istituto Superiore di Sanità">
-                            <option value="University of Oxford">
-                            <option value="University of Cambridge">
-                            <option value="ETH Zürich">
-                            <option value="EPFL">
-                            <option value="Technical University of Munich">
-                            <option value="KU Leuven">
-                            <option value="University of Copenhagen">
-                            <option value="European Commission - DG Research & Innovation">
-                            <option value="Massachusetts Institute of Technology (MIT)">
-                            <option value="Stanford University">
-                            <option value="Harvard University">
-                            <option value="University of California, Berkeley">
-                            <option value="Tsinghua University">
-                            <option value="National University of Singapore">
-                            <option value="The University of Tokyo">
-                            <option value="University of Melbourne">
-                            <option value="UNESCO">
-                            <option value="World Bank">
-                        </datalist>
+                        <div class="organization-select" data-organization-select>
+                            <input type="text" id="contact-organization" name="organization" placeholder="Start typing to find your institution" autocomplete="off" data-organization-input aria-autocomplete="list" aria-expanded="false" aria-controls="organization-options" role="combobox">
+                            <button type="button" class="organization-select__toggle" aria-label="Toggle organization list" aria-haspopup="listbox" aria-expanded="false" data-organization-toggle>
+                                <span aria-hidden="true">&#9662;</span>
+                            </button>
+                            <div class="organization-select__list" id="organization-options" role="listbox" data-organization-list></div>
+                        </div>
                     </div>
                     <div class="form-field">
                         <label for="contact-message">Message</label>
