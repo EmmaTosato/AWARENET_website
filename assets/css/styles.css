@@ -1141,7 +1141,7 @@ a:focus {
 }
 
 .contact-message-section .contact-panel {
-    max-width: min(680px, 100%);
+    max-width: min(620px, 100%);
     margin-inline: auto;
     width: 100%;
 }
@@ -1168,7 +1168,7 @@ a:focus {
 .contact-form {
     display: grid;
     gap: 0.45rem;
-    padding: 0.95rem 1.35rem 1.1rem;
+    padding: 0.8rem 1.15rem 0.95rem;
     background: rgba(255, 255, 255, 0.85);
     border-radius: 18px;
     box-shadow: var(--shadow-sm);
