@@ -1206,9 +1206,9 @@ a:focus {
 
 .contact-form {
     display: grid;
-    gap: 0.25rem;
-    padding: 0.5rem 1rem 0.6rem;
-    background: rgba(255, 255, 255, 0.85);
+    gap: clamp(0.75rem, 2vw, 1rem);
+    padding: 0.85rem clamp(1rem, 2.5vw, 1.5rem) 1.1rem;
+    background: rgba(242, 244, 250, 0.92);
     border-radius: 14px;
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--surface-border);
@@ -1216,7 +1216,7 @@ a:focus {
 
 .form-field {
     display: grid;
-    gap: 0.25rem;
+    gap: 0.45rem;
 }
 
 .form-field label {
@@ -1229,9 +1229,9 @@ a:focus {
 .form-field textarea {
     border: 1px solid var(--surface-border);
     border-radius: 8px;
-    padding: 0.55rem 0.8rem;
+    padding: 0.7rem 1rem;
     font: inherit;
-    background: white;
+    background: #f7f7fb;
     color: var(--color-text);
 }
 
