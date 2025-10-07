@@ -401,6 +401,10 @@ a:focus {
     display: grid;
     gap: clamp(2rem, 4vw, 3.5rem);
     align-content: start;
+    width: min(100%, var(--layout-fluid-width));
+    margin: 0 auto;
+    padding-inline: var(--layout-section-padding);
+    box-sizing: border-box;
 }
 
 .hero-institutions .section__content {
