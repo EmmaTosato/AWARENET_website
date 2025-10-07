@@ -1205,6 +1205,21 @@ a:focus {
     resize: vertical;
 }
 
+.form-status {
+    margin-top: 0.9rem;
+    font-size: 0.95rem;
+    color: var(--color-muted);
+    min-height: 1.5rem;
+}
+
+.form-status--success {
+    color: var(--color-primary);
+}
+
+.form-status--error {
+    color: #b24d57;
+}
+
 .hero-highlight {
     background: var(--card-fill);
     border: 1px solid var(--card-border);
