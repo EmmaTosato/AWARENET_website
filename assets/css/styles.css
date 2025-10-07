@@ -624,14 +624,14 @@ a:focus {
 .contact-info__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: clamp(1rem, 2vw, 1.75rem);
-    margin-block-end: clamp(2.5rem, 6vw, 4rem);
+    gap: clamp(0.85rem, 2vw, 1.5rem);
+    margin-block-end: clamp(1.5rem, 4vw, 2.75rem);
 }
 
 .contact-card {
     display: grid;
-    gap: 0.65rem;
-    padding: clamp(1.1rem, 2vw, 1.85rem);
+    gap: 0.55rem;
+    padding: clamp(0.95rem, 1.8vw, 1.6rem);
     background: rgba(255, 255, 255, 0.88);
     border: 1px solid var(--surface-border);
     border-radius: 18px;
@@ -1090,7 +1090,7 @@ a:focus {
 
 
 .contact-page .section {
-    padding-block: clamp(3.25rem, 10vh, 4.35rem);
+    padding-block: clamp(2.4rem, 7vh, 3.6rem);
 }
 
 .contact-message-section .contact-panel {
@@ -1102,7 +1102,7 @@ a:focus {
 .contact-panel {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: clamp(1.5rem, 3vw, 3rem);
+    gap: clamp(1.25rem, 2.5vw, 2.25rem);
     align-items: start;
 }
 
@@ -1120,8 +1120,8 @@ a:focus {
 
 .contact-form {
     display: grid;
-    gap: 0.65rem;
-    padding: 1.25rem 1.85rem;
+    gap: 0.55rem;
+    padding: 1.1rem 1.6rem 1.3rem;
     background: rgba(255, 255, 255, 0.85);
     border-radius: 18px;
     box-shadow: var(--shadow-sm);
