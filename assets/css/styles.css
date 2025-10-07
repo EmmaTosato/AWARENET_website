@@ -1144,7 +1144,7 @@ a:focus {
 }
 
 .contact-message-section .contact-panel {
-    max-width: min(620px, 100%);
+    max-width: min(680px, 100%);
     margin-inline: auto;
     width: 100%;
 }
@@ -1206,6 +1206,8 @@ a:focus {
 
 .form-field textarea {
     resize: vertical;
+    height: 5.25rem;
+    min-height: 5.25rem;
 }
 
 .form-status {
