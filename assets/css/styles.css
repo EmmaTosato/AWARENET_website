@@ -30,6 +30,30 @@ html {
     --hero-overlay: linear-gradient(135deg, rgba(35, 44, 73, 0.78) 0%, rgba(49, 59, 92, 0.42) 60%, rgba(78, 90, 122, 0.26) 100%);
     --color-title-strong: #324d88;
     --color-year-date: #2a1f5a;
+    --layout-max-width: 1200px;
+    --layout-fluid-width: min(92vw, var(--layout-max-width));
+    --layout-section-padding: clamp(1.5rem, 5vw, 3.5rem);
+}
+
+@media (min-width: 1360px) {
+    :root {
+        --layout-max-width: 1320px;
+        --layout-fluid-width: min(90vw, var(--layout-max-width));
+    }
+}
+
+@media (min-width: 1600px) {
+    :root {
+        --layout-max-width: 1420px;
+        --layout-fluid-width: min(88vw, var(--layout-max-width));
+    }
+}
+
+@media (min-width: 1920px) {
+    :root {
+        --layout-max-width: 1520px;
+        --layout-fluid-width: min(85vw, var(--layout-max-width));
+    }
 }
 
 body.theme-dawn {
@@ -153,7 +177,8 @@ a:focus {
 
 .navbar {
     margin: 0 auto;
-    width: min(1200px, 92vw);
+    width: 100%;
+    max-width: var(--layout-fluid-width);
     padding: 0.75rem 1.5rem;
     display: flex;
     align-items: center;
@@ -291,19 +316,20 @@ a:focus {
 }
 
 .section {
-    padding: 5rem 1.5rem;
-    width: min(1200px, 92vw);
+    padding: clamp(4rem, 10vw, 5.5rem) var(--layout-section-padding);
+    width: 100%;
+    max-width: var(--layout-fluid-width);
     margin: 0 auto;
     display: grid;
     gap: 2.5rem;
 }
 
 .section--surface {
-    padding: 5rem clamp(1.25rem, 4vw, 3rem);
+    padding: clamp(4rem, 10vw, 5.5rem) var(--layout-section-padding);
 }
 
 .section--muted {
-    padding: 5rem clamp(1.25rem, 4vw, 3rem);
+    padding: clamp(4rem, 10vw, 5.5rem) var(--layout-section-padding);
 }
 
 
@@ -332,7 +358,8 @@ a:focus {
 .hero__inner {
     position: relative;
     z-index: 2;
-    width: min(1100px, 92vw);
+    width: 100%;
+    max-width: var(--layout-fluid-width);
     display: grid;
     gap: clamp(2rem, 3vw, 3rem);
 }
@@ -377,31 +404,24 @@ a:focus {
 }
 
 .hero-institutions .section__content {
-    max-width: none;
+    max-width: min(var(--layout-fluid-width), 100%);
     display: grid;
     gap: 0.9rem;
     justify-items: start;
-    overflow-x: auto;
-    padding-bottom: 0.25rem;
-    scrollbar-width: none;
-}
-
-.hero-institutions .section__content::-webkit-scrollbar {
-    display: none;
 }
 
 .hero-institutions h1 {
     color: var(--color-primary);
-    font-size: clamp(0.65rem, calc((min(100vw, 1100px) - 4rem) / 36), 2.35rem);
+    font-size: clamp(1.8rem, 3.4vw, 2.6rem);
     letter-spacing: -0.01em;
     margin-bottom: 0.5rem;
-    white-space: nowrap;
+    white-space: normal;
 }
 
 .hero-institutions .section__content p {
     color: var(--color-muted);
     font-size: 1.05rem;
-    white-space: nowrap;
+    white-space: normal;
 }
 
 .institutions-grid {
