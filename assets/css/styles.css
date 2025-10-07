@@ -89,7 +89,7 @@ body.theme-horizon {
     --color-background: #f3f2fa;
     --color-accent: #d7cade;
     --shadow-sm: 0 4px 14px rgba(58, 104, 153, 0.14);
-    --gradient-background: linear-gradient(180deg, #f7f8ff 0%, #f2f1fb 52%, #f5eee7 100%);
+    --gradient-background: linear-gradient(180deg, #f8f7ff 0%, #f2f1fb 52%, #f5eee7 100%);
     --gradient-header: linear-gradient(120deg, rgba(248, 247, 255, 0.96) 0%, rgba(250, 243, 249, 0.92) 100%);
     --gradient-crest: linear-gradient(135deg, #3a6a9b 0%, #a07aa7 100%);
     --gradient-button: linear-gradient(135deg, #a07aa7, #7f90b8);
