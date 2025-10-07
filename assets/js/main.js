@@ -253,8 +253,46 @@ document.addEventListener('DOMContentLoaded', () => {
             'Yokohama National University'
         ];
 
-        const organizations = Array.from(new Set(baseOrganizations)).sort((a, b) =>
-            a.localeCompare(b, undefined, { sensitivity: 'base' })
+        const normalizeLabel = (label) => {
+            const patterns = [
+                /^University of\s+/i,
+                /^University College\s+/i,
+                /^Universit[áà]\s+degli\s+Studi\s+di\s+/i,
+                /^Universit[áà]\s+degli\s+Studi\s+/i,
+                /^Universit[áà]\s+di\s+/i,
+                /^Université\s+/i,
+                /^Universität\s+/i,
+                /^Universidad\s+de\s+/i,
+                /^Universidad\s+Autónoma\s+de\s+/i,
+                /^Universidad\s+Nacional\s+Autónoma\s+de\s+/i,
+                /^Universidade\s+de\s+/i,
+                /^Universidade\s+do\s+/i,
+                /^Universidade\s+Federal\s+de\s+/i,
+                /^Universidade\s+Estadual\s+de\s+/i,
+                /^Universidade\s+Estadual\s+Paulista\s+/i,
+                /^Universiteit\s+/i
+            ];
+
+            let normalized = label.trim();
+            for (const pattern of patterns) {
+                if (pattern.test(normalized)) {
+                    normalized = normalized.replace(pattern, '');
+                    break;
+                }
+            }
+
+            return normalized.trim();
+        };
+
+        const organizations = Array.from(new Set(baseOrganizations)).map((name) => {
+            const sortLabel = normalizeLabel(name);
+            return {
+                name,
+                sortLabel,
+                searchValue: `${name} ${sortLabel}`.toLowerCase()
+            };
+        }).sort((a, b) =>
+            a.sortLabel.localeCompare(b.sortLabel, undefined, { sensitivity: 'base' })
         );
 
         let currentOptions = organizations;
@@ -272,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const fragment = document.createDocumentFragment();
-            items.forEach((name) => {
+            items.forEach(({ name }) => {
                 const option = document.createElement('button');
                 option.type = 'button';
                 option.className = 'organization-select__option';
@@ -314,8 +352,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const updateList = (query) => {
             const normalizedQuery = query.trim().toLowerCase();
-            currentOptions = organizations.filter((name) =>
-                name.toLowerCase().includes(normalizedQuery)
+            currentOptions = organizations.filter((organization) =>
+                organization.searchValue.includes(normalizedQuery)
             );
             renderList(currentOptions);
         };
