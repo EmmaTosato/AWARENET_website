@@ -1088,7 +1088,7 @@ a:focus {
 }
 
 .team-card__photo {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 9;
     display: grid;
     place-items: center;
     background: linear-gradient(135deg, rgba(64, 89, 142, 0.16) 0%, rgba(176, 138, 165, 0.2) 100%);
