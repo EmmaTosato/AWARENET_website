@@ -908,7 +908,6 @@ a:focus {
     border: 1px solid var(--card-border);
     border-radius: 18px;
     box-shadow: var(--shadow-sm);
-    align-items: flex-start;
 }
 
 .news-card__media {
@@ -935,7 +934,6 @@ a:focus {
 .news-card__content {
     display: grid;
     gap: 0.55rem;
-    flex: 1 1 auto;
 }
 
 .news-card__title {
@@ -970,16 +968,12 @@ a:focus {
 }
 
 @media (max-width: 720px) {
-    .news-card {
-        flex-direction: column;
-        align-items: stretch;
+    .news-year__grid {
+        grid-template-columns: 1fr;
     }
 
-    .news-card__media {
-        width: 100%;
-        max-width: 320px;
-        aspect-ratio: 4 / 3;
-        margin: 0 auto;
+    .news-card {
+        padding: 1rem;
     }
 
     .news-card__content {
