@@ -1,0 +1,11 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="summerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5f7bc3" />
+      <stop offset="100%" stop-color="#f0a864" />
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="22" fill="url(#summerGradient)" />
+  <path d="M60 30l9 18 20 3-15 14 3 20-17-9-17 9 3-20-15-14 20-3z" fill="#fdfcff" opacity="0.85" />
+  <circle cx="60" cy="60" r="14" fill="#f0a864" opacity="0.6" />
+</svg>

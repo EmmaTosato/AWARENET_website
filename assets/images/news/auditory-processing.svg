@@ -1,0 +1,12 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="auditoryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7a8edb" />
+      <stop offset="100%" stop-color="#b98ed4" />
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="22" fill="url(#auditoryGradient)" />
+  <path d="M52 36c14 0 24 10 24 24 0 4-1 8-3 11l-6 9a4 4 0 01-6 1 4 4 0 01-1-6l6-9c1-2 1-4 1-6 0-8-7-15-15-15s-15 7-15 15c0 6 3 11 9 14a4 4 0 11-3 7C34 74 29 65 29 60c0-13 10-24 23-24z" fill="#fdfcff" opacity="0.92" />
+  <circle cx="84" cy="75" r="10" fill="#fdfcff" opacity="0.65" />
+  <circle cx="92" cy="39" r="8" fill="#fdfcff" opacity="0.35" />
+</svg>
