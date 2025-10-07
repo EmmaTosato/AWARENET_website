@@ -219,11 +219,11 @@ a:focus {
     font-weight: 700;
     letter-spacing: 0.08em;
     line-height: 1.08;
-    color: #ffffff;
+    color: var(--color-primary);
 }
 
 .navbar__title--accent {
-    color: rgba(255, 255, 255, 0.82);
+    color: var(--color-secondary);
 }
 
 .navbar__toggle {
