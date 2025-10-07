@@ -45,8 +45,386 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    const setupOrganizationSelector = (form) => {
+        const field = form.querySelector('[data-organization-field]');
+        const selectWrapper = field ? field.querySelector('[data-organization-select]') : null;
+        const input = selectWrapper ? selectWrapper.querySelector('[data-organization-input]') : null;
+        const list = selectWrapper ? selectWrapper.querySelector('[data-organization-list]') : null;
+        const toggle = selectWrapper ? selectWrapper.querySelector('[data-organization-toggle]') : null;
+
+        if (!field || !selectWrapper || !input || !list) {
+            return;
+        }
+
+        const baseOrganizations = [
+            'Aarhus University',
+            'Aalto University',
+            'Aix-Marseille University',
+            'Arizona State University',
+            'Australian National University',
+            'Bocconi University',
+            'Boston University',
+            'Brown University',
+            'California Institute of Technology',
+            'Cardiff University',
+            'Carnegie Mellon University',
+            'Chalmers University of Technology',
+            'Charles University',
+            'City University of Hong Kong',
+            'Columbia University',
+            'Cornell University',
+            'Czech Academy of Sciences',
+            'Delft University of Technology',
+            'Durham University',
+            'Eindhoven University of Technology',
+            'Emory University',
+            'Erasmus University Rotterdam',
+            'ETH Zurich',
+            'École Polytechnique',
+            'École Polytechnique Fédérale de Lausanne (EPFL)',
+            'Free University of Berlin',
+            'French National Centre for Scientific Research (CNRS)',
+            'Fudan University',
+            'George Washington University',
+            'Georgetown University',
+            'Georgia Institute of Technology',
+            'Ghent University',
+            'Harvard University',
+            'Humboldt University of Berlin',
+            'Imperial College London',
+            'Indian Institute of Science Bangalore',
+            'Indian Institute of Technology Bombay',
+            'Indiana University Bloomington',
+            'Johns Hopkins University',
+            'Karolinska Institutet',
+            'Keio University',
+            "King's College London",
+            'Kyoto University',
+            'KU Leuven',
+            'Lancaster University',
+            'Leiden University',
+            'Ludwig Maximilian University of Munich',
+            'Lund University',
+            'Massachusetts Institute of Technology (MIT)',
+            'McGill University',
+            'Michigan State University',
+            'Monash University',
+            'National Autonomous University of Mexico',
+            'National Taiwan University',
+            'National University of Singapore',
+            'New York University',
+            'Northwestern University',
+            'Norwegian University of Science and Technology',
+            'Osaka University',
+            'Pennsylvania State University',
+            'Politecnico di Milano',
+            'Politecnico di Torino',
+            'Princeton University',
+            'Purdue University',
+            'Queen Mary University of London',
+            "Queen's University Belfast",
+            'Rice University',
+            'RMIT University',
+            'Sapienza University of Rome',
+            'Scuola Normale Superiore di Pisa',
+            'Seoul National University',
+            'Shanghai Jiao Tong University',
+            'Sorbonne University',
+            'Stanford University',
+            'Technical University of Denmark',
+            'Technical University of Munich',
+            'The Chinese University of Hong Kong',
+            'The University of Auckland',
+            'The University of Manchester',
+            'The University of Melbourne',
+            'The University of Sydney',
+            'The University of Tokyo',
+            'Tilburg University',
+            'Tsinghua University',
+            'UCLouvain',
+            'Universidad de Buenos Aires',
+            'Universidad de Chile',
+            'Universidad Nacional de Colombia',
+            'Universidade de São Paulo',
+            'Universidade do Porto',
+            'Universidade Federal do Rio de Janeiro',
+            "Università Ca' Foscari Venezia",
+            'Università degli Studi di Milano',
+            'Università degli Studi di Milano-Bicocca',
+            'Università degli Studi di Padova',
+            "Università degli Studi di Roma Tor Vergata",
+            "Università degli Studi Roma Tre",
+            'Università di Bologna',
+            'Università di Firenze',
+            'Università di Napoli Federico II',
+            'Università di Pisa',
+            'Università di Torino',
+            'Università degli Studi di Bari Aldo Moro',
+            'Università degli Studi di Bergamo',
+            'Università degli Studi di Brescia',
+            'Università degli Studi di Cagliari',
+            'Università degli Studi di Cassino e del Lazio Meridionale',
+            'Università degli Studi di Catania',
+            "Università degli Studi di Ferrara",
+            "Università degli Studi di Genova",
+            "Università degli Studi di Messina",
+            "Università degli Studi di Modena e Reggio Emilia",
+            "Università degli Studi di Palermo",
+            "Università degli Studi di Parma",
+            "Università degli Studi di Pavia",
+            "Università degli Studi di Perugia",
+            "Università degli Studi di Salerno",
+            "Università degli Studi di Sassari",
+            "Università degli Studi di Siena",
+            "Università degli Studi di Trento",
+            "Università degli Studi di Trieste",
+            "Università degli Studi di Udine",
+            "Università degli Studi di Verona",
+            "Università Gabriele d'Annunzio Chieti-Pescara",
+            'Université de Genève',
+            'Université de Montréal',
+            'Université de Paris Cité',
+            'Université Paris-Saclay',
+            'University College Cork',
+            'University College Dublin',
+            'University College London (UCL)',
+            'University of Amsterdam',
+            'University of Barcelona',
+            'University of Basel',
+            'University of Bergen',
+            'University of Bern',
+            'University of Bristol',
+            'University of British Columbia',
+            'University of California, Berkeley',
+            'University of California, Los Angeles',
+            'University of Cambridge',
+            'University of Cape Town',
+            'University of Chicago',
+            'University of Copenhagen',
+            'University of Edinburgh',
+            'University of Glasgow',
+            'University of Granada',
+            'University of Hamburg',
+            'University of Helsinki',
+            'University of Hong Kong',
+            'University of Iceland',
+            'University of Illinois Urbana-Champaign',
+            'University of Lausanne',
+            'University of Leeds',
+            'University of Lisbon',
+            'University of Michigan',
+            'University of New South Wales',
+            'University of North Carolina at Chapel Hill',
+            'University of Notre Dame',
+            'University of Oslo',
+            'University of Ottawa',
+            'University of Oxford',
+            'University of Pennsylvania',
+            'University of Queensland',
+            'University of Rochester',
+            'University of Sheffield',
+            'University of South Africa',
+            'University of Southampton',
+            'University of St Andrews',
+            'University of Texas at Austin',
+            'University of Toronto',
+            'University of Vienna',
+            'University of Virginia',
+            'University of Warwick',
+            'University of Washington',
+            'University of Waterloo',
+            'University of Wisconsin-Madison',
+            'University of Zurich',
+            'UNESCO',
+            'United Nations Development Programme',
+            'United Nations Educational, Scientific and Cultural Organization',
+            'United Nations Industrial Development Organization',
+            'Uppsala University',
+            'Utrecht University',
+            'Vienna University of Technology',
+            'Virginia Tech',
+            'Wageningen University & Research',
+            'Warsaw University of Technology',
+            'Waseda University',
+            'Weizmann Institute of Science',
+            'World Bank Group',
+            'World Health Organization (WHO)',
+            'Yale University',
+            'Yokohama National University'
+        ];
+
+        const organizations = Array.from(new Set(baseOrganizations)).sort((a, b) =>
+            a.localeCompare(b, undefined, { sensitivity: 'base' })
+        );
+
+        let currentOptions = organizations;
+        let isOpen = false;
+
+        const renderList = (items) => {
+            list.innerHTML = '';
+
+            if (!items.length) {
+                const emptyState = document.createElement('p');
+                emptyState.className = 'organization-select__empty';
+                emptyState.textContent = 'No matches found.';
+                list.appendChild(emptyState);
+                return;
+            }
+
+            const fragment = document.createDocumentFragment();
+            items.forEach((name) => {
+                const option = document.createElement('button');
+                option.type = 'button';
+                option.className = 'organization-select__option';
+                option.setAttribute('role', 'option');
+                option.setAttribute('tabindex', '-1');
+                option.dataset.value = name;
+                option.textContent = name;
+                fragment.appendChild(option);
+            });
+
+            list.appendChild(fragment);
+        };
+
+        const openList = () => {
+            if (isOpen) {
+                return;
+            }
+
+            selectWrapper.classList.add('organization-select--open');
+            input.setAttribute('aria-expanded', 'true');
+            if (toggle) {
+                toggle.setAttribute('aria-expanded', 'true');
+            }
+            isOpen = true;
+        };
+
+        const closeList = () => {
+            if (!isOpen) {
+                return;
+            }
+
+            selectWrapper.classList.remove('organization-select--open');
+            input.setAttribute('aria-expanded', 'false');
+            if (toggle) {
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+            isOpen = false;
+        };
+
+        const updateList = (query) => {
+            const normalizedQuery = query.trim().toLowerCase();
+            currentOptions = organizations.filter((name) =>
+                name.toLowerCase().includes(normalizedQuery)
+            );
+            renderList(currentOptions);
+        };
+
+        const focusFirstOption = () => {
+            const firstOption = list.querySelector('.organization-select__option');
+            if (firstOption) {
+                firstOption.focus();
+            }
+        };
+
+        input.addEventListener('focus', () => {
+            openList();
+            renderList(currentOptions);
+        });
+
+        input.addEventListener('input', (event) => {
+            const value = event.target.value || '';
+            updateList(value);
+            openList();
+        });
+
+        input.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowDown') {
+                event.preventDefault();
+                if (!isOpen) {
+                    openList();
+                }
+                renderList(currentOptions);
+                focusFirstOption();
+            } else if (event.key === 'Escape') {
+                closeList();
+            }
+        });
+
+        if (toggle) {
+            toggle.addEventListener('click', () => {
+                if (isOpen) {
+                    closeList();
+                } else {
+                    renderList(currentOptions);
+                    openList();
+                    input.focus();
+                }
+            });
+        }
+
+        list.addEventListener('click', (event) => {
+            const option = event.target.closest('.organization-select__option');
+            if (!option) {
+                return;
+            }
+
+            event.preventDefault();
+            const value = option.dataset.value || option.textContent || '';
+            input.value = value;
+            closeList();
+            input.focus();
+        });
+
+        list.addEventListener('keydown', (event) => {
+            const option = event.target.closest('.organization-select__option');
+            if (!option) {
+                if (event.key === 'Escape') {
+                    closeList();
+                    input.focus();
+                }
+                return;
+            }
+
+            const options = Array.from(list.querySelectorAll('.organization-select__option'));
+            const currentIndex = options.indexOf(option);
+
+            if (event.key === 'ArrowDown') {
+                event.preventDefault();
+                const nextOption = options[currentIndex + 1] || options[0];
+                nextOption.focus();
+            } else if (event.key === 'ArrowUp') {
+                event.preventDefault();
+                const previousOption = options[currentIndex - 1] || options[options.length - 1];
+                previousOption.focus();
+            } else if (event.key === 'Enter') {
+                event.preventDefault();
+                option.click();
+            } else if (event.key === 'Escape') {
+                closeList();
+                input.focus();
+            }
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!field.contains(event.target)) {
+                closeList();
+            }
+        });
+
+        form.addEventListener('reset', () => {
+            currentOptions = organizations;
+            renderList(currentOptions);
+            closeList();
+        });
+
+        renderList(currentOptions);
+    };
+
     const contactForm = document.querySelector('[data-contact-form]');
     if (contactForm) {
+        setupOrganizationSelector(contactForm);
+
         const statusMessage = contactForm.querySelector('[data-form-status]');
         const contactEmail = (contactForm.dataset.contactEmail || '').trim();
 
