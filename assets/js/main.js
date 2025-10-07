@@ -35,4 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+
+    const eventDetail = document.querySelector('.event-detail');
+    if (eventDetail) {
+        const description = eventDetail.querySelector('.event-detail__placeholder');
+        if (description) {
+            const hasMedia = Boolean(eventDetail.querySelector('img, figure, picture'));
+            description.classList.toggle('event-detail__placeholder--wrap', hasMedia);
+        }
+    }
 });
