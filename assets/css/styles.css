@@ -667,36 +667,37 @@ a:focus {
 
 .highlights-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: clamp(1.25rem, 2.5vw, 2rem);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: clamp(1rem, 2vw, 1.5rem);
     align-items: stretch;
 }
 
 .highlight-card {
     display: grid;
     grid-template-rows: auto 1fr;
-    gap: 1rem;
+    gap: 0.75rem;
     background: rgba(255, 255, 255, 0.92);
     border: 1px solid var(--card-border);
-    border-radius: 20px;
+    border-radius: 18px;
     overflow: hidden;
     box-shadow: var(--shadow-sm);
 }
 
 .highlight-card__media {
     background: linear-gradient(135deg, rgba(58, 104, 153, 0.35), rgba(160, 122, 167, 0.5));
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 5 / 3;
 }
 
 .highlight-card__body {
     display: grid;
-    gap: 0.6rem;
-    padding: 0 1.5rem 2rem;
+    gap: 0.5rem;
+    padding: 0 1.25rem 1.5rem;
 }
 
 .highlight-card__title {
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
+    line-height: 1.35;
     color: var(--color-primary);
 }
 
