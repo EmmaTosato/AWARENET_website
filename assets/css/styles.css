@@ -109,7 +109,7 @@ body.theme-horizon {
 }
 
 body.theme-dusk {
-    --color-primary: #40598e;
+    --color-primary: rgba(64, 89, 142, 0.92);
     --color-secondary: #b08aa5;
     --color-muted: #655e77;
     --color-background: #f4f0f6;
