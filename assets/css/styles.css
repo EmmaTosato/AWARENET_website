@@ -344,7 +344,7 @@ a:focus {
 .section--hero h1 {
     font-size: clamp(1.93rem, 4.5vw, 3.43rem);
     margin-bottom: 1rem;
-    color: #f4f5ff;
+    color: #ffffff;
     line-height: 1.12;
 }
 
