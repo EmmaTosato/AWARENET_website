@@ -753,10 +753,20 @@ a:focus {
 
 .highlights-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: clamp(1.25rem, 2.5vw, 2rem);
     align-items: stretch;
-    justify-content: center;
+}
+
+@media (min-width: 48rem) {
+    .highlights-grid {
+        grid-template-columns: repeat(2, minmax(260px, 1fr));
+    }
+}
+
+@media (min-width: 64rem) {
+    .highlights-grid {
+        grid-template-columns: repeat(3, minmax(260px, 1fr));
+    }
 }
 
 .highlight-card {
