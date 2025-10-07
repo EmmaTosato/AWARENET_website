@@ -468,6 +468,10 @@ a:focus {
     transform: scale(1.12);
 }
 
+.institution-card:last-child .institution-card__logo img {
+    transform: scale(0.92);
+}
+
 .institution-card h3 {
     margin: 0;
     font-size: 1.12rem;
