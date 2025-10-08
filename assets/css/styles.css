@@ -1962,6 +1962,8 @@ a:focus {
 }
 
 .contact-page .form-status {
+    margin: 0.15rem 0 0;
+    min-height: 1.1rem;
     color: rgba(249, 247, 255, 0.82);
 }
 
