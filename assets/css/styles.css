@@ -425,22 +425,92 @@ a:focus {
 .hero-institutions {
     position: relative;
     overflow: hidden;
-    background: #eff5ff;
+    background: linear-gradient(180deg, #f8f9ff 0%, #f1f0fb 55%, #f5ede7 100%);
     color: var(--color-text);
     padding: clamp(4.5rem, 15vh, 7rem) 0 clamp(4rem, 14vh, 6.5rem);
 }
 
 .hero-institutions::before {
-    display: none;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 15% 20%, rgba(58, 104, 153, 0.18) 0%, rgba(58, 104, 153, 0) 55%),
+        radial-gradient(circle at 80% -5%, rgba(160, 122, 167, 0.22) 0%, rgba(160, 122, 167, 0) 60%);
+    opacity: 0.85;
+    z-index: 0;
 }
 
 .hero-institutions__background {
-    display: none;
+    position: absolute;
+    inset: 0;
+    display: block;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-institutions__background::before,
+.hero-institutions__background::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(0.5px);
+}
+
+.hero-institutions__background::before {
+    width: clamp(320px, 45vw, 520px);
+    height: clamp(320px, 45vw, 520px);
+    top: clamp(-220px, -18vw, -160px);
+    left: clamp(-120px, -8vw, -60px);
+    background: radial-gradient(circle, rgba(58, 104, 153, 0.32) 0%, rgba(58, 104, 153, 0) 65%);
+    opacity: 0.45;
+}
+
+.hero-institutions__background::after {
+    width: clamp(280px, 40vw, 460px);
+    height: clamp(280px, 40vw, 460px);
+    bottom: clamp(-180px, -12vw, -120px);
+    right: clamp(-140px, -10vw, -70px);
+    background: radial-gradient(circle, rgba(160, 122, 167, 0.34) 0%, rgba(160, 122, 167, 0) 68%);
+    opacity: 0.4;
+}
+
+.hero-institutions__blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.5;
+}
+
+.hero-institutions__blob--primary {
+    width: clamp(220px, 34vw, 360px);
+    height: clamp(220px, 34vw, 360px);
+    top: clamp(-80px, -6vw, -40px);
+    left: clamp(44vw, 50vw, 58vw);
+    background: radial-gradient(circle, rgba(58, 104, 153, 0.38) 0%, rgba(58, 104, 153, 0) 70%);
+}
+
+.hero-institutions__blob--secondary {
+    width: clamp(180px, 32vw, 320px);
+    height: clamp(180px, 32vw, 320px);
+    bottom: clamp(10vh, 18vh, 26vh);
+    left: clamp(6vw, 12vw, 18vw);
+    background: radial-gradient(circle, rgba(160, 122, 167, 0.35) 0%, rgba(160, 122, 167, 0) 68%);
+}
+
+.hero-institutions__ripple {
+    position: absolute;
+    left: 50%;
+    bottom: clamp(-160px, -12vw, -100px);
+    transform: translateX(-50%);
+    width: clamp(680px, 90vw, 1100px);
+    height: clamp(300px, 45vw, 520px);
+    background: radial-gradient(ellipse at center, rgba(244, 242, 249, 0.82) 0%, rgba(244, 242, 249, 0.24) 65%, rgba(244, 242, 249, 0) 100%);
+    opacity: 0.7;
 }
 
 .hero-institutions__layout {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     display: grid;
     gap: clamp(2.2rem, 4vw, 3.5rem);
     align-items: stretch;
@@ -570,9 +640,21 @@ a:focus {
     }
 
     .hero-institutions__ripple {
-        inset: auto 8% -15% 8%;
-        height: clamp(220px, 52vw, 340px);
-        transform: rotate(-4deg);
+        left: 50%;
+        bottom: clamp(-220px, -22vw, -140px);
+        width: clamp(460px, 94vw, 640px);
+        height: clamp(220px, 56vw, 360px);
+        transform: translateX(-50%) scaleX(1.05);
+    }
+
+    .hero-institutions__blob--primary {
+        top: clamp(-120px, -16vw, -80px);
+        left: clamp(38vw, 48vw, 60vw);
+    }
+
+    .hero-institutions__blob--secondary {
+        bottom: clamp(12vh, 22vh, 32vh);
+        left: clamp(10vw, 18vw, 24vw);
     }
 }
 
