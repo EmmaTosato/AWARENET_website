@@ -1301,7 +1301,7 @@ a:focus {
 }
 
 .team-card__photo {
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 1 / 1;
     display: grid;
     place-items: center;
     background: #e3e7f1;
