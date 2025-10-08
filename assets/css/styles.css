@@ -1102,14 +1102,14 @@ a:focus {
     padding: 0.85rem;
     background: rgba(245, 246, 255, 0.9);
     border: 1px solid var(--card-border);
-    border-radius: 16px;
+    border-radius: 0;
     box-shadow: var(--shadow-sm);
 }
 
 .news-card__media {
     width: 100%;
     aspect-ratio: 3 / 2;
-    border-radius: 12px;
+    border-radius: 0;
     overflow: hidden;
     background: var(--card-fill);
     display: flex;
