@@ -284,12 +284,18 @@ document.addEventListener('DOMContentLoaded', () => {
             return normalized.trim();
         };
 
+        const normalizeSearchValue = (value = '') =>
+            value
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '')
+                .toLowerCase();
+
         const organizations = Array.from(new Set(baseOrganizations)).map((name) => {
             const sortLabel = normalizeLabel(name);
             return {
                 name,
                 sortLabel,
-                searchValue: `${name} ${sortLabel}`.toLowerCase()
+                searchValue: normalizeSearchValue(`${name} ${sortLabel}`)
             };
         }).sort((a, b) =>
             a.sortLabel.localeCompare(b.sortLabel, undefined, { sensitivity: 'base' })
@@ -351,7 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         const updateList = (query) => {
-            const normalizedQuery = query.trim().toLowerCase();
+            const normalizedQuery = normalizeSearchValue(query.trim());
             currentOptions = organizations.filter((organization) =>
                 organization.searchValue.includes(normalizedQuery)
             );
