@@ -622,7 +622,7 @@ a:focus {
     border-radius: 0;
     background: #ffffff;
     border: 1px solid var(--surface-border);
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
     overflow: hidden;
 }
 
@@ -676,12 +676,12 @@ a:focus {
     gap: clamp(1.5rem, 3vw, 2.5rem);
 }
 
-.card { 
+.card {
     background: var(--card-fill);
     border: 1px solid var(--card-border);
     border-radius: 0;
     padding: 2rem;
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
 }
 
 .card h3,
@@ -1109,14 +1109,14 @@ a:focus {
     padding: 0.85rem;
     background: rgba(245, 246, 255, 0.9);
     border: 1px solid var(--card-border);
-    border-radius: 16px;
+    border-radius: 0;
     box-shadow: var(--shadow-sm);
 }
 
 .news-card__media {
     width: 100%;
     aspect-ratio: 3 / 2;
-    border-radius: 12px;
+    border-radius: 0;
     overflow: hidden;
     background: var(--card-fill);
     display: flex;
@@ -1326,7 +1326,7 @@ a:focus {
 }
 
 .team-card__photo {
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 1 / 1;
     display: grid;
     place-items: center;
     background: #e3e7f1;
