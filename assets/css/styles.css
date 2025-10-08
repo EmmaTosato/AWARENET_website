@@ -1545,6 +1545,7 @@ a:focus {
     margin: 0;
     font-weight: 600;
     color: #4f5971;
+    font-size: 1.05rem;
 }
 
 @media (max-width: 1280px) {
