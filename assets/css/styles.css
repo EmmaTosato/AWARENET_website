@@ -825,15 +825,13 @@ a:focus {
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
-    background: transparent;
-    border: none;
-    box-shadow: none;
+    color: var(--color-primary);
 }
 
-.contact-detail__icon img {
+.contact-detail__icon svg {
     width: 70%;
     height: 70%;
-    object-fit: contain;
+    fill: currentColor;
 }
 
 
