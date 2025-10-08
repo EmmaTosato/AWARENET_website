@@ -10,7 +10,7 @@ html {
     --color-text: #25263a;
     --color-muted: #5f5b78;
     --color-accent: #dacde9;
-    --font-family: 'Montserrat', sans-serif;
+    --font-family: 'Inter', 'Montserrat', sans-serif;
     --shadow-sm: 0 4px 14px rgba(62, 93, 150, 0.14);
     --header-offset: 5rem;
     --gradient-background: linear-gradient(180deg, #f9f6ff 0%, #f4eff8 55%, #f6f1ec 100%);
@@ -148,7 +148,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: var(--font-family);
-    font-size: calc(18px + 0.6667pt);
+    font-size: 1.3125rem;
     color: var(--color-text);
     background: var(--gradient-background);
     line-height: 1.6;
@@ -640,7 +640,7 @@ a:focus {
 .card h2 {
     margin-top: 0;
     margin-bottom: 0.75rem;
-    font-size: 1.2rem;
+    font-size: 1.45rem;
     color: var(--color-heading);
 }
 
@@ -1491,7 +1491,7 @@ a:focus {
     align-items: center;
     justify-content: center;
     padding: 0.55rem 1.2rem;
-    border-radius: 12px;
+    border-radius: 0;
     background: var(--gradient-button);
     color: white;
     font-weight: 600;
@@ -1503,7 +1503,7 @@ a:focus {
     width: 100%;
     margin-top: 0.4rem;
     padding: 0.85rem 1.4rem;
-    border-radius: 8px;
+    border-radius: 0;
     box-shadow: none;
 }
 
