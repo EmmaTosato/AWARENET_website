@@ -743,29 +743,7 @@ a:focus {
     margin: 0 auto;
     padding-inline: clamp(1rem, 4vw, 2.5rem);
     display: grid;
-    gap: clamp(1.5rem, 3.5vw, 2.5rem);
-}
-
-.contact-hero__heading {
-    max-width: min(720px, 100%);
-    margin-inline: auto;
-    text-align: center;
-}
-
-.contact-hero__heading h1 {
-    letter-spacing: -0.01em;
-}
-
-.contact-hero__heading p {
-    color: rgba(37, 38, 58, 0.78);
-    line-height: 1.55;
-    font-size: clamp(1.12rem, 2.1vw, 1.26rem);
-}
-
-.contact-hero__content {
-    display: grid;
-    gap: clamp(1.5rem, 3vw, 2.2rem);
-    align-items: center;
+    gap: clamp(1.75rem, 4vw, 2.75rem);
 }
 
 .contact-hero__header {
@@ -892,7 +870,7 @@ a:focus {
 
 .contact-social {
     display: grid;
-    gap: 0.65rem;
+    gap: 0.75rem;
 }
 
 .contact-social__label {
@@ -917,8 +895,8 @@ a:focus {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 3rem;
-    height: 3rem;
+    width: 2.75rem;
+    height: 2.75rem;
     border-radius: 50%;
     background: rgba(58, 104, 153, 0.12);
     border: 1px solid rgba(58, 104, 153, 0.1);
@@ -927,8 +905,8 @@ a:focus {
 }
 
 .contact-social__icon svg {
-    width: 1.45rem;
-    height: 1.45rem;
+    width: 1.35rem;
+    height: 1.35rem;
     fill: currentColor;
 }
 
@@ -1557,91 +1535,6 @@ a:focus {
     background: var(--color-background);
     color: var(--color-text);
     line-height: 1.4;
-}
-
-.organization-select {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-.organization-select input[data-organization-input] {
-    flex: 1;
-    padding-right: 2.5rem;
-}
-
-.organization-select__toggle {
-    position: absolute;
-    top: 50%;
-    right: 0.65rem;
-    transform: translateY(-50%);
-    border: none;
-    background: transparent;
-    color: var(--color-muted);
-    cursor: pointer;
-    font-size: 0.95rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.15rem;
-}
-
-.organization-select__toggle:focus-visible {
-    outline: 2px solid var(--focus-outline);
-    border-radius: 6px;
-}
-
-.organization-select__list {
-    position: absolute;
-    top: calc(100% + 0.4rem);
-    left: 0;
-    right: 0;
-    background: #ffffff;
-    border: 1px solid var(--surface-border);
-    border-radius: 12px;
-    box-shadow: 0 18px 35px rgba(64, 89, 142, 0.18);
-    max-height: 18rem;
-    overflow-y: auto;
-    padding: 0.4rem 0;
-    display: none;
-    z-index: 12;
-}
-
-.contact-page .organization-select__toggle:focus-visible {
-    border-radius: 0;
-}
-
-.contact-page .organization-select__list {
-    border-radius: 0;
-}
-
-.organization-select--open .organization-select__list {
-    display: block;
-}
-
-.organization-select__option {
-    width: 100%;
-    text-align: left;
-    border: none;
-    background: transparent;
-    padding: 0.55rem 1rem;
-    font: inherit;
-    color: var(--color-text);
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.organization-select__option:hover,
-.organization-select__option:focus {
-    background-color: rgba(73, 94, 152, 0.08);
-    outline: none;
-}
-
-.organization-select__empty {
-    padding: 0.7rem 1rem;
-    color: var(--color-muted);
-    font-size: 0.95rem;
 }
 
 .form-field input:focus,
