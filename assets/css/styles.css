@@ -474,22 +474,12 @@ a:focus {
 
 .hero-institutions .hero-institutions__cta {
     margin-top: 0.75rem;
-    background: #324d7d;
-    color: #f8f9ff;
-    box-shadow: none;
-    padding: 0.65rem 1.6rem;
-    border-radius: 6px;
-    border: 1px solid rgba(50, 77, 125, 0.18);
-    transform: none;
-    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    text-transform: none;
 }
 
 .hero-institutions .hero-institutions__cta:hover,
 .hero-institutions .hero-institutions__cta:focus {
-    background: #293f65;
-    border-color: rgba(50, 77, 125, 0.28);
-    box-shadow: none;
-    transform: none;
+    text-transform: none;
 }
 
 .hero-institutions__logos {
