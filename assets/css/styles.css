@@ -1765,6 +1765,19 @@ a:focus {
     color: rgba(249, 247, 255, 0.9);
 }
 
+.contact-hero__form .organization-select__toggle {
+    color: rgba(249, 247, 255, 0.75);
+}
+
+.contact-hero__form .organization-select__toggle:hover,
+.contact-hero__form .organization-select__toggle:focus-visible {
+    color: #ffffff;
+}
+
+.contact-hero__form .organization-select__list {
+    border-radius: 10px;
+}
+
 .form-field input,
 .form-field textarea {
     border: 1px solid rgba(58, 104, 153, 0.16);
@@ -1791,6 +1804,91 @@ a:focus {
 .form-field input,
 .form-field textarea {
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.organization-select {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.organization-select input[data-organization-input] {
+    flex: 1;
+    padding-right: 2.5rem;
+}
+
+.organization-select__toggle {
+    position: absolute;
+    top: 50%;
+    right: 0.65rem;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: var(--color-muted);
+    cursor: pointer;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.15rem;
+}
+
+.organization-select__toggle:focus-visible {
+    outline: 2px solid var(--focus-outline);
+    border-radius: 6px;
+}
+
+.organization-select__list {
+    position: absolute;
+    top: calc(100% + 0.4rem);
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border: 1px solid var(--surface-border);
+    border-radius: 12px;
+    box-shadow: 0 18px 35px rgba(64, 89, 142, 0.18);
+    max-height: 18rem;
+    overflow-y: auto;
+    padding: 0.4rem 0;
+    display: none;
+    z-index: 12;
+}
+
+.contact-page .organization-select__toggle:focus-visible {
+    border-radius: 0;
+}
+
+.contact-page .organization-select__list {
+    border-radius: 0;
+}
+
+.organization-select--open .organization-select__list {
+    display: block;
+}
+
+.organization-select__option {
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: transparent;
+    padding: 0.55rem 1rem;
+    font: inherit;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.organization-select__option:hover,
+.organization-select__option:focus {
+    background-color: rgba(73, 94, 152, 0.08);
+    outline: none;
+}
+
+.organization-select__empty {
+    padding: 0.7rem 1rem;
+    color: var(--color-muted);
+    font-size: 0.95rem;
 }
 
 
