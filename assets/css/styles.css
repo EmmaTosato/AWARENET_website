@@ -1709,8 +1709,8 @@ a:focus {
     box-shadow: 0 20px 42px rgba(58, 104, 153, 0.25);
     overflow: hidden;
     color: #f9f7ff;
-    max-width: min(100%, 660px);
-    margin-top: clamp(1.5rem, 4vw, 3rem);
+    max-width: min(100%, 720px);
+    margin-top: clamp(0.85rem, 2.8vw, 2rem);
 }
 
 .contact-hero__content .contact-hero__form {
@@ -1720,6 +1720,24 @@ a:focus {
 @media (min-width: 960px) {
     .contact-hero__content .contact-hero__form {
         justify-self: end;
+    }
+}
+
+@media (min-width: 1100px) {
+    .contact-hero__info-inner {
+        margin-top: -0.75rem;
+    }
+
+    .contact-hero__form {
+        max-width: min(100%, 760px);
+        margin-top: clamp(0.2rem, 1.5vw, 1.25rem);
+        margin-left: clamp(1.5rem, 4vw, 3rem);
+    }
+}
+
+@media (min-width: 1440px) {
+    .contact-hero__form {
+        margin-left: clamp(2.5rem, 6vw, 5rem);
     }
 }
 
