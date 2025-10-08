@@ -1553,15 +1553,21 @@ a:focus {
     margin: 0;
     display: grid;
     place-items: center;
-    width: 100%;
+    width: min(13rem, 92%);
+    aspect-ratio: 1 / 1;
+    border-radius: 22px;
+    overflow: hidden;
+    padding: 0;
+    background: none;
 }
 
 .team-card__portrait {
-    width: min(78%, 11.5rem);
+    width: 100%;
+    height: 100%;
     aspect-ratio: 1 / 1;
-    object-fit: contain;
+    object-fit: cover;
     display: block;
-    margin: 0 auto;
+    border-radius: 18px;
 }
 
 .team-card__name {
@@ -1610,12 +1616,6 @@ a:focus {
     width: 1.4rem;
     height: 1.4rem;
     object-fit: contain;
-}
-
-@media (max-width: 1280px) {
-    .team-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
 }
 
 @media (max-width: 1024px) {
