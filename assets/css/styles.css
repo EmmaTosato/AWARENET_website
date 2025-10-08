@@ -398,7 +398,7 @@ a:focus {
 .hero-institutions {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(140deg, #c0d7f2 0%, #a9c7ea 45%, #7ea9d9 100%);
+    background: #eff5ff;
     color: var(--color-text);
     padding: clamp(4.5rem, 15vh, 7rem) 0 clamp(4rem, 14vh, 6.5rem);
 }
@@ -408,40 +408,7 @@ a:focus {
 }
 
 .hero-institutions__background {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-}
-
-.hero-institutions__blob {
-    position: absolute;
-    width: clamp(220px, 32vw, 420px);
-    height: clamp(220px, 32vw, 420px);
-    border-radius: 50%;
-    filter: blur(0px);
-    opacity: 0.6;
-}
-
-.hero-institutions__blob--primary {
-    top: -18%;
-    right: -8%;
-    background: radial-gradient(circle at 30% 30%, rgba(63, 120, 187, 0.58), rgba(63, 120, 187, 0));
-}
-
-.hero-institutions__blob--secondary {
-    bottom: -24%;
-    left: -10%;
-    background: radial-gradient(circle at 60% 40%, rgba(112, 159, 214, 0.54), rgba(112, 159, 214, 0));
-}
-
-.hero-institutions__ripple {
-    position: absolute;
-    inset: 15% 20% auto 18%;
-    height: clamp(280px, 32vw, 420px);
-    border-radius: 40%;
-    border: 1px solid rgba(86, 132, 191, 0.3);
-    transform: rotate(-8deg);
-    background: linear-gradient(120deg, rgba(255, 255, 255, 0.38) 0%, rgba(255, 255, 255, 0.08) 100%);
+    display: none;
 }
 
 .hero-institutions__layout {
