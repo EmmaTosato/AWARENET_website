@@ -742,7 +742,7 @@ a:focus {
 
 .section--about {
     position: relative;
-    max-width: min(96vw, calc(var(--layout-max-width) + 140px));
+    max-width: var(--layout-fluid-width);
 }
 
 .about-layout {
