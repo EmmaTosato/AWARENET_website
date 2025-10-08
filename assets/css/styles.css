@@ -988,7 +988,7 @@ a:focus {
 
     .contact-hero__header {
         max-width: min(100%, 48rem);
-        align-self: end;
+        align-self: start;
     }
 
     .contact-hero__content {
@@ -1012,7 +1012,7 @@ a:focus {
         justify-self: stretch;
         align-self: stretch;
         max-width: 560px;
-        margin-top: clamp(2rem, 4vw, 3.5rem);
+        margin-top: 0;
     }
 
     .contact-hero__form-inner {
