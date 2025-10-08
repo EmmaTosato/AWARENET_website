@@ -1709,7 +1709,7 @@ a:focus {
     box-shadow: 0 20px 42px rgba(58, 104, 153, 0.25);
     overflow: hidden;
     color: #f9f7ff;
-    max-width: min(100%, 540px);
+    max-width: min(100%, 640px);
     margin-top: clamp(1.5rem, 4vw, 3rem);
 }
 
