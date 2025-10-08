@@ -666,7 +666,7 @@ a:focus {
 
 .contact-hero__info {
     position: relative;
-    border-radius: 22px;
+    border-radius: 0;
     overflow: hidden;
     background: linear-gradient(140deg, rgba(30, 45, 78, 0.94) 0%, rgba(50, 82, 129, 0.92) 65%, rgba(76, 104, 158, 0.88) 100%);
     color: #f4f6ff;
@@ -709,12 +709,13 @@ a:focus {
 }
 
 .contact-card {
+    --contact-card-panel: rgba(255, 255, 255, 0.12);
     display: grid;
     gap: 0.65rem;
     padding: clamp(1.1rem, 2.4vw, 1.6rem);
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 0;
+    background: var(--contact-card-panel);
+    border: 1px solid rgba(255, 255, 255, 0.22);
     min-height: 0;
     transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
@@ -723,15 +724,19 @@ a:focus {
 .contact-card:focus-within {
     transform: translateY(-6px);
     border-color: rgba(255, 255, 255, 0.35);
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.18);
 }
 
 .contact-card__icon {
     display: inline-flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     width: 2.6rem;
     height: 2.6rem;
+    background: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 0;
+    padding: 0.35rem;
 }
 
 .contact-card__icon img {
@@ -1280,20 +1285,23 @@ a:focus {
 
 .contact-hero__form {
     background: var(--color-surface);
-    border-radius: 22px;
+    border-radius: 0;
     box-shadow: var(--shadow-sm);
     border: 1px solid rgba(58, 104, 153, 0.12);
-    padding: clamp(2.2rem, 4.5vw, 3.2rem);
-    display: grid;
-    gap: clamp(1.3rem, 2.5vw, 1.8rem);
+    padding: clamp(1.6rem, 3.6vw, 2.4rem);
 }
 
-.contact-hero__form-heading h2 {
-    margin: 0 0 0.4rem;
+.contact-form__intro {
+    margin-top: clamp(0.75rem, 2vw, 1.1rem);
+    margin-bottom: clamp(0.85rem, 2vw, 1.2rem);
+}
+
+.contact-form__intro h2 {
+    margin: 0 0 0.35rem;
     color: var(--color-heading);
 }
 
-.contact-hero__form-heading p {
+.contact-form__intro p {
     margin: 0;
     color: var(--color-muted);
     font-size: 0.98rem;
@@ -1302,7 +1310,7 @@ a:focus {
 
 .contact-form {
     display: grid;
-    gap: clamp(0.75rem, 1.8vw, 1rem);
+    gap: clamp(0.65rem, 1.6vw, 0.95rem);
 }
 
 .form-field {
@@ -1325,6 +1333,11 @@ a:focus {
     background: var(--color-background);
     color: var(--color-text);
     line-height: 1.4;
+}
+
+.contact-page .form-field input,
+.contact-page .form-field textarea {
+    border-radius: 0;
 }
 
 .form-field--organization {
@@ -1381,7 +1394,7 @@ a:focus {
 }
 
 .contact-page .organization-select__toggle:focus-visible {
-    border-radius: 2px;
+    border-radius: 0;
 }
 
 .contact-page .organization-select__list {
@@ -1494,9 +1507,20 @@ a:focus {
     box-shadow: none;
 }
 
-.contact-form .button:hover,
-.contact-form .button:focus {
+.contact-page .contact-form .button {
+    border-radius: 0;
+    background: var(--color-background);
+    color: var(--color-heading);
+    border: 1px solid var(--surface-border);
+    box-shadow: none;
+}
+
+.contact-page .contact-form .button:hover,
+.contact-page .contact-form .button:focus {
     transform: translateY(-1px);
+    border-color: rgba(58, 104, 153, 0.35);
+    background: var(--color-surface);
+    box-shadow: none;
 }
 
 .button:hover,
