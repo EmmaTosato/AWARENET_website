@@ -895,27 +895,28 @@ a:focus {
 
 .news-year__grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
     padding: 0 1.75rem 1.75rem;
+    justify-items: center;
 }
 
 .news-card {
-    display: flex;
+    display: grid;
     gap: 1rem;
-    padding: 1.2rem;
+    padding: 1.1rem;
     background: rgba(245, 246, 255, 0.9);
     border: 1px solid var(--card-border);
     border-radius: 18px;
     box-shadow: var(--shadow-sm);
-    align-items: flex-start;
+    width: 100%;
+    max-width: 320px;
 }
 
 .news-card__media {
-    flex: 0 0 96px;
-    width: 96px;
-    aspect-ratio: 1 / 1;
-    border-radius: 16px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 14px;
     overflow: hidden;
     background: var(--card-fill);
     display: flex;
@@ -935,7 +936,6 @@ a:focus {
 .news-card__content {
     display: grid;
     gap: 0.55rem;
-    flex: 1 1 auto;
 }
 
 .news-card__title {
@@ -970,16 +970,14 @@ a:focus {
 }
 
 @media (max-width: 720px) {
-    .news-card {
-        flex-direction: column;
-        align-items: stretch;
+    .news-year__grid {
+        grid-template-columns: 1fr;
+        justify-items: stretch;
     }
 
-    .news-card__media {
-        width: 100%;
-        max-width: 320px;
-        aspect-ratio: 4 / 3;
-        margin: 0 auto;
+    .news-card {
+        padding: 1rem;
+        max-width: 100%;
     }
 
     .news-card__content {
