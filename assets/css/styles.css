@@ -10,7 +10,7 @@ html {
     --color-text: #25263a;
     --color-muted: #5f5b78;
     --color-accent: #dacde9;
-    --font-family: 'Inter', 'Montserrat';
+    --font-family: 'Montserrat';
     --shadow-sm: 0 4px 14px rgba(62, 93, 150, 0.14);
     --header-offset: 5rem;
     --gradient-background: linear-gradient(180deg, #f9f6ff 0%, #f4eff8 55%, #f6f1ec 100%);
