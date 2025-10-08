@@ -1496,6 +1496,8 @@ a:focus {
     margin-inline: auto;
 }
 
+#institutions-title,
+#team-title,
 .team-section--calm .section__heading h2 {
     color: #1b2c4d;
 }
