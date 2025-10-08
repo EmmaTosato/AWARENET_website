@@ -746,6 +746,7 @@ a:focus {
     display: grid;
     gap: clamp(1.75rem, 4vw, 2.75rem);
     justify-items: center;
+    padding-bottom: clamp(5rem, 12vw, 8rem);
 }
 
 .section--cta .section__heading {
