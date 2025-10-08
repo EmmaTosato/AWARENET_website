@@ -461,8 +461,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const contactForm = document.querySelector('[data-contact-form]');
     if (contactForm) {
-        setupOrganizationSelector(contactForm);
-
         const statusMessage = contactForm.querySelector('[data-form-status]');
         const contactEmail = (contactForm.dataset.contactEmail || '').trim();
 
@@ -497,7 +495,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const name = getValue('name');
             const email = getValue('email');
-            const organization = getValue('organization');
+            const subjectValue = getValue('subject');
             const message = getValue('message');
 
             const emailLines = [
@@ -505,13 +503,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 '',
                 `Name: ${name || 'Not provided'}`,
                 `Email: ${email || 'Not provided'}`,
-                `Organization: ${organization || 'Not provided'}`,
+                `Subject: ${subjectValue || 'General inquiry'}`,
                 '',
                 'Message:',
                 message || 'No message provided.'
             ];
 
-            const subject = encodeURIComponent(`New contact request from ${name || 'AWARENET website'}`);
+            const subject = encodeURIComponent(subjectValue || `New contact request from ${name || 'AWARENET website'}`);
             const body = encodeURIComponent(emailLines.join('\n'));
             const mailtoLink = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
 
