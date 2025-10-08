@@ -722,18 +722,19 @@ a:focus {
 
 .section--about {
     position: relative;
+    max-width: min(96vw, calc(var(--layout-max-width) + 140px));
 }
 
 .about-layout {
     display: grid;
-    gap: clamp(1.75rem, 4vw, 3rem);
+    gap: clamp(2rem, 5vw, 4.5rem);
     align-items: start;
 }
 
 @media (min-width: 860px) {
     .about-layout {
-        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-        gap: clamp(2rem, 5vw, 4rem);
+        grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+        gap: clamp(2.5rem, 6vw, 5rem);
     }
 }
 
@@ -757,7 +758,7 @@ a:focus {
 
 .about-layout__highlights {
     display: grid;
-    gap: clamp(1.25rem, 3vw, 2.25rem);
+    gap: clamp(1.85rem, 4vw, 3.5rem);
 }
 
 .about-highlight {
