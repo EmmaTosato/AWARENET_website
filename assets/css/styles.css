@@ -622,7 +622,7 @@ a:focus {
     border-radius: 0;
     background: #ffffff;
     border: 1px solid var(--surface-border);
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
     overflow: hidden;
 }
 
@@ -676,12 +676,12 @@ a:focus {
     gap: clamp(1.5rem, 3vw, 2.5rem);
 }
 
-.card { 
+.card {
     background: var(--card-fill);
     border: 1px solid var(--card-border);
     border-radius: 0;
     padding: 2rem;
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
 }
 
 .card h3,
