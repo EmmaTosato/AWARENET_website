@@ -398,7 +398,7 @@ a:focus {
 .hero-institutions {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(140deg, #c7d4fa 0%, #d1c3f7 45%, #f3c4bc 100%);
+    background: linear-gradient(140deg, #c0d7f2 0%, #a9c7ea 45%, #7ea9d9 100%);
     color: var(--color-text);
     padding: clamp(4.5rem, 15vh, 7rem) 0 clamp(4rem, 14vh, 6.5rem);
 }
@@ -425,13 +425,13 @@ a:focus {
 .hero-institutions__blob--primary {
     top: -18%;
     right: -8%;
-    background: radial-gradient(circle at 30% 30%, rgba(81, 137, 202, 0.6), rgba(81, 137, 202, 0));
+    background: radial-gradient(circle at 30% 30%, rgba(63, 120, 187, 0.58), rgba(63, 120, 187, 0));
 }
 
 .hero-institutions__blob--secondary {
     bottom: -24%;
     left: -10%;
-    background: radial-gradient(circle at 60% 40%, rgba(212, 145, 206, 0.58), rgba(212, 145, 206, 0));
+    background: radial-gradient(circle at 60% 40%, rgba(112, 159, 214, 0.54), rgba(112, 159, 214, 0));
 }
 
 .hero-institutions__ripple {
@@ -439,9 +439,9 @@ a:focus {
     inset: 15% 20% auto 18%;
     height: clamp(280px, 32vw, 420px);
     border-radius: 40%;
-    border: 1px solid rgba(82, 119, 181, 0.28);
+    border: 1px solid rgba(86, 132, 191, 0.3);
     transform: rotate(-8deg);
-    background: linear-gradient(120deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.05) 100%);
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.38) 0%, rgba(255, 255, 255, 0.08) 100%);
 }
 
 .hero-institutions__layout {
