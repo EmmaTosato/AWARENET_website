@@ -1709,7 +1709,8 @@ a:focus {
     box-shadow: 0 20px 42px rgba(58, 104, 153, 0.25);
     overflow: hidden;
     color: #f9f7ff;
-    max-width: min(100%, 720px);
+    width: 780px;
+    max-width: 100%;
     margin-top: clamp(0.85rem, 2.8vw, 2rem);
 }
 
@@ -1729,7 +1730,8 @@ a:focus {
     }
 
     .contact-hero__form {
-        max-width: min(100%, 760px);
+        width: 820px;
+        max-width: 100%;
         margin-top: clamp(0.2rem, 1.5vw, 1.25rem);
         margin-left: clamp(1.5rem, 4vw, 3rem);
     }
@@ -1745,6 +1747,7 @@ a:focus {
     display: grid;
     gap: clamp(1.4rem, 3vw, 2.1rem);
     padding: clamp(1.6rem, 4vw, 2.4rem);
+    padding-bottom: clamp(1rem, 3vw, 1.6rem);
     height: 100%;
 }
 
