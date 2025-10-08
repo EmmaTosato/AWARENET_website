@@ -638,6 +638,14 @@ a:focus {
     font-size: 1.05rem;
 }
 
+.highlights .section__heading {
+    max-width: 100%;
+}
+
+.highlights .section__heading p {
+    font-size: 1.2rem;
+}
+
 
 .section--goals .section__heading {
     max-width: 100%;
