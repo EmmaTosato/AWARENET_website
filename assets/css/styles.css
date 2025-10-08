@@ -465,7 +465,7 @@ a:focus {
 
 .hero-institutions h1 {
     color: #1b2c4d;
-    font-size: clamp(2.1rem, 4vw, 3rem);
+    font-size: clamp(2.5rem, 5vw, 3.6rem);
     letter-spacing: -0.01em;
     margin: 0;
     white-space: normal;
@@ -473,8 +473,9 @@ a:focus {
 
 .hero-institutions__content p {
     color: #43526b;
-    font-size: 1.05rem;
-    max-width: 34rem;
+    font-size: clamp(1.15rem, 2.4vw, 1.35rem);
+    max-width: 36rem;
+    line-height: 1.6;
 }
 
 .hero-institutions .hero-institutions__cta {
@@ -503,44 +504,54 @@ a:focus {
     justify-content: center;
 }
 
+
 .institution-list {
     display: grid;
-    grid-template-columns: repeat(2, minmax(160px, 1fr));
-    gap: clamp(1.75rem, 4vw, 2.75rem);
-    width: min(560px, 100%);
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+    gap: clamp(1.85rem, 4.5vw, 3rem);
+    width: min(600px, 100%);
 }
 
 .institution-list__item {
     display: grid;
-    gap: 1rem;
-    justify-items: center;
-    text-align: center;
-    color: #1e2c46;
+    justify-items: stretch;
 }
 
 .institution-list__mark {
-    width: clamp(160px, 24vw, 200px);
-    min-height: clamp(80px, 14vw, 120px);
+    width: clamp(190px, 26vw, 240px);
+    min-height: clamp(100px, 16vw, 150px);
     display: grid;
     place-items: center;
     background: transparent;
     border-radius: 0;
     border: none;
     box-shadow: none;
-    padding: 0.5rem;
+    padding: 0.75rem;
 }
 
 .institution-list__mark img {
     max-width: 100%;
-    max-height: clamp(60px, 12vw, 100px);
+    max-height: clamp(80px, 14vw, 130px);
     object-fit: contain;
 }
 
-.institution-list__item h3 {
-    margin: 0;
-    font-size: 1.05rem;
-    font-weight: 600;
-    letter-spacing: -0.01em;
+.institution-list__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #1e2c46;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 18px;
+    padding: 0.5rem;
+}
+
+.institution-list__link:hover,
+.institution-list__link:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(38, 59, 101, 0.12);
+    outline: none;
 }
 
 .institution-list__item--centered {
@@ -549,7 +560,7 @@ a:focus {
 }
 
 .institution-list__item--centered .institution-list__mark {
-    max-width: clamp(200px, 28vw, 240px);
+    max-width: clamp(230px, 32vw, 280px);
 }
 
 @media (min-width: 900px) {
