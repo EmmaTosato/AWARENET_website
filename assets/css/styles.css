@@ -827,11 +827,12 @@ a:focus {
 }
 
 .section--goals .section__heading > h2 {
-    font-size: clamp(1.95rem, 4.3vw, 2.7rem);
+    font-size: clamp(1.7rem, 3.6vw, 2.3rem);
 }
 
 .section--goals .section__heading p {
     max-width: none;
+    font-size: clamp(1.02rem, 2vw, 1.25rem);
 }
 
 .objectives-card {
@@ -895,7 +896,7 @@ a:focus {
 
 .objective-card__title {
     margin: 0;
-    font-size: clamp(1.42rem, 2.8vw, 1.75rem);
+    font-size: clamp(1.28rem, 2.4vw, 1.55rem);
     color: var(--color-heading);
     min-height: 3.2rem;
     display: flex;
@@ -906,7 +907,7 @@ a:focus {
 .objective-card__text {
     margin: 0;
     color: var(--color-muted);
-    font-size: clamp(1.08rem, 2vw, 1.3rem);
+    font-size: clamp(0.98rem, 1.6vw, 1.18rem);
     text-align: center;
 }
 
@@ -1033,6 +1034,18 @@ a:focus {
     transform: translateX(0.35rem);
 }
 
+.about-highlight--offset h3 {
+    font-size: clamp(1.32rem, 2.2vw, 1.55rem);
+}
+
+.about-highlight--offset p {
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+}
+
+.about-highlight--offset .about-highlight__link {
+    font-size: clamp(0.88rem, 1.5vw, 0.98rem);
+}
+
 .section--cta {
     display: grid;
     gap: clamp(1.75rem, 4vw, 2.75rem);
@@ -1047,11 +1060,11 @@ a:focus {
 }
 
 .section--cta .section__heading > h2 {
-    font-size: clamp(1.95rem, 4.2vw, 2.7rem);
+    font-size: clamp(1.75rem, 3.5vw, 2.35rem);
 }
 
 .section--cta .section__heading .section__lead {
-    font-size: clamp(1.16rem, 2.3vw, 1.42rem);
+    font-size: clamp(1.02rem, 2vw, 1.25rem);
 }
 
 .cta-button {
