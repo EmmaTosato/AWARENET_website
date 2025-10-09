@@ -760,11 +760,11 @@ a:focus {
 .section__heading p {
     margin: 0;
     color: var(--color-muted);
-    font-size: 1.05rem;
+    font-size: clamp(1.06rem, 1.8vw, 1.25rem);
 }
 
 .section__heading .section__lead {
-    font-size: clamp(1.15rem, 2.4vw, 1.4rem);
+    font-size: clamp(1.17rem, 2.45vw, 1.44rem);
     line-height: 1.6;
 }
 
@@ -779,6 +779,10 @@ a:focus {
 
 .section--goals .section__heading {
     max-width: 100%;
+}
+
+.section--goals .section__heading > h2 {
+    font-size: clamp(1.95rem, 4.3vw, 2.7rem);
 }
 
 .section--goals .section__heading p {
@@ -846,7 +850,7 @@ a:focus {
 
 .objective-card__title {
     margin: 0;
-    font-size: 1.35rem;
+    font-size: clamp(1.42rem, 2.8vw, 1.75rem);
     color: var(--color-heading);
     min-height: 3.2rem;
     display: flex;
@@ -857,7 +861,7 @@ a:focus {
 .objective-card__text {
     margin: 0;
     color: var(--color-muted);
-    font-size: 1.05rem;
+    font-size: clamp(1.08rem, 2vw, 1.3rem);
     text-align: center;
 }
 
@@ -895,12 +899,14 @@ a:focus {
     margin-top: 0;
     margin-bottom: 1rem;
     color: var(--color-heading);
+    font-size: clamp(1.9rem, 3.8vw, 2.55rem);
 }
 
 .about-layout__intro p {
     margin: 0;
     max-width: 48ch;
     color: var(--color-muted);
+    font-size: clamp(1.12rem, 2.2vw, 1.35rem);
 }
 
 .about-layout__highlights {
@@ -924,14 +930,25 @@ a:focus {
 }
 
 .about-highlight__content {
+    position: relative;
     display: grid;
     gap: 0.65rem;
     padding-bottom: clamp(0.5rem, 1vw, 0.75rem);
-    border-bottom: 1px solid rgba(58, 106, 155, 0.18);
 }
 
-.about-highlight:last-child .about-highlight__content {
-    border-bottom: 0;
+.about-highlight__content::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: min(60%, 14rem);
+    height: 1px;
+    background: rgba(58, 106, 155, 0.18);
+}
+
+.about-highlight:last-child .about-highlight__content::after {
+    display: none;
 }
 
 .about-highlight--offset {
@@ -940,14 +957,14 @@ a:focus {
 
 .about-highlight h3 {
     margin: 0;
-    font-size: 1.35rem;
+    font-size: clamp(1.45rem, 2.6vw, 1.75rem);
     color: var(--color-heading);
 }
 
 .about-highlight p {
     margin: 0;
     color: var(--color-muted);
-    font-size: 1.05rem;
+    font-size: clamp(1.1rem, 2vw, 1.32rem);
 }
 
 .about-highlight__link {
@@ -958,7 +975,7 @@ a:focus {
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--color-primary);
-    font-size: 0.92rem;
+    font-size: clamp(0.96rem, 1.8vw, 1.05rem);
 }
 
 .about-highlight__link::after {
@@ -984,6 +1001,14 @@ a:focus {
     max-width: 52ch;
 }
 
+.section--cta .section__heading > h2 {
+    font-size: clamp(1.95rem, 4.2vw, 2.7rem);
+}
+
+.section--cta .section__heading .section__lead {
+    font-size: clamp(1.16rem, 2.3vw, 1.42rem);
+}
+
 .cta-button {
     display: inline-flex;
     align-items: center;
@@ -995,6 +1020,7 @@ a:focus {
     color: #ffffff;
     font-weight: 600;
     letter-spacing: 0.01em;
+    font-size: clamp(1rem, 1.9vw, 1.18rem);
     box-shadow: 0 14px 28px rgba(19, 37, 75, 0.28);
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
