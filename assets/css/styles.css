@@ -427,7 +427,7 @@ a:focus {
     overflow: hidden;
     background: linear-gradient(180deg, #f8f9ff 0%, #f1f0fb 55%, #f5ede7 100%);
     color: var(--color-text);
-    padding: clamp(4.5rem, 15vh, 7rem) 0 clamp(4rem, 14vh, 6.5rem);
+    padding: clamp(6rem, 18vh, 8.5rem) 0 clamp(4rem, 14vh, 6.5rem);
     margin-top: 0;
 }
 
