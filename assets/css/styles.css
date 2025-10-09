@@ -1737,7 +1737,7 @@ a:focus {
 .team-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: clamp(1.5rem, 3vw, 2.25rem);
+    gap: clamp(1.15rem, 2.4vw, 1.85rem);
 }
 
 .team-card {
@@ -1753,7 +1753,7 @@ a:focus {
 }
 
 .team-card__figure {
-    --team-card-portrait-size: clamp(9.5rem, 62%, 12.25rem);
+    --team-card-portrait-size: clamp(10.25rem, 68%, 13rem);
     margin: 0;
     display: grid;
     place-items: center;
