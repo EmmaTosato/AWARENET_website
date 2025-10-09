@@ -406,10 +406,32 @@ a:focus {
 }
 
 .section--hero h1 {
-    font-size: clamp(1.93rem, 4.5vw, 3.43rem);
-    margin-bottom: 1rem;
+    font-size: clamp(2.5rem, 6.8vw, 4.75rem);
     color: #ffffff;
-    line-height: 1.12;
+    line-height: 1.32;
+}
+
+.hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.95rem 2.85rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 14px 28px rgba(19, 37, 75, 0.28);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.hero__cta:hover,
+.hero__cta:focus {
+    background: rgba(255, 255, 255, 0.22);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 18px 36px rgba(19, 37, 75, 0.32);
 }
 
 #home-title {
