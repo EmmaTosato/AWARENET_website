@@ -391,6 +391,22 @@ a:focus {
     z-index: 1;
 }
 
+.section--hero.section--hero--clear {
+    color: var(--color-heading);
+}
+
+.section--hero.section--hero--clear::before {
+    display: none;
+}
+
+.section--hero.section--hero--clear h1 {
+    color: var(--color-title-strong);
+}
+
+.section--hero.section--hero--clear p {
+    color: var(--color-text);
+}
+
 .hero__inner {
     position: relative;
     z-index: 2;
