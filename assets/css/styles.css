@@ -539,9 +539,10 @@ a:focus {
     align-items: start;
     width: min(100%, var(--layout-fluid-width));
     margin: 0 auto;
-    padding-inline: clamp(1.5rem, 6vw, 4rem);
+    padding-left: clamp(0.5rem, 3vw, 2rem);
+    padding-right: clamp(2rem, 7vw, 4.5rem);
     box-sizing: border-box;
-    justify-content: center;
+    justify-content: start;
 }
 
 .hero-institutions__content {
@@ -553,7 +554,7 @@ a:focus {
 
 .hero-institutions h1 {
     color: #1b2c4d;
-    font-size: clamp(2.5rem, 5vw, 3.6rem);
+    font-size: clamp(2.8rem, 5.5vw, 4.25rem);
     letter-spacing: -0.01em;
     margin: 0;
     white-space: normal;
@@ -568,7 +569,7 @@ a:focus {
 }
 
 .hero-institutions .hero-institutions__cta {
-    margin-top: 1.5rem;
+    margin-top: clamp(2.25rem, 4vw, 3rem);
     text-transform: none;
     background: #1b2c4d;
     color: #f4f7ff;
