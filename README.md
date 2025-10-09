@@ -60,11 +60,11 @@ Visitando `http://localhost:8000` potrai navigare tutte le pagine e verificare i
 
 ## Pubblicazione su GitHub Pages
 
-Il repository include un workflow GitHub Actions (`.github/workflows/deploy.yml`) che pubblica automaticamente il sito come GitHub Page.
+Il repository include un workflow GitHub Actions (`.github/workflows/deploy.yml`) che pubblica automaticamente il sito come GitHub Page. Il workflow esegue due job: il primo crea l'artifact con tutti i file necessari al deploy (inclusa la cartella `assets`), il secondo lo pubblica sull'ambiente GitHub Pages.
 
 1. Vai su **Settings → Pages** nel repository GitHub.
 2. Seleziona **GitHub Actions** come sorgente di pubblicazione.
 3. Verifica che il branch predefinito sia `main` e salva.
-4. Ogni push su `main` (oppure l'avvio manuale del workflow) genererà un artifact con tutti i file HTML e la cartella `assets`, quindi aggiornerà il branch `gh-pages` e l'URL pubblico del sito.
+4. Ogni push su `main` (oppure l'avvio manuale del workflow) farà partire la pipeline che creerà l'artifact e aggiornerà l'URL pubblico del sito.
 
-Quando la prima esecuzione del workflow sarà completata, GitHub mostrerà l'indirizzo definitivo della pagina nella scheda **Deployments**.
+Per evitare la trasformazione Jekyll automatica di GitHub Pages è presente un file `.nojekyll` nella root del progetto. Quando la prima esecuzione del workflow sarà completata, GitHub mostrerà l'indirizzo definitivo della pagina nella scheda **Deployments**.
