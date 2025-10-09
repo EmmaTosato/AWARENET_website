@@ -1684,6 +1684,10 @@ a:focus {
     gap: 2.5rem;
 }
 
+#team-section {
+    scroll-margin-top: calc(var(--header-offset) + 2rem);
+}
+
 .team-section--calm {
     background: transparent;
     color: var(--color-text);
