@@ -777,6 +777,10 @@ a:focus {
 }
 
 
+.section--goals {
+    gap: clamp(1.75rem, 3vw, 2.25rem);
+}
+
 .section--goals .section__heading {
     max-width: 100%;
 }
