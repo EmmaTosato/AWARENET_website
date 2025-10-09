@@ -545,11 +545,18 @@ a:focus {
 .hero-institutions .hero-institutions__cta {
     margin-top: 0.75rem;
     text-transform: none;
+    background: #1b2c4d;
+    color: #f4f7ff;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 14px 32px rgba(22, 36, 64, 0.28);
 }
 
 .hero-institutions .hero-institutions__cta:hover,
 .hero-institutions .hero-institutions__cta:focus {
     text-transform: none;
+    background: #1f3459;
+    box-shadow: 0 16px 36px rgba(22, 36, 64, 0.32);
 }
 
 .hero-institutions__logos {
@@ -587,6 +594,25 @@ a:focus {
     max-width: 100%;
     max-height: clamp(80px, 14vw, 130px);
     object-fit: contain;
+}
+
+.institution-list__mark--cnr img {
+    transform: scale(1.08);
+}
+
+.institution-list__mark--placeholder {
+    border: 1px dashed rgba(31, 63, 115, 0.35);
+    border-radius: 18px;
+    width: 100%;
+    background: rgba(248, 247, 255, 0.65);
+    color: var(--color-heading);
+}
+
+.institution-list__placeholder-text {
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: inherit;
 }
 
 .institution-list__link {
@@ -933,20 +959,21 @@ a:focus {
     align-items: center;
     justify-content: center;
     padding: 0.75rem 1.75rem;
-    border: 1px solid var(--color-primary);
-    border-radius: 0;
-    background: var(--color-primary);
-    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 999px;
+    background: var(--gradient-header);
+    color: var(--color-heading);
     font-weight: 600;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    box-shadow: 0 12px 30px rgba(58, 104, 153, 0.18);
+    transition: filter 0.25s ease, box-shadow 0.25s ease;
 }
 
 .cta-button:hover,
 .cta-button:focus {
-    background: transparent;
-    color: var(--color-primary);
+    filter: brightness(0.95);
+    box-shadow: 0 16px 34px rgba(58, 104, 153, 0.22);
 }
 
 
