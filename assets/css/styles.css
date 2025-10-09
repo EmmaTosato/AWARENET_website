@@ -1434,6 +1434,15 @@ a:focus {
     font-size: 1rem;
 }
 
+.event-card__divider {
+    display: block;
+    width: 3.25rem;
+    height: 0.25rem;
+    background: var(--color-heading);
+    border-radius: 999px;
+    margin-top: 0.15rem;
+}
+
 .highlight-card__description {
     margin: 0;
     color: var(--color-text);
