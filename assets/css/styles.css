@@ -1368,6 +1368,7 @@ a:focus {
     font-size: 1.15rem;
     line-height: 1.35;
     color: var(--color-primary);
+    font-weight: 600;
 }
 
 .highlight-card__title a {
@@ -1391,6 +1392,7 @@ a:focus {
     color: var(--color-text);
     line-height: 1.5;
     font-size: 0.95rem;
+    font-weight: 400;
 }
 
 .news-archive__accordion {
@@ -1494,6 +1496,7 @@ a:focus {
     margin: 0;
     font-size: 1.15rem;
     color: var(--color-heading);
+    font-weight: 600;
 }
 
 .news-card__title a {
@@ -1508,8 +1511,12 @@ a:focus {
 .news-card__date {
     margin: 0.3rem 0 0;
     color: var(--color-muted);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1rem;
+}
+
+.news-card__date strong {
+    font-weight: inherit;
 }
 
 .news-card__date--upcoming {
@@ -1520,6 +1527,7 @@ a:focus {
     margin: 0;
     color: var(--color-text);
     font-size: 0.9rem;
+    font-weight: 400;
 }
 
 @media (max-width: 720px) {
