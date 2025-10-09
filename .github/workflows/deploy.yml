@@ -23,13 +23,15 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Configure Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
 
       - name: Prepare static site artifact
         run: |
           mkdir -p public
           cp -r assets public/
+          cp -r images public/  # <-- aggiunto per includere la cartella images
           cp ./*.html public/
+          [ -f CNAME ] && cp CNAME public/
           touch public/.nojekyll
 
       - name: Upload artifact

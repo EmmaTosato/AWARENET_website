@@ -939,7 +939,6 @@ a:focus {
     color: #ffffff;
     font-weight: 600;
     letter-spacing: 0.02em;
-    text-transform: uppercase;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
