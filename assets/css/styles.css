@@ -514,7 +514,7 @@ a:focus {
     z-index: 2;
     display: grid;
     gap: clamp(2.2rem, 4vw, 3.5rem);
-    align-items: stretch;
+    align-items: start;
     width: min(100%, var(--layout-fluid-width));
     margin: 0 auto;
     padding-inline: clamp(1.5rem, 6vw, 4rem);
@@ -647,7 +647,7 @@ a:focus {
 @media (min-width: 900px) {
     .hero-institutions__layout {
         grid-template-columns: minmax(320px, 1fr) minmax(380px, 1fr);
-        align-items: center;
+        align-items: start;
     }
 }
 
