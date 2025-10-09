@@ -374,7 +374,7 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: clamp(3rem, 12vh, 6rem) clamp(1.5rem, 8vw, 6rem);
+    padding: clamp(2.25rem, 10vh, 5.5rem) clamp(1.5rem, 8vw, 6rem);
     min-height: 100vh;
     width: 100%;
     max-width: none;
@@ -406,9 +406,10 @@ a:focus {
 }
 
 .section--hero h1 {
-    font-size: clamp(2.5rem, 6.8vw, 4.75rem);
+    font-size: clamp(2.9rem, 7.2vw, 5.4rem);
     color: #ffffff;
     line-height: 1.32;
+    margin-bottom: clamp(1.25rem, 3vw, 1.85rem);
 }
 
 .hero__cta {
@@ -424,6 +425,7 @@ a:focus {
     border: 1px solid rgba(255, 255, 255, 0.35);
     box-shadow: 0 14px 28px rgba(19, 37, 75, 0.28);
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    margin-top: clamp(1.75rem, 4vw, 3.25rem);
 }
 
 .hero__cta:hover,
