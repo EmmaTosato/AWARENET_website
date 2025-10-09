@@ -428,6 +428,7 @@ a:focus {
     background: linear-gradient(180deg, #f8f9ff 0%, #f1f0fb 55%, #f5ede7 100%);
     color: var(--color-text);
     padding: clamp(4.5rem, 15vh, 7rem) 0 clamp(4rem, 14vh, 6.5rem);
+    margin-top: clamp(1.5rem, 4vw, 2.75rem);
 }
 
 .hero-institutions::before {
@@ -1646,18 +1647,21 @@ a:focus {
     text-align: center;
     gap: 0.55rem;
     padding: 0.5rem 0.5rem 1.1rem;
+    grid-template-rows: auto auto auto auto;
 }
 
 .team-card__figure {
+    --team-card-portrait-size: clamp(9.5rem, 62%, 12.25rem);
     margin: 0;
     display: grid;
     place-items: center;
-    width: min(13rem, 92%);
+    width: min(var(--team-card-portrait-size), 100%);
     aspect-ratio: 1 / 1;
     border-radius: 22px;
     overflow: hidden;
     padding: 0;
-    background: none;
+    background: rgba(255, 255, 255, 0.65);
+    box-shadow: 0 12px 28px rgba(31, 45, 68, 0.08);
 }
 
 .team-card__portrait {
