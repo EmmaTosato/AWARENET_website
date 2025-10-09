@@ -428,6 +428,7 @@ a:focus {
     background: linear-gradient(180deg, #f8f9ff 0%, #f1f0fb 55%, #f5ede7 100%);
     color: var(--color-text);
     padding: clamp(4.5rem, 15vh, 7rem) 0 clamp(4rem, 14vh, 6.5rem);
+    margin-top: clamp(1.5rem, 4vw, 2.75rem);
 }
 
 .hero-institutions::before {
@@ -965,9 +966,7 @@ a:focus {
     color: var(--color-heading);
     font-weight: 600;
     letter-spacing: 0.02em;
-    text-transform: uppercase;
-    box-shadow: 0 12px 30px rgba(58, 104, 153, 0.18);
-    transition: filter 0.25s ease, box-shadow 0.25s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .cta-button:hover,
@@ -1673,21 +1672,30 @@ a:focus {
     text-align: center;
     gap: 0.55rem;
     padding: 0.5rem 0.5rem 1.1rem;
+    grid-template-rows: auto auto auto auto;
 }
 
 .team-card__figure {
+    --team-card-portrait-size: clamp(9.5rem, 62%, 12.25rem);
     margin: 0;
     display: grid;
     place-items: center;
-    width: 100%;
+    width: min(var(--team-card-portrait-size), 100%);
+    aspect-ratio: 1 / 1;
+    border-radius: 22px;
+    overflow: hidden;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.65);
+    box-shadow: 0 12px 28px rgba(31, 45, 68, 0.08);
 }
 
 .team-card__portrait {
-    width: min(78%, 11.5rem);
+    width: 100%;
+    height: 100%;
     aspect-ratio: 1 / 1;
-    object-fit: contain;
+    object-fit: cover;
     display: block;
-    margin: 0 auto;
+    border-radius: 18px;
 }
 
 .team-card__name {
@@ -1736,12 +1744,6 @@ a:focus {
     width: 1.4rem;
     height: 1.4rem;
     object-fit: contain;
-}
-
-@media (max-width: 1280px) {
-    .team-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
 }
 
 @media (max-width: 1024px) {
@@ -1818,7 +1820,7 @@ a:focus {
     display: grid;
     gap: clamp(1.4rem, 3vw, 2.1rem);
     padding: clamp(1.6rem, 4vw, 2.4rem);
-    padding-bottom: clamp(1rem, 3vw, 1.6rem);
+    padding-bottom: clamp(0.6rem, 2.5vw, 1.1rem);
     height: 100%;
 }
 

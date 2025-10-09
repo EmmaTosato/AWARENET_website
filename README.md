@@ -57,3 +57,14 @@ python3 -m http.server
 ```
 
 Visitando `http://localhost:8000` potrai navigare tutte le pagine e verificare il comportamento della barra di navigazione responsive e della pagina eventi dinamica.
+
+## Pubblicazione su GitHub Pages
+
+Il repository include un workflow GitHub Actions (`.github/workflows/deploy.yml`) che pubblica automaticamente il sito come GitHub Page.
+
+1. Vai su **Settings → Pages** nel repository GitHub.
+2. Seleziona **GitHub Actions** come sorgente di pubblicazione.
+3. Verifica che il branch predefinito sia `main` e salva.
+4. Ogni push su `main` (oppure l'avvio manuale del workflow) genererà un artifact con tutti i file HTML e la cartella `assets`, quindi aggiornerà il branch `gh-pages` e l'URL pubblico del sito.
+
+Quando la prima esecuzione del workflow sarà completata, GitHub mostrerà l'indirizzo definitivo della pagina nella scheda **Deployments**.
