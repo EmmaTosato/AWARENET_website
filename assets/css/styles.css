@@ -1626,6 +1626,7 @@ a:focus {
     max-width: none;
     margin: 0;
     width: 100%;
+    padding-top: clamp(2.5rem, 8vw, 4.5rem);
     padding-inline: clamp(1.5rem, 8vw, 6rem);
     position: relative;
 }
