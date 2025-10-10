@@ -17,6 +17,20 @@ if (toggleButton && navigation) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    const getHeaderOffset = () => {
+        const header = document.querySelector('.site-header');
+        if (!header) {
+            return 0;
+        }
+
+        const rect = header.getBoundingClientRect();
+        const styles = window.getComputedStyle(header);
+        const marginTop = parseFloat(styles.marginTop) || 0;
+        const marginBottom = parseFloat(styles.marginBottom) || 0;
+
+        return rect.height + marginTop + marginBottom;
+    };
+
     const scrollWithOffset = (hash) => {
         if (!hash || hash === '#') {
             return;
@@ -27,22 +41,22 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const header = document.querySelector('.site-header');
-        const headerHeight = header ? header.getBoundingClientRect().height : 0;
-        const dynamicSpacing = headerHeight * 0.75; // Use a portion of the header height to create consistent breathing room
+        const headerOffset = getHeaderOffset();
+        const targetRect = target.getBoundingClientRect();
+        const targetTop = targetRect.top + window.pageYOffset;
+        const targetStyles = window.getComputedStyle(target);
+        const scrollMarginTop = parseFloat(targetStyles.scrollMarginTop) || 0;
+        const breathingSpace = Math.max(0, scrollMarginTop - headerOffset);
 
-        const focusTarget = target.closest('[data-scroll-focus]') || target;
-        const focusRect = focusTarget.getBoundingClientRect();
-        const focusHeight = focusRect.height;
-        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-        const availableHeight = Math.max(0, viewportHeight - headerHeight);
-        const centeringOffset = Math.max(
-            dynamicSpacing,
-            availableHeight > 0 ? Math.max(0, (availableHeight - focusHeight) / 2) : 0
-        );
+        const focusContainer = target.closest('[data-scroll-focus]') || target;
+        const section = focusContainer.closest('section') || focusContainer;
+        const sectionRect = section.getBoundingClientRect();
+        const sectionTop = sectionRect.top + window.pageYOffset;
+        const minimumOffset = sectionTop - headerOffset;
 
-        const focusPosition = focusRect.top + window.pageYOffset;
-        const offsetPosition = Math.max(0, focusPosition - headerHeight - centeringOffset);
+        let offsetPosition = targetTop - headerOffset - breathingSpace;
+        offsetPosition = Math.max(offsetPosition, minimumOffset);
+        offsetPosition = Math.max(0, Math.round(offsetPosition));
 
         window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
     };
