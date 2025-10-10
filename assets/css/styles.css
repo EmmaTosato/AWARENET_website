@@ -529,7 +529,7 @@ a:focus {
     position: relative;
     z-index: 2;
     display: grid;
-    gap: clamp(2.5rem, 4.5vw, 4.25rem);
+    gap: clamp(2.75rem, 5vw, 4.75rem);
     align-items: start;
     width: min(100%, var(--layout-fluid-width));
     margin: 0 auto;
@@ -665,31 +665,31 @@ a:focus {
 
 @media (min-width: 900px) {
     .hero-institutions__layout {
-        grid-template-columns: minmax(320px, 420px) minmax(420px, 560px);
+        grid-template-columns: minmax(320px, 440px) minmax(360px, 520px);
         align-items: start;
-        column-gap: clamp(5rem, 9vw, 7rem);
+        column-gap: clamp(4.25rem, 8vw, 6rem);
     }
 
     .hero-institutions__content {
         justify-items: end;
         text-align: right;
-        padding-inline-end: clamp(1.75rem, 5vw, 3.75rem);
-        margin-top: clamp(-2.5rem, -5vw, -1.5rem);
+        padding-inline-end: clamp(1.5rem, 4.5vw, 3.25rem);
+        margin-top: clamp(-1.5rem, -3vw, -0.75rem);
         align-self: start;
     }
 
     .hero-institutions .hero-institutions__cta {
         justify-self: end;
-        margin-top: clamp(3.25rem, 5.75vw, 4rem);
+        margin-top: clamp(2.75rem, 5vw, 3.5rem);
     }
 
     .hero-institutions__logos {
         align-self: start;
         justify-content: flex-end;
         justify-self: end;
-        margin-top: clamp(-5.5rem, -9vw, -3rem);
-        padding-inline-start: clamp(1.25rem, 3vw, 2rem);
-        transform: translateX(clamp(2.25rem, 6vw, 4rem));
+        margin-top: clamp(-3.25rem, -6vw, -2rem);
+        padding-inline-start: clamp(0.75rem, 2.5vw, 1.75rem);
+        transform: translateX(clamp(1.5rem, 5vw, 3.25rem));
     }
 }
 
@@ -2357,10 +2357,11 @@ main {
 }
 
 .research-hero {
-    padding: clamp(4rem, 12vw, 6rem) var(--layout-section-padding);
+    padding-block: clamp(3.5rem, 10vw, 5rem) clamp(5rem, 14vw, 7rem);
+    padding-inline: var(--layout-section-padding);
     min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     background: var(--gradient-background);
     background-size: cover;
@@ -2373,7 +2374,7 @@ main {
     margin: 0;
     font-size: clamp(2rem, 4.5vw, 2.8rem);
     line-height: 1.15;
-    color: var(--color-title-strong);
+    color: #1b2c4d;
 }
 
 .research-hero__grid {
@@ -2568,6 +2569,10 @@ main {
 }
 
 @media (max-width: 960px) {
+    .research-hero {
+        align-items: center;
+    }
+
     .research-hero__grid {
         grid-template-columns: 1fr;
         text-align: center;
@@ -2588,7 +2593,8 @@ main {
 
 @media (max-width: 640px) {
     .research-hero {
-        padding: clamp(3rem, 14vw, 4rem) var(--layout-section-padding);
+        padding-block: clamp(2.5rem, 12vw, 3.5rem) clamp(3.5rem, 16vw, 4.5rem);
+        padding-inline: var(--layout-section-padding);
     }
 
     .research-task,
