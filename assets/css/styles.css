@@ -2354,9 +2354,14 @@ main {
 
 .research-hero {
     padding: clamp(4rem, 12vw, 6rem) var(--layout-section-padding);
-    display: grid;
-    place-items: center;
-    background: var(--color-background);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-background);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     border-bottom: 1px solid rgba(58, 104, 153, 0.12);
 }
 
