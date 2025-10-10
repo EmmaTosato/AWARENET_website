@@ -1709,7 +1709,7 @@ a:focus {
     max-width: none;
     margin: 0;
     width: 100%;
-    padding-top: clamp(2.5rem, 8vw, 4.5rem);
+    padding-top: clamp(1.75rem, 6vw, 3.75rem);
     padding-inline: clamp(1.5rem, 8vw, 6rem);
     position: relative;
 }
@@ -1757,24 +1757,24 @@ a:focus {
 
 .team-card {
     background: transparent;
-    border-radius: 18px;
+    border-radius: 0;
     display: grid;
     justify-items: center;
     align-content: start;
     text-align: center;
     gap: 0.55rem;
-    padding: 0.5rem 0.5rem 1.1rem;
+    padding: 0.65rem 0.65rem 1.2rem;
     grid-template-rows: auto auto auto auto;
 }
 
 .team-card__figure {
-    --team-card-portrait-size: clamp(10.25rem, 68%, 13rem);
+    --team-card-portrait-size: clamp(11rem, 70%, 14rem);
     margin: 0;
     display: grid;
     place-items: center;
     width: min(var(--team-card-portrait-size), 100%);
     aspect-ratio: 1 / 1;
-    border-radius: 22px;
+    border-radius: 0;
     overflow: hidden;
     padding: 0;
     background: rgba(255, 255, 255, 0.65);
@@ -1787,13 +1787,13 @@ a:focus {
     aspect-ratio: 1 / 1;
     object-fit: cover;
     display: block;
-    border-radius: 18px;
+    border-radius: 0;
 }
 
 .team-card__name {
     margin: 0;
     color: #1f2d44;
-    font-size: 1.05rem;
+    font-size: 1.12rem;
     letter-spacing: -0.01em;
 }
 
