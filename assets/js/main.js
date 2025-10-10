@@ -528,6 +528,125 @@ document.addEventListener('DOMContentLoaded', () => {
         renderList(currentOptions);
     };
 
+    const emailLinks = document.querySelectorAll('[data-email-link]');
+    if (emailLinks.length > 0) {
+        const toast = document.querySelector('[data-toast]');
+        let toastTimeoutId;
+
+        const hideToast = () => {
+            if (!toast) {
+                return;
+            }
+
+            toast.classList.remove('toast--visible');
+            toast.classList.add('toast--hidden');
+            toast.classList.remove('toast--error');
+        };
+
+        const showToast = (message, tone = 'info') => {
+            if (!toast) {
+                return;
+            }
+
+            toast.textContent = message;
+            toast.classList.remove('toast--hidden');
+            toast.classList.remove('toast--error');
+
+            if (tone === 'error') {
+                toast.classList.add('toast--error');
+            }
+
+            requestAnimationFrame(() => {
+                toast.classList.add('toast--visible');
+            });
+
+            window.clearTimeout(toastTimeoutId);
+            toastTimeoutId = window.setTimeout(() => {
+                hideToast();
+            }, 2000);
+        };
+
+        const copyEmail = async (email) => {
+            if (!email) {
+                return false;
+            }
+
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(email);
+                    return true;
+                }
+            } catch (error) {
+                // Ignore and fall back to manual copy method.
+            }
+
+            const textarea = document.createElement('textarea');
+            textarea.value = email;
+            textarea.setAttribute('readonly', '');
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            textarea.style.pointerEvents = 'none';
+            textarea.style.top = '-9999px';
+
+            document.body.appendChild(textarea);
+
+            const selection = document.getSelection ? document.getSelection() : null;
+            const selectedRange = selection && selection.rangeCount > 0 ? selection.getRangeAt(0) : null;
+
+            textarea.focus();
+            textarea.select();
+
+            let successful = false;
+
+            try {
+                successful = document.execCommand('copy');
+            } catch (error) {
+                successful = false;
+            }
+
+            document.body.removeChild(textarea);
+
+            if (selectedRange && selection) {
+                selection.removeAllRanges();
+                selection.addRange(selectedRange);
+            }
+
+            return successful;
+        };
+
+        emailLinks.forEach((link) => {
+            const email = (link.dataset.email || '').trim();
+            if (!email) {
+                return;
+            }
+
+            const mailto = `mailto:${email}`;
+            const currentHref = link.getAttribute('href') || '';
+
+            if (!currentHref || currentHref === '#') {
+                link.setAttribute('href', mailto);
+            }
+
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                copyEmail(email)
+                    .then((copied) => {
+                        if (copied) {
+                            showToast('Mail copied');
+                        } else {
+                            showToast('Unable to copy email', 'error');
+                        }
+                    })
+                    .finally(() => {
+                        window.setTimeout(() => {
+                            window.location.href = mailto;
+                        }, 100);
+                    });
+            });
+        });
+    }
+
     const contactForm = document.querySelector('[data-contact-form]');
     if (contactForm) {
         setupOrganizationSelector(contactForm);
