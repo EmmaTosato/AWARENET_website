@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             event.preventDefault();
-            scrollWithOffset(hash);
+            scrollToHash(hash);
             if (history.pushState) {
                 history.pushState(null, '', hash);
             } else {
@@ -63,9 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (window.location.hash) {
-        // Allow the browser to finish its default positioning before adjusting
         requestAnimationFrame(() => {
-            scrollWithOffset(window.location.hash);
+            scrollToHash(window.location.hash);
         });
     }
 
