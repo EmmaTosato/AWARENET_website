@@ -901,6 +901,7 @@ a:focus {
 .section--about {
     position: relative;
     max-width: var(--layout-fluid-width);
+    margin-top: clamp(3rem, 9vw, 6rem);
 }
 
 #about-title {
