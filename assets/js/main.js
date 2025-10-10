@@ -40,6 +40,56 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
     };
 
+    const focusRegion = (element) => {
+        if (!element) {
+            return;
+        }
+
+        const focusableSelector = 'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])';
+
+        const candidate = element.matches(focusableSelector)
+            ? element
+            : element.querySelector(focusableSelector);
+
+        if (candidate) {
+            candidate.focus({ preventScroll: true });
+            return;
+        }
+
+        element.setAttribute('tabindex', '-1');
+        element.addEventListener(
+            'blur',
+            () => {
+                if (element.getAttribute('tabindex') === '-1') {
+                    element.removeAttribute('tabindex');
+                }
+            },
+            { once: true }
+        );
+
+        element.focus({ preventScroll: true });
+    };
+
+    const scrollToHash = (hash) => {
+        if (!hash || hash === '#') {
+            return;
+        }
+
+        const target = document.querySelector(hash);
+        if (!target) {
+            return;
+        }
+
+        scrollWithOffset(hash);
+
+        const focusTarget =
+            target.closest('[data-scroll-focus]') ||
+            target.querySelector('[data-scroll-focus]') ||
+            target;
+
+        focusRegion(focusTarget);
+    };
+
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener('click', (event) => {
             const hash = anchor.getAttribute('href');
