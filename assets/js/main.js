@@ -31,8 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const headerHeight = header ? header.getBoundingClientRect().height : 0;
         const dynamicSpacing = headerHeight * 0.75; // Use a portion of the header height to create consistent breathing room
 
-        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-        const offsetPosition = Math.max(0, targetPosition - headerHeight - dynamicSpacing);
+        const focusTarget = target.closest('[data-scroll-focus]') || target;
+        const focusRect = focusTarget.getBoundingClientRect();
+        const focusHeight = focusRect.height;
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+        const availableHeight = Math.max(0, viewportHeight - headerHeight);
+        const centeringOffset = Math.max(
+            dynamicSpacing,
+            availableHeight > 0 ? Math.max(0, (availableHeight - focusHeight) / 2) : 0
+        );
+
+        const focusPosition = focusRect.top + window.pageYOffset;
+        const offsetPosition = Math.max(0, focusPosition - headerHeight - centeringOffset);
 
         window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
     };
