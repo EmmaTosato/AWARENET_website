@@ -352,7 +352,7 @@ a:focus {
     align-items: center;
     justify-content: center;
     padding: clamp(2.25rem, 10vh, 5.5rem) clamp(1.5rem, 8vw, 6rem);
-    min-height: 100vh;
+    min-height: clamp(26rem, 78vh, 92vh);
     width: 100%;
     max-width: none;
     margin: 0;
