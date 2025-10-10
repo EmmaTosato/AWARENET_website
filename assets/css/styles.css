@@ -795,7 +795,7 @@ a:focus {
 
 
 .section--goals {
-    gap: clamp(1.75rem, 3vw, 2.25rem);
+    gap: clamp(1.25rem, 2.5vw, 1.75rem);
 }
 
 .section--goals .section__heading {
