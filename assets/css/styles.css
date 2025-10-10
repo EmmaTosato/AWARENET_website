@@ -908,15 +908,19 @@ a:focus {
         padding: 1.5rem;
     }
 }
-
 .section--about {
     position: relative;
     max-width: var(--layout-fluid-width);
-    margin-top: clamp(3rem, 9vw, 6rem);
+    margin-top: clamp(12rem, 9vw, 6rem);
 }
 
+
 #about-title {
+<<<<<<< Updated upstream
     scroll-margin-top: calc(var(--header-offset) + 10rem);
+=======
+      scroll-margin-top: calc(var(--header-offset) + 10rem);
+>>>>>>> Stashed changes
 }
 
 .about-layout {
@@ -1725,7 +1729,7 @@ a:focus {
 }
 
 #team-section {
-    scroll-margin-top: calc(var(--header-offset) + 2rem);
+    scroll-margin-top: calc(var(--header-offset) + 0.10rem);
 }
 
 .team-section--calm {
