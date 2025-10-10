@@ -446,6 +446,7 @@ a:focus {
     color: var(--color-text);
     padding: clamp(5rem, 16vh, 7.5rem) 0 clamp(4rem, 14vh, 6.5rem);
     margin-top: 0;
+    min-height: 100vh;
 }
 
 .hero-institutions::before {
