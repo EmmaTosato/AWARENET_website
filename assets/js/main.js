@@ -17,7 +17,12 @@ if (toggleButton && navigation) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const scrollToHash = (hash) => {
+    const getHeaderHeight = () => {
+        const header = document.querySelector('.site-header');
+        return header ? header.getBoundingClientRect().height : 0;
+    };
+
+    const scrollWithOffset = (hash) => {
         if (!hash || hash === '#') {
             return;
         }
@@ -27,7 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const headerHeight = getHeaderHeight();
+        const dynamicSpacing = headerHeight * 0.75;
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = Math.max(0, targetPosition - headerHeight - dynamicSpacing);
+
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
     };
 
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {

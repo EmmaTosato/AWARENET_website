@@ -352,10 +352,11 @@ a:focus {
     align-items: center;
     justify-content: center;
     padding: clamp(2.25rem, 10vh, 5.5rem) clamp(1.5rem, 8vw, 6rem);
-    min-height: min(92vh, 780px);
-    width: 100%;
+    min-height: clamp(26rem, 78vh, 92vh);
+    width: min(100vw, 100%);
     max-width: none;
-    margin: 0;
+    margin-left: calc((100vw - 100%) / -2);
+    margin-right: calc((100vw - 100%) / -2);
     overflow: hidden;
     color: white;
 }
@@ -445,6 +446,7 @@ a:focus {
     color: var(--color-text);
     padding: clamp(5rem, 16vh, 7.5rem) 0 clamp(4rem, 14vh, 6.5rem);
     margin-top: 0;
+    min-height: 100vh;
 }
 
 .hero-institutions::before {
