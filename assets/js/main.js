@@ -17,6 +17,55 @@ if (toggleButton && navigation) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    const scrollWithOffset = (hash) => {
+        if (!hash || hash === '#') {
+            return;
+        }
+
+        const target = document.querySelector(hash);
+        if (!target) {
+            return;
+        }
+
+        const header = document.querySelector('.site-header');
+        const headerHeight = header ? header.getBoundingClientRect().height : 0;
+        const dynamicSpacing = headerHeight * 0.75; // Use a portion of the header height to create consistent breathing room
+
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = Math.max(0, targetPosition - headerHeight - dynamicSpacing);
+
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+    };
+
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', (event) => {
+            const hash = anchor.getAttribute('href');
+            if (!hash || hash === '#') {
+                return;
+            }
+
+            const targetExists = document.querySelector(hash);
+            if (!targetExists) {
+                return;
+            }
+
+            event.preventDefault();
+            scrollWithOffset(hash);
+            if (history.pushState) {
+                history.pushState(null, '', hash);
+            } else {
+                window.location.hash = hash;
+            }
+        });
+    });
+
+    if (window.location.hash) {
+        // Allow the browser to finish its default positioning before adjusting
+        requestAnimationFrame(() => {
+            scrollWithOffset(window.location.hash);
+        });
+    }
+
     const yearElement = document.getElementById('current-year');
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
