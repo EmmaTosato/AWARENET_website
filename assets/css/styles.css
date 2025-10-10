@@ -1726,6 +1726,7 @@ a:focus {
     margin-inline: auto;
 }
 
+#research-hero-title,
 #institutions-title,
 #team-title,
 .team-section--calm .section__heading h2 {
@@ -2353,7 +2354,7 @@ main {
 }
 
 .research-hero {
-    padding-block: clamp(3.5rem, 10vw, 5rem) clamp(5rem, 14vw, 7rem);
+    padding-block: clamp(2.75rem, 8vw, 4.5rem) clamp(3.75rem, 12vw, 5.75rem);
     padding-inline: var(--layout-section-padding);
     min-height: 100vh;
     display: flex;
@@ -2370,7 +2371,6 @@ main {
     margin: 0;
     font-size: clamp(2rem, 4.5vw, 2.8rem);
     line-height: 1.15;
-    color: #1b2c4d;
 }
 
 .research-hero__grid {
@@ -2589,7 +2589,7 @@ main {
 
 @media (max-width: 640px) {
     .research-hero {
-        padding-block: clamp(2.5rem, 12vw, 3.5rem) clamp(3.5rem, 16vw, 4.5rem);
+        padding-block: clamp(2rem, 10vw, 3rem) clamp(2.75rem, 14vw, 4rem);
         padding-inline: var(--layout-section-padding);
     }
 
