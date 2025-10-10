@@ -689,9 +689,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     })
                     .finally(() => {
+                        const redirectDelay = toast ? 600 : 100;
+
                         window.setTimeout(() => {
                             window.location.href = mailto;
-                        }, 100);
+                        }, redirectDelay);
                     });
             });
         });

@@ -2501,15 +2501,12 @@ main {
 }
 
 .research-workflow__illustration {
-    width: min(var(--workflow-illustration-max-width), 100%);
-    aspect-ratio: 16 / 9;
+    width: min(720px, 100%);
+    height: auto;
     border-radius: 0;
     border: 1px solid var(--surface-border);
     background-color: var(--color-surface);
-    background-image: var(--workflow-figure-image);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    display: block;
 }
 
 .research-workflow__figure figcaption {
