@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return header ? header.getBoundingClientRect().height : 0;
     };
 
-    const scrollWithOffset = (hash) => {
+    const scrollToHash = (hash) => {
         if (!hash || hash === '#') {
             return;
         }
