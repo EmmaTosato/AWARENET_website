@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">Stylized head silhouette highlighting connected brain regions</title>
+  <desc id="desc">A simplified profile of a human head with gradient colors and connected brain nodes represented by circles and lines.</desc>
+  <defs>
+    <linearGradient id="gradient-background" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3D4BEE" />
+      <stop offset="100%" stop-color="#5C9DF2" />
+    </linearGradient>
+    <linearGradient id="gradient-brain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9A8D4" />
+      <stop offset="100%" stop-color="#F472B6" />
+    </linearGradient>
+    <clipPath id="head-clip">
+      <path d="M440 92c-41-36-99-58-160-54-118 7-211 105-216 223-2 38 5 74 21 107 28 57 22 94 18 116-4 22 19 41 41 34 21-6 63-13 89 2 24 14 39 36 45 59 6 25 30 41 55 36 59-11 129-45 166-120 62-125-5-292-59-403Z"/>
+    </clipPath>
+  </defs>
+  <rect width="640" height="640" fill="#0B1437" rx="64" />
+  <g clip-path="url(#head-clip)">
+    <rect width="640" height="640" fill="url(#gradient-background)" />
+    <path d="M452 148c-24-24-54-40-90-46-68-12-130 14-172 74-46 66-44 157 4 220 28 37 38 76 28 115-4 16 9 31 25 29 26-3 55-1 81 11 20 9 37 23 50 39 8 10 23 11 33 2 70-66 97-212 41-307-17-28-34-52-55-76Z" fill="url(#gradient-brain)" opacity="0.85" />
+    <g fill="none" stroke="#FDFEFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+      <path d="M320 206c-36 0-66 28-66 64 0 24 14 45 34 56" />
+      <path d="M320 206c36 0 66 28 66 64 0 28-18 52-44 60" />
+      <path d="M288 326c12 24 38 40 68 40s56-16 68-40" />
+      <path d="M256 270c-32 6-56 34-56 68 0 12 4 24 9 34" />
+      <path d="M384 270c32 6 56 34 56 68 0 12-4 24-9 34" />
+    </g>
+    <g fill="#FDFEFF" opacity="0.95">
+      <circle cx="320" cy="206" r="14" />
+      <circle cx="254" cy="270" r="14" />
+      <circle cx="386" cy="270" r="14" />
+      <circle cx="288" cy="326" r="14" />
+      <circle cx="352" cy="326" r="14" />
+      <circle cx="240" cy="372" r="14" />
+      <circle cx="400" cy="372" r="14" />
+    </g>
+  </g>
+  <path d="M456 124c-41-36-99-58-160-54-118 7-211 105-216 223-2 38 5 74 21 107 28 57 22 94 18 116-4 22 19 41 41 34 21-6 63-13 89 2 24 14 39 36 45 59 6 25 30 41 55 36 59-11 129-45 166-120 62-125-5-292-59-403Z" fill="none" stroke="#FDFEFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" opacity="0.8" />
+</svg>
