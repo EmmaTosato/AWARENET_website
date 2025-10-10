@@ -36,6 +36,7 @@ html {
     --layout-max-width: 1200px;
     --layout-fluid-width: min(92vw, var(--layout-max-width));
     --layout-section-padding: clamp(1.5rem, 5vw, 3.5rem);
+    --font-size-body: clamp(1.02rem, 0.96rem + 0.22vw, 1.18rem);
 }
 
 @media (min-width: 1360px) {
@@ -150,10 +151,15 @@ body {
     display: flex;
     flex-direction: column;
     font-family: var(--font-family);
-    font-size: 1rem;
+    font-size: var(--font-size-body);
     color: var(--color-text);
     background: var(--gradient-background);
-    line-height: 1.6;
+    line-height: 1.65;
+}
+
+p {
+    font-size: 1em;
+    line-height: inherit;
 }
 
 img {
@@ -429,7 +435,6 @@ a:focus {
 
 .section--hero p {
     color: rgba(244, 245, 255, 0.88);
-    font-size: clamp(1.05rem, 1.4vw, 1.3rem);
     max-width: none;
 }
 
@@ -552,7 +557,6 @@ a:focus {
 
 .hero-institutions__content p {
     color: #43526b;
-    font-size: clamp(1.15rem, 2.4vw, 1.35rem);
     max-width: 36rem;
     line-height: 1.6;
 }
@@ -670,7 +674,7 @@ a:focus {
         justify-items: end;
         text-align: right;
         padding-inline-end: clamp(1.25rem, 4vw, 2.75rem);
-        margin-top: clamp(-1rem, -2.5vw, -0.5rem);
+        margin-top: clamp(-3.5rem, -6vw, -2.25rem);
     }
 
     .hero-institutions .hero-institutions__cta {
@@ -680,7 +684,8 @@ a:focus {
 
     .hero-institutions__logos {
         align-self: start;
-        margin-top: clamp(-2.5rem, -5vw, -1.75rem);
+        margin-top: clamp(-4rem, -7vw, -2.75rem);
+        transform: translateX(clamp(1rem, 4vw, 2.75rem));
     }
 }
 
@@ -772,12 +777,12 @@ a:focus {
 .section__heading p {
     margin: 0;
     color: var(--color-muted);
-    font-size: clamp(1.06rem, 1.8vw, 1.25rem);
 }
 
 .section__heading .section__lead {
-    font-size: clamp(1.17rem, 2.45vw, 1.44rem);
-    line-height: 1.6;
+    font-size: inherit;
+    line-height: 1.65;
+    font-weight: 500;
 }
 
 .highlights .section__heading {
@@ -785,7 +790,7 @@ a:focus {
 }
 
 .highlights .section__heading p {
-    font-size: 1.2rem;
+    font-size: inherit;
 }
 
 
@@ -877,7 +882,7 @@ a:focus {
 .objective-card__text {
     margin: 0;
     color: var(--color-muted);
-    font-size: clamp(1.08rem, 2vw, 1.3rem);
+    font-size: inherit;
     text-align: center;
 }
 
@@ -922,7 +927,6 @@ a:focus {
     margin: 0;
     max-width: 48ch;
     color: var(--color-muted);
-    font-size: clamp(1.12rem, 2.2vw, 1.35rem);
 }
 
 .about-layout__highlights {
@@ -980,7 +984,6 @@ a:focus {
 .about-highlight p {
     margin: 0;
     color: var(--color-muted);
-    font-size: clamp(1.1rem, 2vw, 1.32rem);
 }
 
 .about-highlight__link {
@@ -1022,7 +1025,7 @@ a:focus {
 }
 
 .section--cta .section__heading .section__lead {
-    font-size: clamp(1.16rem, 2.3vw, 1.42rem);
+    font-size: inherit;
 }
 
 .cta-button {
@@ -1094,7 +1097,6 @@ a:focus {
     margin: 0;
     color: rgba(37, 38, 58, 0.72);
     line-height: 1.6;
-    font-size: clamp(1.05rem, 2vw, 1.22rem);
 }
 
 .contact-hero__info {
@@ -1463,7 +1465,7 @@ a:focus {
     margin: 0;
     color: var(--color-text);
     line-height: 1.5;
-    font-size: 0.95rem;
+    font-size: inherit;
     font-weight: 400;
 }
 
@@ -1598,7 +1600,7 @@ a:focus {
 .news-card__description {
     margin: 0;
     color: var(--color-text);
-    font-size: 0.9rem;
+    font-size: inherit;
     font-weight: 400;
 }
 
@@ -1710,7 +1712,7 @@ a:focus {
     max-width: none;
     margin: 0;
     width: 100%;
-    padding-top: clamp(2.5rem, 8vw, 4.5rem);
+    padding-top: clamp(1.75rem, 6vw, 3.75rem);
     padding-inline: clamp(1.5rem, 8vw, 6rem);
     position: relative;
 }
@@ -1758,24 +1760,24 @@ a:focus {
 
 .team-card {
     background: transparent;
-    border-radius: 18px;
+    border-radius: 0;
     display: grid;
     justify-items: center;
     align-content: start;
     text-align: center;
     gap: 0.55rem;
-    padding: 0.5rem 0.5rem 1.1rem;
+    padding: 0.65rem 0.65rem 1.2rem;
     grid-template-rows: auto auto auto auto;
 }
 
 .team-card__figure {
-    --team-card-portrait-size: clamp(10.25rem, 68%, 13rem);
+    --team-card-portrait-size: clamp(11rem, 70%, 14rem);
     margin: 0;
     display: grid;
     place-items: center;
     width: min(var(--team-card-portrait-size), 100%);
     aspect-ratio: 1 / 1;
-    border-radius: 22px;
+    border-radius: 0;
     overflow: hidden;
     padding: 0;
     background: rgba(255, 255, 255, 0.65);
@@ -1788,13 +1790,13 @@ a:focus {
     aspect-ratio: 1 / 1;
     object-fit: cover;
     display: block;
-    border-radius: 18px;
+    border-radius: 0;
 }
 
 .team-card__name {
     margin: 0;
     color: #1f2d44;
-    font-size: 1.05rem;
+    font-size: 1.12rem;
     letter-spacing: -0.01em;
 }
 
@@ -1875,7 +1877,7 @@ a:focus {
     box-shadow: 0 26px 48px rgba(58, 104, 153, 0.26);
     overflow: hidden;
     color: #f9f7ff;
-    width: min(100%, 640px);
+    width: min(100%, 700px);
     margin: clamp(0.5rem, 2vw, 1.25rem) auto 0;
 }
 
@@ -1883,7 +1885,7 @@ a:focus {
     .contact-hero__form {
         justify-self: end;
         margin: 0;
-        width: min(100%, 680px);
+        width: min(100%, 760px);
     }
 }
 
@@ -1901,9 +1903,9 @@ a:focus {
 
 .contact-hero__form-inner {
     display: grid;
-    gap: clamp(1.4rem, 3vw, 2.1rem);
-    padding: clamp(1.6rem, 4vw, 2.4rem);
-    padding-bottom: clamp(0.6rem, 2.5vw, 1.1rem);
+    gap: clamp(1.1rem, 2.6vw, 1.8rem);
+    padding: clamp(1.3rem, 3.6vw, 2rem);
+    padding-bottom: clamp(0.5rem, 2vw, 1rem);
     height: 100%;
 }
 
@@ -1922,13 +1924,43 @@ a:focus {
 .contact-hero__form-heading p {
     margin: 0;
     color: rgba(249, 247, 255, 0.85);
-    font-size: 0.95rem;
+    font-size: inherit;
     line-height: 1.55;
 }
 
 .contact-form {
     display: grid;
     gap: clamp(0.65rem, 1.6vw, 0.95rem);
+}
+
+.contact-form--compact {
+    gap: clamp(0.55rem, 1.5vw, 0.85rem);
+}
+
+@media (min-width: 960px) {
+    .contact-form--compact {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: clamp(1rem, 2.2vw, 1.5rem);
+        row-gap: clamp(0.6rem, 1.4vw, 0.9rem);
+    }
+
+    .contact-form--compact .form-field {
+        min-width: 0;
+    }
+}
+
+.contact-form--compact .form-field--full,
+.contact-form--compact button,
+.contact-form--compact .form-status {
+    grid-column: 1 / -1;
+}
+
+.contact-form--compact button {
+    justify-self: flex-start;
+}
+
+.contact-form--compact .form-status {
+    margin: 0;
 }
 
 .form-field {
@@ -1969,6 +2001,12 @@ a:focus {
     background: var(--color-background);
     color: var(--color-text);
     line-height: 1.4;
+}
+
+.contact-form--compact .form-field input,
+.contact-form--compact .form-field textarea {
+    padding: 0.55rem 0.9rem;
+    font-size: 0.95rem;
 }
 
 .form-field input:focus,
@@ -2171,7 +2209,7 @@ a:focus {
 
 .hero-highlight p {
     margin: 0 0 0.75rem;
-    font-size: 1rem;
+    font-size: inherit;
 }
 
 .hero-highlight p:last-child {
