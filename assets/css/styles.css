@@ -529,7 +529,7 @@ a:focus {
     position: relative;
     z-index: 2;
     display: grid;
-    gap: clamp(2.2rem, 4vw, 3.5rem);
+    gap: clamp(2.75rem, 5vw, 4.75rem);
     align-items: start;
     width: min(100%, var(--layout-fluid-width));
     margin: 0 auto;
@@ -542,7 +542,7 @@ a:focus {
 .hero-institutions__content {
     max-width: min(520px, 100%);
     display: grid;
-    gap: 1.75rem;
+    gap: clamp(2rem, 4vw, 3rem);
     justify-items: start;
 }
 
@@ -665,27 +665,31 @@ a:focus {
 
 @media (min-width: 900px) {
     .hero-institutions__layout {
-        grid-template-columns: minmax(320px, 420px) minmax(340px, 480px);
+        grid-template-columns: minmax(320px, 440px) minmax(360px, 520px);
         align-items: start;
-        column-gap: clamp(3.75rem, 8vw, 5.5rem);
+        column-gap: clamp(4.25rem, 8vw, 6rem);
     }
 
     .hero-institutions__content {
         justify-items: end;
         text-align: right;
-        padding-inline-end: clamp(1.25rem, 4vw, 2.75rem);
-        margin-top: clamp(-3.5rem, -6vw, -2.25rem);
+        padding-inline-end: clamp(1.5rem, 4.5vw, 3.25rem);
+        margin-top: clamp(-1.5rem, -3vw, -0.75rem);
+        align-self: start;
     }
 
     .hero-institutions .hero-institutions__cta {
         justify-self: end;
-        margin-top: clamp(2.25rem, 4vw, 3rem);
+        margin-top: clamp(2.75rem, 5vw, 3.5rem);
     }
 
     .hero-institutions__logos {
         align-self: start;
-        margin-top: clamp(-4rem, -7vw, -2.75rem);
-        transform: translateX(clamp(1rem, 4vw, 2.75rem));
+        justify-content: flex-end;
+        justify-self: end;
+        margin-top: clamp(-3.25rem, -6vw, -2rem);
+        padding-inline-start: clamp(0.75rem, 2.5vw, 1.75rem);
+        transform: translateX(clamp(1.5rem, 5vw, 3.25rem));
     }
 }
 
