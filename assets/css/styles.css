@@ -561,7 +561,7 @@ a:focus {
 
 .hero-institutions h1 {
     color: #1b2c4d;
-    font-size: clamp(2.8rem, 5.5vw, 4.25rem);
+    font-size: clamp(3.133rem, calc(5.5vw + 0.333rem), 4.583rem);
     letter-spacing: -0.01em;
     margin: 0;
     white-space: normal;
