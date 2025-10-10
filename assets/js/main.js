@@ -17,21 +17,7 @@ if (toggleButton && navigation) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const getHeaderOffset = () => {
-        const header = document.querySelector('.site-header');
-        if (!header) {
-            return 0;
-        }
-
-        const rect = header.getBoundingClientRect();
-        const styles = window.getComputedStyle(header);
-        const marginTop = parseFloat(styles.marginTop) || 0;
-        const marginBottom = parseFloat(styles.marginBottom) || 0;
-
-        return rect.height + marginTop + marginBottom;
-    };
-
-    const scrollWithOffset = (hash) => {
+    const scrollToHash = (hash) => {
         if (!hash || hash === '#') {
             return;
         }
@@ -41,24 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const headerOffset = getHeaderOffset();
-        const targetRect = target.getBoundingClientRect();
-        const targetTop = targetRect.top + window.pageYOffset;
-        const targetStyles = window.getComputedStyle(target);
-        const scrollMarginTop = parseFloat(targetStyles.scrollMarginTop) || 0;
-        const breathingSpace = Math.max(0, scrollMarginTop - headerOffset);
-
-        const focusContainer = target.closest('[data-scroll-focus]') || target;
-        const section = focusContainer.closest('section') || focusContainer;
-        const sectionRect = section.getBoundingClientRect();
-        const sectionTop = sectionRect.top + window.pageYOffset;
-        const minimumOffset = sectionTop - headerOffset;
-
-        let offsetPosition = targetTop - headerOffset - breathingSpace;
-        offsetPosition = Math.max(offsetPosition, minimumOffset);
-        offsetPosition = Math.max(0, Math.round(offsetPosition));
-
-        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     };
 
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -74,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             event.preventDefault();
-            scrollWithOffset(hash);
+            scrollToHash(hash);
             if (history.pushState) {
                 history.pushState(null, '', hash);
             } else {
@@ -84,9 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (window.location.hash) {
-        // Allow the browser to finish its default positioning before adjusting
         requestAnimationFrame(() => {
-            scrollWithOffset(window.location.hash);
+            scrollToHash(window.location.hash);
         });
     }
 
