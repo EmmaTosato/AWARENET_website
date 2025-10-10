@@ -916,7 +916,7 @@ a:focus {
 }
 
 #about-title {
-    scroll-margin-top: calc(var(--header-offset) + 1.5rem);
+    scroll-margin-top: calc(var(--header-offset) + 10rem);
 }
 
 .about-layout {
