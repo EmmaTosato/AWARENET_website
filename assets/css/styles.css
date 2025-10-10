@@ -37,6 +37,8 @@ html {
     --layout-fluid-width: min(92vw, var(--layout-max-width));
     --layout-section-padding: clamp(1.5rem, 5vw, 3.5rem);
     --font-size-body: clamp(1.02rem, 0.96rem + 0.22vw, 1.18rem);
+    --workflow-figure-max-width: 840px;
+    --workflow-illustration-max-width: 1080px;
 }
 
 @media (min-width: 1360px) {
@@ -2489,6 +2491,13 @@ main {
     display: grid;
     gap: 1rem;
     justify-items: center;
+}
+
+.research-workflow__figure img {
+    width: min(var(--workflow-figure-max-width), 100%);
+    border: 1px solid var(--surface-border);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-sm);
 }
 
 .research-workflow__illustration {
