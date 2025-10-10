@@ -2386,7 +2386,7 @@ main {
 }
 
 .research-hero__lead {
-    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    font-size: var(--font-size-body);
     line-height: 1.6;
     color: var(--color-text);
 }
@@ -2425,7 +2425,7 @@ main {
 .research-intro {
     max-width: min(880px, 100%);
     color: var(--color-text);
-    font-size: 1rem;
+    font-size: var(--font-size-body);
     line-height: 1.7;
 }
 
@@ -2514,7 +2514,7 @@ main {
 .research-impact__list {
     display: grid;
     gap: 0.75rem;
-    font-size: 1rem;
+    font-size: var(--font-size-body);
     color: var(--color-text);
     padding-left: 1.2rem;
 }
@@ -2525,7 +2525,7 @@ main {
 
 .research-collab p {
     max-width: min(720px, 100%);
-    font-size: 1rem;
+    font-size: var(--font-size-body);
     line-height: 1.7;
     color: var(--color-text);
 }
@@ -2553,7 +2553,7 @@ main {
 
 .research-cta__card p {
     color: var(--color-text);
-    font-size: 1rem;
+    font-size: var(--font-size-body);
 }
 
 .research-cta__actions {
