@@ -531,7 +531,7 @@ a:focus {
     position: relative;
     z-index: 2;
     display: grid;
-    gap: clamp(2.75rem, 5vw, 4.75rem);
+    gap: clamp(3.75rem, 5vw, 4.75rem);
     align-items: start;
     width: min(100%, var(--layout-fluid-width));
     margin: 0 auto;
