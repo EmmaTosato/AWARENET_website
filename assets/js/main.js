@@ -22,6 +22,24 @@ document.addEventListener('DOMContentLoaded', () => {
         yearElement.textContent = new Date().getFullYear();
     }
 
+    const header = document.querySelector('.site-header');
+    const root = document.documentElement;
+    if (header && root) {
+        const setHeaderOffset = () => {
+            const headerHeight = header.getBoundingClientRect().height;
+            root.style.setProperty('--header-offset', `${headerHeight}px`);
+        };
+
+        setHeaderOffset();
+
+        if (typeof ResizeObserver !== 'undefined') {
+            const observer = new ResizeObserver(() => setHeaderOffset());
+            observer.observe(header);
+        }
+
+        window.addEventListener('resize', setHeaderOffset);
+    }
+
     const eventTitleTarget = document.querySelector('[data-event-title]');
     if (eventTitleTarget) {
         const params = new URLSearchParams(window.location.search);
