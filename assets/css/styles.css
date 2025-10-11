@@ -2391,13 +2391,13 @@ main {
 .research-hero__content h1 {
     margin: 0;
     font-size: clamp(2rem, 4.5vw, 2.8rem);
-    line-height: 1.15;
+    line-height: 1.35;
     color: #1b2c4d;
 }
 
 .research-hero__grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 480px);
+    grid-template-columns: minmax(0, 1fr) minmax(0, clamp(340px, 42vw, 560px));
     gap: clamp(2rem, 5vw, 4rem);
     align-items: center;
     width: min(1100px, 100%);
@@ -2416,16 +2416,17 @@ main {
 
 .research-hero__figure {
     margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .research-hero__illustration {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    border-radius: 0;
-    border: 1px solid var(--surface-border);
-    background-color: var(--color-surface);
+    width: min(100%, clamp(320px, 48vw, 560px));
+    height: auto;
+    border: none;
+    background: transparent;
     background-image: var(--hero-figure-image);
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
