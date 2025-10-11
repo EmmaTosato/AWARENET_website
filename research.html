@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research | AWARENET</title>
+    <title>Mapping the neural architecture of consciousness | AWARENET</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -33,10 +33,11 @@
         <section id="research-hero" class="research-hero" aria-labelledby="research-hero-title">
             <div class="research-hero__grid">
                 <div class="research-hero__content">
-                    <h1 id="research-hero-title">Interdisciplinary research that keeps humans in the loop</h1>
+                    <h1 id="research-hero-title">Mapping the neural architecture of consciousness</h1>
+                    <p class="research-hero__lead">Understanding how the brain gives rise to consciousness is one of the central challenges in neuroscience.</p>
                 </div>
                 <figure class="research-hero__figure">
-                    <img class="research-hero__illustration" src="assets/images/research/hero-brain-network.png" alt="Stylized human head silhouette highlighting connected brain regions">
+                    <img class="research-hero__illustration" src="assets/images/research/warping.png" alt="Abstract visualization of interconnected brain regions">
                 </figure>
             </div>
         </section>
@@ -45,38 +46,56 @@
             <div class="section__header">
                 <h2 id="research-mission-title">Mission</h2>
             </div>
-
-            <p> Understanding how the brain gives rise to consciousness is one of the central challenges in neuroscience. <br>
-                AWARENET aims to build an integrated atlas of consciousness, combining fine-grained intracranial data with large-scale brain organization to explain how awareness emerges and how it can be disrupted by brain lesions.<br>
-                Using stereo-EEG recordings and stimulations in humans, AWARENET links the level of consciousness (how awake or responsive the brain is) and the content of consciousness (what we perceive) within a common spatial framework.<br>
-                This unified Awareness Atlas serves both fundamental science and clinical practice, supporting diagnosis and rehabilitation in conditions such as stroke, epilepsy, coma, and vegetative state.</p>
-
+            <div class="research-intro">
+                <p>AWARENET aims to build an integrated atlas of consciousness, combining fine-grained intracranial data with large-scale brain organization to explain how awareness emerges and how it can be disrupted by brain lesions.</p>
+                <p>Using stereo-EEG recordings and stimulations in humans, AWARENET links the level of consciousness (how awake or responsive the brain is) and the content of consciousness (what we perceive) within a common spatial framework.</p>
+                <p>This unified Awareness Atlas serves both fundamental science and clinical practice, supporting diagnosis and rehabilitation in conditions such as stroke, epilepsy, coma, and vegetative state.</p>
+            </div>
         </section>
 
-        <section id="research-challenges" class="section" aria-labelledby="research-challenges-title">
+        <section id="research-challenges" class="section research-dual" aria-labelledby="research-challenges-title">
             <div class="section__header">
                 <h2 id="research-challenges-title">Main challenges</h2>
             </div>
-            <p>Our dataset relies on intracranial recordings (sEEG) from drug-resistant epilepsy patients, providing high spatial and temporal resolution but no direct fMRI data, raising a key question: <strong>How can we link functional connectivity with consciousness when no direct fMRI is available?</strong></p>
-            <p>To overcome this limitation, we:</p>
-            <ul>
-                <li>Embed individual lesions into normative connectomes, enabling indirect mapping of disconnection.</li>
-                <li>Combine structural (dMRI) and functional (fMRI) gradients from healthy populations.</li>
-                <li>Develop predictive models linking lesion impact to consciousness loss and recovery.</li>
-            </ul>
+            <div class="research-dual__grid">
+                <article class="research-dual__item research-dual__item--contrast">
+                    <p>Our dataset relies on intracranial recordings (sEEG) from drug-resistant epilepsy patients, providing high spatial and temporal resolution but no direct fMRI data.</p>
+                    <h3>How can we link functional connectivity with consciousness when no direct fMRI is available?</h3>
+                </article>
+                <div class="research-challenges__actions">
+                    <p>To overcome this limitation, we:</p>
+                    <ul>
+                        <li>Embed individual lesions into normative connectomes, enabling indirect mapping of disconnection.</li>
+                        <li>Combine structural (dMRI) and functional (fMRI) gradients from healthy populations.</li>
+                        <li>Develop predictive models linking lesion impact to consciousness loss and recovery.</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <section id="research-whatwedo" class="section" aria-labelledby="research-whatwedo-title">
-            <div class="section__header">
+        <section id="research-whatwedo" class="section section--muted" aria-labelledby="research-whatwedo-title">
+            <div class="section__heading">
                 <h2 id="research-whatwedo-title">What we aim to do</h2>
+                <p>AWARENET will:</p>
             </div>
-            <p>AWARENET will:</p>
-            <ul>
-                <li>Map brain regions supporting level and content of consciousness through intracranial perturbations and recordings (sEEG).</li>
-                <li>Integrate these maps with large-scale cortical gradients derived from normative fMRI/dMRI datasets (HCP 7T).</li>
-                <li>Test causality by studying patients undergoing controlled thermocoagulation lesions, comparing behavioral decline with disconnection-overlap in the atlas.</li>
-                <li>Develop tools that predict how specific lesions alter awareness, bridging basic and clinical neuroscience.</li>
-            </ul>
+            <div class="timeline" aria-label="Research objectives">
+                <div class="timeline__event">
+                    <span class="timeline__year">Map consciousness networks</span>
+                    <p>Identify brain regions supporting the level and content of consciousness through intracranial perturbations and recordings (sEEG).</p>
+                </div>
+                <div class="timeline__event">
+                    <span class="timeline__year">Integrate normative gradients</span>
+                    <p>Align intracranial maps with large-scale cortical gradients derived from normative fMRI/dMRI datasets (HCP 7T).</p>
+                </div>
+                <div class="timeline__event">
+                    <span class="timeline__year">Test causal mechanisms</span>
+                    <p>Study patients undergoing controlled thermocoagulation lesions to compare behavioral decline with disconnection-overlap in the atlas.</p>
+                </div>
+                <div class="timeline__event">
+                    <span class="timeline__year">Deliver predictive tools</span>
+                    <p>Develop models that forecast how specific lesions alter awareness, bridging basic and clinical neuroscience.</p>
+                </div>
+            </div>
         </section>
 
         <section id="research-workflow" class="section research-workflow" aria-labelledby="research-workflow-title">
