@@ -2451,6 +2451,56 @@ main {
     line-height: 1.7;
 }
 
+.research-mission__layout {
+    margin-top: clamp(1.5rem, 3vw, 2.5rem);
+    display: grid;
+    gap: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.research-mission__summary {
+    display: grid;
+    gap: clamp(0.9rem, 2vw, 1.3rem);
+    color: var(--color-muted);
+}
+
+.research-mission__summary p {
+    margin: 0;
+}
+
+.research-mission__highlights {
+    display: grid;
+    gap: clamp(1rem, 2.5vw, 1.5rem);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.mission-highlight {
+    background: rgba(58, 104, 153, 0.08);
+    border: 1px solid rgba(58, 104, 153, 0.18);
+    border-radius: 18px;
+    padding: clamp(1.25rem, 2.5vw, 1.75rem);
+    display: grid;
+    gap: 0.65rem;
+    box-shadow: 0 14px 34px rgba(58, 104, 153, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mission-highlight h3 {
+    margin: 0;
+    font-size: clamp(1.05rem, 0.98rem + 0.3vw, 1.25rem);
+    color: var(--color-heading);
+}
+
+.mission-highlight p {
+    margin: 0;
+    color: var(--color-muted);
+}
+
+.mission-highlight:hover,
+.mission-highlight:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(58, 104, 153, 0.16);
+}
+
 .research-dual {
     gap: 2rem;
 }
