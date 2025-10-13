@@ -2460,27 +2460,12 @@ main {
 
 #research-mission .research-intro strong,
 #research-mission .research-intro b {
-    font-weight: 600;
-    color: var(--color-heading);
+    font-weight: 700;
 }
 
 #research-mission .research-intro em,
 #research-mission .research-intro i {
     font-style: italic;
-    color: var(--color-muted);
-}
-
-
-#research-mission .research-intro strong,
-#research-mission .research-intro b {
-    font-weight: 600;
-    color: var(--color-heading);
-}
-
-#research-mission .research-intro em,
-#research-mission .research-intro i {
-    font-style: italic;
-    color: var(--color-muted);
 }
 
 .research-mission__layout {
