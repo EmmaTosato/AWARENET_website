@@ -2453,6 +2453,11 @@ main {
     line-height: 1.7;
 }
 
+#research-mission .research-intro,
+#research-mission .research-intro p {
+    font-weight: 500;
+}
+
 .research-mission__layout {
     margin-top: clamp(1.5rem, 3vw, 2.5rem);
     display: grid;
