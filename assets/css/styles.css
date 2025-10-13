@@ -2555,6 +2555,8 @@ main {
     border-color: rgba(255, 255, 255, 0.2);
     color: #ffffff;
     box-shadow: 0 14px 28px rgba(58, 104, 153, 0.28);
+    width: min(100%, 520px);
+    justify-self: center;
 }
 
 .research-dual__item--contrast h3 {
