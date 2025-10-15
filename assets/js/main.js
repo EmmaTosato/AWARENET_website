@@ -22,24 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return header ? header.getBoundingClientRect().height : 0;
     };
 
-    const scrollToHash = (hash) => {
-        if (!hash || hash === '#') {
-            return;
-        }
-
-        const target = document.querySelector(hash);
-        if (!target) {
-            return;
-        }
-
-        const headerHeight = getHeaderHeight();
-        const dynamicSpacing = headerHeight * 0.75;
-        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-        const offsetPosition = Math.max(0, targetPosition - headerHeight - dynamicSpacing);
-
-        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-    };
-
     const focusRegion = (element) => {
         if (!element) {
             return;
@@ -80,7 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        scrollWithOffset(hash);
+        const headerHeight = getHeaderHeight();
+        const dynamicSpacing = headerHeight * 0.75;
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = Math.max(0, targetPosition - headerHeight - dynamicSpacing);
+
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
 
         const focusTarget =
             target.closest('[data-scroll-focus]') ||
