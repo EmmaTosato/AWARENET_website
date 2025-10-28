@@ -229,6 +229,12 @@ a:focus {
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.55), 0 12px 24px var(--crest-shadow);
 }
 
+.navbar__partner {
+    height: 2.4rem;
+    width: auto;
+    display: block;
+}
+
 .navbar__crest::after {
     content: "";
     position: absolute;
