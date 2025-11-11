@@ -1825,6 +1825,10 @@ a:focus {
     border-radius: 0;
 }
 
+.team-card__portrait--catalina {
+    object-position: center 35%;
+}
+
 .team-card__name {
     margin: 0;
     color: #1f2d44;
