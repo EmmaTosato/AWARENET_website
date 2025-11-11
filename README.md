@@ -43,7 +43,7 @@ Tutte le pagine condividono la stessa barra di navigazione responsive e il foote
 
 ## Personalizzazione rapida
 
-1. **Logo e identità** – aggiorna l'elemento `.navbar__crest` o sostituisci `assets/images/logo.png` con il tuo logo.
+1. **Logo e identità** – aggiorna l'immagine dentro `.navbar__logos` oppure sostituisci `assets/images/logo.png` con il tuo logo.
 2. **Contenuti** – modifica testi direttamente nei file HTML; ogni sezione è già organizzata con classi semantiche (`section__heading`, `card-grid`, ecc.).
 3. **Eventi** – duplica `event.html` per creare landing dedicate oppure collega dalla pagina `news.html` aggiungendo il parametro `title` all'URL per personalizzare il titolo in modo rapido.
 4. **Immagini del team** – carica le foto in `assets/photos_team` oppure sostituisci i segnaposto in `assets/images/placeholders/` con versioni reali (consigliata la stessa proporzione per mantenere il layout).
