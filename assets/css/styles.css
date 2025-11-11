@@ -1814,7 +1814,7 @@ a:focus {
 }
 
 .team-card__portrait--catalina {
-    object-position: center 48%;
+    object-position: center 10%;
 }
 
 .team-card__name {
@@ -1861,7 +1861,7 @@ a:focus {
 
 .team-card__icon {
     width: 1.4rem;
-    height: 1.4rem;
+    height: 3.6rem;
     object-fit: contain;
 }
 
